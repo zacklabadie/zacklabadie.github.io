@@ -79,13 +79,10 @@ nav{
     grid-area: intro;
     align-self: center;
 }
-#welcome > div > h1:first-of-type{
-    margin-bottom: 1em;
-}
 #welcome > div > h1{
     font-weight: normal;
 }
-#welcome-typewriter{
+.type-it span{
     font-weight: bold;
     color: #FF0053;
 }
