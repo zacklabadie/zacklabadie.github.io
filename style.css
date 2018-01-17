@@ -1,0 +1,88 @@
+/***** - - -  Styling by Zack Labadie unless otherwise noted  - - - *****/
+/***** - - -  Made with several pots of coffee in January 2018 - - -  *****/
+
+/***** Global styles *****/
+.mono{
+    font-family: "t26-carbon",monospace;
+}
+.sans{
+    font-family: sans-serif;
+}
+h1{
+    line-height: 1.35;
+    font-family: sans-serif;
+    color: #000;
+}
+
+/***** Navigation bar *****/
+nav{
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 1fr 40px;
+    grid-template-rows: 10px auto 10px;
+    grid-template-areas:
+        ". . . . ."
+        ". text-links monogram icon-links ."
+        ". . . . .";
+    align-items: center;
+    background: #fff;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#nav-links{
+    grid-area: text-links;
+    justify-self: start;
+}
+#nav-links > a{
+    font-family: "t26-carbon",monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline;
+    padding-right: 1em;
+    text-decoration: none;
+    color: #000;
+}
+#nav-monogram{
+    grid-area: monogram;
+    justify-self: center;
+}
+#nav-monogram > a > img{
+    width: 30px;
+    height: auto;
+    text-align: center;
+}
+#nav-icons{
+    grid-area: icon-links;
+    justify-self: end;
+}
+#nav-icons > a > img{
+    width: 25px;
+    height: auto;
+    display: inline;
+    padding-left: 1em;
+}
+
+/***** Welcome screen *****/
+#welcome{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 6em 7fr 8fr;
+    grid-template-rows: 6em 1fr 6em;
+    grid-template-areas:
+        ". . ."
+        ". intro ."
+        ". . .";
+}
+#welcome > div{
+    grid-area: intro;
+    align-self: center;
+}
+#welcome > div > h1{
+    font-weight: normal;
+}
+.type-it span{
+    font-weight: bold;
+    color: #FF0053;
+}
