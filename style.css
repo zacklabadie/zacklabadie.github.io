@@ -1,7 +1,40 @@
 /***** - - -  Styling by Zack Labadie unless otherwise noted  - - - *****/
 /***** - - -  Made with several pots of coffee in January 2018 - - -  *****/
 
+/***** Set font-face *****/
+@font-face {
+    font-family: 'Larsseit';
+    src: url('subset-Larsseit-Italic.woff2') format('woff2'),
+        url('subset-Larsseit-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('subset-Larsseit-Bold.woff2') format('woff2'),
+        url('subset-Larsseit-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('subset-Larsseit.woff2') format('woff2'),
+        url('subset-Larsseit.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('subset-Larsseit-BoldItalic.woff2') format('woff2'),
+        url('subset-Larsseit-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
 /***** Global styles *****/
+.body{
+    overflow: hidden;
+}
 .mono{
     font-family: "t26-carbon",monospace;
 }
@@ -68,12 +101,12 @@ nav{
 #welcome{
     height: 100vh;
     display: grid;
-    grid-template-columns: 6em 7fr 8fr;
+    grid-template-columns: 6em 7fr 8fr 6em;
     grid-template-rows: 6em 1fr 6em;
     grid-template-areas:
-        ". . ."
-        ". intro ."
-        ". . .";
+        ". . . ."
+        ". intro . ."
+        ". . . .";
 }
 #welcome > div{
     grid-area: intro;
@@ -83,6 +116,112 @@ nav{
     font-weight: normal;
 }
 .type-it span{
+    display: inline;
     font-weight: bold;
     color: #FF0053;
+}
+
+/***** Projects section *****/
+#work{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6em 49% 50%;
+    grid-template-rows: 6em repeat(6, 1fr) 6em;
+    grid-template-areas:
+        ". . ."
+        ". compile img"
+        ". bevspot img"
+        ". lasso img"
+        ". reclaim img"
+        ". atk img"
+        ". more img"
+        ". . ." ;
+    justify-items: start;
+    overflow: hidden;
+}
+#compile-link{
+    grid-area: compile;
+    align-self: stretch;
+}
+#compile-link:hover{
+
+}
+#bevspot-link{
+    grid-area: bevspot;
+    align-self: stretch;
+}
+#lasso-link{
+    grid-area: lasso;
+    align-self: stretch;
+}
+#reclaim-link{
+    grid-area: reclaim;
+    align-self: stretch;
+}
+#atk-link{
+    grid-area: atk;
+    align-self: stretch;
+}
+#more-link{
+    grid-area: more;
+    align-self: stretch;
+}
+#img-stack{
+    grid-area: img;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ddd;
+}
+#compile-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #CBFF00 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#bevspot-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #f49c57 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#lasso-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #5FFFBA 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#reclaim-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #f15e47 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#atk-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #6ba6aa 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#more-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#compile-link > a:hover,
+#bevspot-link > a:hover,
+#lasso-link > a:hover,
+#reclaim-link > a:hover,
+#atk-link > a:hover,
+#more-link > a:hover{
+    background-size: 100% 100%;
+    cursor: pointer;
 }
