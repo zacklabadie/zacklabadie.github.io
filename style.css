@@ -53,12 +53,17 @@ h1{
 }
 h2{
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
 }
 section > hr{
     border: 1px solid black;
     margin: 0 6em;
     width:auto;
     opacity: .1;
+}
+p{
+    font-family: "t26-carbon",monospace;
+    line-height: 1.4;
 }
 
 /***** Navigation bar *****/
@@ -143,57 +148,47 @@ nav a{
 
 /***** Projects section *****/
 #work{
+
     height: 100vh;
-    width: 100%;
     display: grid;
-    grid-template-columns: 6em 49% 50%;
-    grid-template-rows: 6em repeat(6, 1fr) 6em;
+    grid-template-columns: 6em 4fr 5fr;
+    grid-template-rows: 6em 1fr 6em;
     grid-template-areas:
         ". . ."
-        ". compile img"
-        ". bevspot img"
-        ". lasso img"
-        ". reclaim img"
-        ". atk img"
-        ". more img"
-        ". . ." ;
+        ". work img"
+        ". . .";
     justify-items: start;
+    align-items: center;
     overflow: hidden;
-}
-#compile-link{
-    grid-area: compile;
-    align-self: stretch;
-}
-#compile-link:hover{
-
-}
-#bevspot-link{
-    grid-area: bevspot;
-    align-self: stretch;
-}
-#lasso-link{
-    grid-area: lasso;
-    align-self: stretch;
-}
-#reclaim-link{
-    grid-area: reclaim;
-    align-self: stretch;
-}
-#atk-link{
-    grid-area: atk;
-    align-self: stretch;
-}
-#more-link{
-    grid-area: more;
-    align-self: stretch;
-    font-weight: normal;
 }
 #img-stack{
     grid-area: img;
-    align-self: center;
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
+    width: 100%;
     background-color: #ddd;
+    position: relative;
+    overflow: hidden;
+}
+#work-links{
+    grid-area: work;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#img-stack img{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    transition: left 0.4s ease-in-out;
+}
+#img-stack img.slide-left{
+    left: 0;
+}
+#bevspot-link > a:hover ~ .bev{
+    left: 0;
+    transition: left 0.4s ease-in-out;
 }
 #compile-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #CBFF00 0);
@@ -230,7 +225,8 @@ nav a{
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#more-link > a{
+#more-link > a, #info-contact > h2 > a{
+    color: #000;
     background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -242,19 +238,55 @@ nav a{
 #lasso-link > a:hover,
 #reclaim-link > a:hover,
 #atk-link > a:hover,
-#more-link > a:hover{
+#more-link > a:hover,
+#info-contact > h2 > a:hover{
     background-size: 100% 100%;
     cursor: pointer;
 }
 
 /***** Info section *****/
-/* #info{
+#info{
     display: grid;
-    grid-gap: 2em;
-    grid-template-columns: 6em repeat(10, [col] 1fr) 6em;
-    grid-template-rows: 6em repeat(10, [col] 1fr) 6em;
+    grid-gap: 1em;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: repeat(auto-fill, [row] 6em);
+    min-height: 100vh;
+    padding: 6em;
+    margin-bottom: 12em;
 }
-#info img{
-    grid-column: 2 / span 6;
-    grid-row:
-} */
+#info-image{
+    grid-column: col / span 6;
+    grid-row: row / span 3;
+    background-image: url('images/zion.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#info-contact{
+    grid-column: col / span 3;
+    grid-row-start: row 5;
+    justify-self: start;
+    align-self: stretch;
+}
+#info-contact h2{
+    line-height: 1.8;
+}
+.columns{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    padding: 1em 1em 1em 2em;
+    background: #ffffff;
+}
+#info-about{
+    grid-column: col 4 / span 9;
+    grid-row-start: row 3;
+    justify-self: start;
+    align-self: start;
+}
+#info-about p{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: inline-block;
+    padding-right: 2em;
+}

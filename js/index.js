@@ -1,15 +1,16 @@
 $(document).ready(function() {
-
+    // Scrolling peekaboo nav based on work by Marius Craciunoiu
+    // http://jsfiddle.net/mariusc23/s6mLJ/31/
     // Hide Header on on scroll down
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
     var navbarHeight = $('nav').outerHeight();
 
+    // Check for scrolling every 250ms
     $(window).scroll(function(event){
         didScroll = true;
     });
-
     setInterval(function() {
         if (didScroll) {
             hasScrolled();
@@ -24,9 +25,8 @@ $(document).ready(function() {
         if(Math.abs(lastScrollTop - st) <= delta)
             return;
 
-        // If they scrolled down and are past the navbar, add class .nav-up.
-        // This is necessary so you never see what is "behind" the navbar.
-        if (st > lastScrollTop && st > navbarHeight){
+        // If they scrolled down and are past the navbar, add class .nav-up
+        if (st > lastScrollTop && st > navbarHeight*2){
             // Scroll Down
             $('nav').addClass('nav-up');
         } else {
@@ -35,7 +35,6 @@ $(document).ready(function() {
                 $('nav').removeClass('nav-up');
             }
         }
-
         lastScrollTop = st;
     }
 
@@ -92,6 +91,15 @@ $(document).ready(function() {
     .pause(300)
     .type('<span>Cinnamon Toast Crunch</span>.')
     ;
+
+
+        $('#bevspot-link').hover(function(){
+            $('.bev-img').addClass('slide-left');
+        },
+        function(){
+            $('.bev-img').removeClass('slide-left');     
+        });
+
 
 
 });
