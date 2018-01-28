@@ -256,8 +256,8 @@ nav a{
 }
 #info-image{
     grid-column: col / span 6;
-    grid-row: row / span 3;
-    background-image: url('images/zion.jpg');
+    grid-row: row / span 4;
+    background-image: url('images/young.jpg');
     background-size: contain;
     background-repeat: no-repeat;
 }
