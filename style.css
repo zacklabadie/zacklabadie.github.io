@@ -4,33 +4,33 @@
 /***** Set font-face *****/
 @font-face {
     font-family: 'Larsseit';
-    src: url('fonts/subset-Larsseit-Italic.woff2') format('woff2'),
-        url('fonts/subset-Larsseit-Italic.woff') format('woff'),
-        url('fonts/subset-Larsseit-Italic.ttf') format('ttf');
+    src: url('fonts/Larsseit-Light.woff2') format('woff2'),
+        url('fonts/Larsseit-Light.woff') format('woff'),
+        url('fonts/Larsseit-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('fonts/Larsseit-LightItalic.woff2') format('woff2'),
+        url('fonts/Larsseit-LightItalic.woff') format('woff'),
+        url('fonts/Larsseit-LightItalic.ttf') format('ttf');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'Larsseit';
-    src: url('fonts/subset-Larsseit-Bold.woff') format('woff2'),
-        url('fonts/subset-Larsseit-Bold.woff') format('woff'),
-        url('fonts/subset-Larsseit-Bold.ttf') format('ttf');
+    src: url('fonts/Larsseit-Bold.woff') format('woff2'),
+        url('fonts/Larsseit-Bold.woff') format('woff'),
+        url('fonts/Larsseit-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Larsseit';
-    src: url('fonts/subset-Larsseit.woff2') format('woff2'),
-        url('fonts/subset-Larsseit.woff') format('woff'),
-        url('fonts/subset-Larsseit.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Larsseit';
-    src: url('fonts/subset-Larsseit-BoldItalic.woff2') format('woff2'),
-        url('fonts/subset-Larsseit-BoldItalic.woff') format('woff'),
-        url('fonts/subset-Larsseit-BoldItalic.ttf') format('ttf');
+    src: url('fonts/Larsseit-BoldItalic.woff2') format('woff2'),
+        url('fonts/Larsseit-BoldItalic.woff') format('woff'),
+        url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
     font-weight: bold;
     font-style: italic;
 }
@@ -56,12 +56,12 @@ h1{
     line-height: 1.35;
     color: #000;
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 h2{
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 section > hr{
     border: 1px solid #7e7e7e;
@@ -149,6 +149,7 @@ nav a{
     font-weight: normal;
 }
 .type-it span{
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline;
     font-weight: bold;
     color: #FF0053;
@@ -356,10 +357,10 @@ nav a{
 }
 @media (max-width: 760px){
     h1{
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
     h2{
-        font-size: 1.4em;
+        font-size: 1.45em;
     }
     .project{
         margin: 1.1em 0;
@@ -386,7 +387,7 @@ nav a{
 }
 @media (max-width: 600px){
     h1{
-        font-size: 1.6em;
+        font-size: 1.7em;
     }
     section > hr{
         margin: 0 3em;
@@ -422,10 +423,10 @@ nav a{
         display: none;
     }
     h1{
-        font-size: 1.35em;
+        font-size: 1.5em;
     }
     h2{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     #bio{
         padding: 6em 0;
