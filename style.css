@@ -1,7 +1,51 @@
 /***** - - -  Styling by Zack Labadie unless otherwise noted  - - - *****/
 /***** - - -  Made with several pots of coffee in January 2018 - - -  *****/
 
+/***** Set font-face *****/
+@font-face {
+    font-family: 'Larsseit';
+    src: url('fonts/Larsseit-Light.woff2') format('woff2'),
+        url('fonts/Larsseit-Light.woff') format('woff'),
+        url('fonts/Larsseit-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('fonts/Larsseit-LightItalic.woff2') format('woff2'),
+        url('fonts/Larsseit-LightItalic.woff') format('woff'),
+        url('fonts/Larsseit-LightItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('fonts/Larsseit-Bold.woff') format('woff2'),
+        url('fonts/Larsseit-Bold.woff') format('woff'),
+        url('fonts/Larsseit-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Larsseit';
+    src: url('fonts/Larsseit-BoldItalic.woff2') format('woff2'),
+        url('fonts/Larsseit-BoldItalic.woff') format('woff'),
+        url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
 /***** Global styles *****/
+html, body{
+    height: 100%;
+}
+body{
+    padding-top: 50px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
 .mono{
     font-family: "t26-carbon",monospace;
 }
@@ -10,15 +54,31 @@
 }
 h1{
     line-height: 1.35;
-    font-family: sans-serif;
     color: #000;
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.2em;
+}
+h2{
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 1.6em;
+}
+section > hr{
+    border: 1px solid #7e7e7e;
+    margin: 0 6em;
+    width:auto;
+    opacity: .15;
+}
+p{
+    font-family: "t26-carbon",monospace;
+    line-height: 1.4;
 }
 
 /***** Navigation bar *****/
 nav{
     display: grid;
     grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 10px auto 10px;
+    grid-template-rows: 10px 30px 10px;
     grid-template-areas:
         ". . . . ."
         ". text-links monogram icon-links ."
@@ -28,8 +88,11 @@ nav{
     z-index: 3;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
+    transition: top 0.2s ease-in-out;
+}
+nav a{
+    text-decoration: none;
 }
 #nav-links{
     grid-area: text-links;
@@ -63,17 +126,20 @@ nav{
     display: inline;
     padding-left: 1em;
 }
+.nav-up{
+    top: -50px;
+}
 
 /***** Welcome screen *****/
 #welcome{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 6em 7fr 8fr;
+    grid-template-columns: 6em minmax(260px, 600px) 12em;
     grid-template-rows: 6em 1fr 6em;
     grid-template-areas:
-        ". . ."
-        ". intro ."
-        ". . .";
+        ". . . ."
+        ". intro . ."
+        ". . . .";
 }
 #welcome > div{
     grid-area: intro;
@@ -83,6 +149,298 @@ nav{
     font-weight: normal;
 }
 .type-it span{
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline;
     font-weight: bold;
     color: #FF0053;
+}
+
+/***** Projects section *****/
+#work{
+    display: grid;
+    grid-template-columns: 6em repeat(6, 1fr);
+    grid-template-rows: 6em 1fr 6em;
+    justify-items: start;
+    align-items: center;
+}
+#img-stack{
+    grid-column: 5 / 8;
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#work-links{
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.project{
+    margin: 1.25em 0;
+}
+.project:first-of-type{
+    margin: 0 0 1.25em 0;
+}
+.project:last-of-type{
+    margin: 1.25em 0 0 0;
+}
+#img-stack img, #img-stack video{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    transition: left 0.4s ease-in-out;
+}
+#img-stack img.slide-left, #img-stack video.slide-left{
+    left: 0;
+}
+#compile-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #CBFF00 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#bevspot-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #779ddb 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#lasso-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #5FFFBA 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#reframe-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #3fcaea 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#reclaim-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #f15e47 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#more-link > a, #bio-contact > h2 > a{
+    color: #000;
+    background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .3s ease;
+}
+#compile-link > a:hover,
+#bevspot-link > a:hover,
+#lasso-link > a:hover,
+#reclaim-link > a:hover,
+#reframe-link > a:hover,
+#more-link > a:hover,
+#bio-contact > h2 > a:hover{
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+/***** Bio section *****/
+#bio{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 14em auto;
+    padding: 6em;
+}
+
+#bio-image{
+    grid-column: 1 / 7;
+    grid-row: 1 / 3;
+    background-image: url('images/young.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#bio-contact{
+    grid-column: 1 / 4;
+    grid-row-start: 2;
+    justify-self: start;
+    align-self: stretch;
+    margin-top: 15vw;
+}
+#bio-contact h2{
+    line-height: 1.8;
+}
+.columns{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 270px;
+    -moz-column-width: 270px;
+    column-width: 270px;
+    padding: .75em 1em 1em 1.5em;
+    background: #ffffff;
+}
+#bio-about{
+    grid-column: 4 / 13;
+    grid-row-start: 2;
+    justify-self: start;
+    align-self: start;
+    width: 100%;
+    overflow: auto;
+}
+#bio-about p{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: inline-block;
+    padding-right: 2em;
+}
+
+/***** Footer section *****/
+#footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 15px 40px;
+    background: #000;
+}
+#footer > a{
+    text-decoration: none;
+}
+#footer > a > img{
+    width: 22px;
+    padding: 0 .75em;
+    height: auto;
+    opacity: .45;
+    transition: opacity .3s ease;
+}
+#footer > a > img:hover{
+    opacity: 1;
+}
+
+/***** Responsive styling *****/
+@media (max-width: 960px){
+    #bio-image{
+        grid-column:1 / 8;
+    }
+}
+@media (max-width: 900px){
+    nav{
+        grid-template-columns: 25px 1fr 1fr 1fr 25px;
+    }
+    section > hr{
+        margin: 0 4em;
+    }
+    #welcome{
+        grid-template-columns: 4em minmax(260px, 600px) 8em;
+    }
+    #work{
+        grid-template-columns: 4em repeat(6, 1fr);
+    }
+    #img-stack{
+        height: 80%;
+    }
+    .project{
+        margin: 1.15em 0;
+    }
+    #bio{
+        padding: 6em 4em;
+    }
+}
+@media (max-width: 760px){
+    h1{
+        font-size: 1.9em;
+    }
+    h2{
+        font-size: 1.45em;
+    }
+    .project{
+        margin: 1.1em 0;
+    }
+    #bio-image{
+        grid-column: 1 / 9;
+    }
+}
+@media (max-width: 660px){
+    #bio-about p{
+        padding-right: 0;
+    }
+    #bio-image{
+        grid-column: 3 / 13;
+        grid-row: 1 / 3;
+    }
+    #bio-contact{
+        display: none;
+    }
+    #bio-about{
+        grid-column: 1 / 11;
+        grid-row-start: 2;
+    }
+}
+@media (max-width: 600px){
+    h1{
+        font-size: 1.7em;
+    }
+    section > hr{
+        margin: 0 3em;
+    }
+    #welcome{
+        grid-template-columns: 3em minmax(260px, 600px) 6em;
+    }
+    #work{
+        grid-template-columns: 3em repeat(6, 1fr);
+    }
+    #img-stack{
+        grid-column: 3 / 8;
+        height: 100%;
+        opacity: .4;
+    }
+    #work-links{
+        grid-column: 2 / 8;
+        z-index: 2;
+    }
+    #bio{
+        padding: 6em 3em;
+    }
+    .columns{
+        padding: .75em 2em 1em 0em;
+    }
+}
+
+@media (max-width: 490px){
+    nav{
+        grid-template-columns: 25px 1fr 25px 1fr 25px;
+    }
+    #nav-monogram{
+        display: none;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    #bio{
+        padding: 6em 0;
+        grid-template-rows: 16em auto;
+    }
+    #bio-image{
+        grid-column: 1 / 13;
+        grid-row: 1 / 3;
+    }
+    #bio-about{
+        grid-column: 1 / 13;
+        grid-row-start: 2;
+    }
+    .columns{
+        padding: 1em 2em 1em 2em;
+    }
 }

@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Zack Labadie</title>
+    <title>Zack Labadie | Portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/vxr5wxk.css">
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typeit@5.3.0/dist/typeit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.4.1/dist/typeit.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 
@@ -17,31 +26,102 @@
     <nav>
         <div id="nav-links">
             <a href="#work">work</a>
-            <a href="#info">info</a>
+            <a href="#bio">bio</a>
         </div>
         <div id="nav-monogram">
             <a href="index.html#welcome">
-                <img src="images/monogram.svg">
+                <img src="images/icons/monogram.svg">
             </a>
         </div>
         <div id="nav-icons">
             <a href="files/ZackLabadie-Resume.pdf" target="_blank">
-                <img src="images/download.svg">
+                <img src="images/icons/download.svg">
             </a>
             <a href="mailto:hello@zacklabadie.com">
-                <img src="images/mail.svg">
+                <img src="images/icons/mail.svg">
             </a>
         </div>
     </nav>
-    <section id="welcome">
+    <div id="welcome">
         <div>
             <h1 class="type-it"></h1>
-
-
-            <!-- <h1>Hi, my name’s Zack.&nbsp;👋🏼</h1>
-            <h1>I’m a digital designer from Boston<br/>who cares about&nbsp;<span id="welcome-typewriter"></span></h1> -->
         </div>
+    </div>
+    <section>
+        <hr/>
     </section>
+    <div id="work">
+        <div id="work-links">
+            <h2 id="compile-link" class="project">
+                <a>Compile</a>
+            </h2>
+            <h2 id="bevspot-link" class="project">
+                <a>BevSpot</a>
+            </h2>
+            <h2 id="lasso-link" class="project">
+                <a>Lasso</a>
+            </h2>
+            <h2 id="reframe-link" class="project">
+                <a>Reframing Foster Care</a>
+            </h2>
+            <h2 id="reclaim-link" class="project">
+                <a>Reclaim the Kitchen</a>
+            </h2>
+        </div>
+        <div id="img-stack">
+            <img src="images/hero-images/bevspot-help.png" class="bev-img">
+            <video autoplay loop muted class="comp-img">
+                <source type="video/mp4" src="images/hero-images/compile.mp4">
+            </video>
+            <img src="images/hero-images/lasso.png" class="las-img">
+            <img src="images/hero-images/foster-care2.png" class="fc-img">
+            <img src="images/hero-images/reclaim-the-kitchen.png" class="rk-img">
+        </div>
+    </div>
+    <section>
+        <hr/>
+    </section>
+    <div id="bio">
+        <div id="bio-image">
+        </div>
+        <div id="bio-contact">
+            <h2>
+                <a href="mailto:hello@zacklabadie.com">Email</a>
+            </h2>
+            <h2>
+                <a href="files/ZackLabadie-Resume.pdf" target="_blank">R&eacute;sum&eacute;</a>
+            </h2>
+        </div>
+        <div id="bio-about">
+            <div class="columns">
+                <p>My name is Zack Labadie. I’ve been fascinated by the intersection of art, design, technology and people for as long as I can remember — And I don’t envision that changing any timesoon.</p>
+                <p>I recently graduated summa cum laude from Northeastern University, earning a BFA in Design with a concentration in Experience Design. While pursuing my degree, I was able to accumulate nearly two years of full-time professional experience with incredible teams including a corporate marketing department, a multimedia publishing company, and an early stage all-hands-on-deck SaaS&nbsp;startup.</p>
+                <p>I believe that design is problem-solving in action. Good design is smart, simple, creative, and intuitive. Great design makes life better for&nbsp;others.</p>
+                <p>I consider myself a digital design generalist, for lack of a more accurate title and a fear of buzzwords. I have experience in everything from ideation and wireframing to interactive prototyping and front-end development. My formal training consists of equal parts traditional design education and modern UX proceses, which allows me to contribute to a project at any point in its lifecycle. My development experience ensures I work within engineering constraints and arrive at pragmatic&nbsp;solutions.</p>
+                <p>I’m eager to tackle any and all kinds of projects, but I’m especially interested in UX and product design work. Thanks for visiting and please don’t be shy!&nbsp;✌️</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="https://www.linkedin.com/in/zacklabadie/" target="_blank">
+            <img src="images/icons/linked-in.svg" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/zacklabadie" target="_blank">
+            <img src="images/icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://medium.com/@zacklabadie" target="_blank">
+            <img src="images/icons/medium.svg" alt="Medium">
+        </a>
+        <a href="https://www.facebook.com/labadie.z" target="_blank">
+            <img src="images/icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/zacklabadie/" target="_blank">
+            <img src="images/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://open.spotify.com/user/zacklabadie" target="_blank">
+            <img src="images/icons/spotify.svg" alt="Spotify">
+        </a>
+    </div>
 
 </body>
 </html>
