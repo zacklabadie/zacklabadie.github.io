@@ -21,16 +21,16 @@
 @font-face {
     font-family: 'Larsseit';
     src: url('fonts/Larsseit-Bold.woff') format('woff2'),
-        url('fonts/Larsseit-Bold.woff') format('woff'),
-        url('fonts/Larsseit-Bold.ttf') format('ttf');
+         url('fonts/Larsseit-Bold.woff') format('woff'),
+         url('fonts/Larsseit-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Larsseit';
     src: url('fonts/Larsseit-BoldItalic.woff2') format('woff2'),
-        url('fonts/Larsseit-BoldItalic.woff') format('woff'),
-        url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
+         url('fonts/Larsseit-BoldItalic.woff') format('woff'),
+         url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
     font-weight: bold;
     font-style: italic;
 }
@@ -190,6 +190,7 @@ nav a{
 }
 .project > a{
     color: #000;
+
 }
 .project:first-of-type{
     margin: 0 0 1.25em 0;
@@ -296,6 +297,7 @@ nav a{
     column-width: 270px;
     padding: .75em 1em 1em 1.5em;
     background: #ffffff;
+    flex: 1;
 }
 #bio-about{
     grid-column: 4 / 13;
@@ -303,7 +305,8 @@ nav a{
     justify-self: start;
     align-self: start;
     width: 100%;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 #bio-about p{
     -webkit-column-break-inside: avoid;
