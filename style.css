@@ -367,7 +367,6 @@ nav a{
 .project-brief{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 4em;
 }
 .project-brief h6{
     margin-top: 0;
@@ -402,22 +401,41 @@ nav a{
     grid-column: 1;
     grid-row: 2;
 }
-.work-grid{
+.work-section{
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3em 0;
 }
-.work-grid h5{
+.work-container hr{
+    margin: 4em 0 2em 0;
+}
+.work-text h5{
     font-size: 1.4em;
+    margin: 0 0 .25em 0;
+}
+.work-columns{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 320px;
+    -moz-column-width: 320px;
+    column-width: 320px;
+    column-gap: 60px;
 }
 .half-flex{
     width: 50%;
 }
-.half-flex:first-of-type{
-    padding-right: 1em;
+.half-flex img{
+    width: 100%;
+    height: auto;
 }
-.half-flex:last-of-type{
-    padding-left: 1em;
+.flex-left{
+    padding-right: 2em;
+}
+.flex-right{
+    padding-left: 2em;
 }
 
 
@@ -429,7 +447,10 @@ nav a{
     min-height: 80vh;
     min-width: 100vw;
 }
-
+#compile-ideation{
+    width: 80%;
+    margin-left: 10%;
+}
 
 /***** Footer section *****/
 footer{
@@ -524,6 +545,27 @@ footer span{
     }
     .brief-goal{
         padding-right: 4em;
+    }
+    .work-section{
+        flex-wrap: wrap;
+    }
+    .half-flex{
+        width: 100%;
+    }
+    .work-text{
+        margin-bottom: 2em;
+    }
+    .work-img{
+        text-align: center;
+        order: 3;
+    }
+    .work-img img{
+        max-height: 500px;
+        width: auto;
+        max-width: 100%;
+    }
+    .flex-left, .flex-right{
+        padding: 0;
     }
 }
 @media (max-width: 760px){
