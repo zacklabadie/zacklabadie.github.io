@@ -21,16 +21,16 @@
 @font-face {
     font-family: 'Larsseit';
     src: url('fonts/Larsseit-Bold.woff') format('woff2'),
-        url('fonts/Larsseit-Bold.woff') format('woff'),
-        url('fonts/Larsseit-Bold.ttf') format('ttf');
+         url('fonts/Larsseit-Bold.woff') format('woff'),
+         url('fonts/Larsseit-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Larsseit';
     src: url('fonts/Larsseit-BoldItalic.woff2') format('woff2'),
-        url('fonts/Larsseit-BoldItalic.woff') format('woff'),
-        url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
+         url('fonts/Larsseit-BoldItalic.woff') format('woff'),
+         url('fonts/Larsseit-BoldItalic.ttf') format('ttf');
     font-weight: bold;
     font-style: italic;
 }
@@ -62,6 +62,12 @@ h2{
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
     font-size: 1.6em;
+}
+h3{
+    font-family: "t26-carbon",monospace;
+    font-size: 1.5em;
+    line-height: 1.4;
+    font-weight: normal;
 }
 section > hr{
     border: 1px solid #7e7e7e;
@@ -185,6 +191,10 @@ nav a{
 .project{
     margin: 1.25em 0;
 }
+.project > a{
+    color: #000;
+
+}
 .project:first-of-type{
     margin: 0 0 1.25em 0;
 }
@@ -290,6 +300,7 @@ nav a{
     column-width: 270px;
     padding: .75em 1em 1em 1.5em;
     background: #ffffff;
+    flex: 1;
 }
 #bio-about{
     grid-column: 4 / 13;
@@ -297,7 +308,8 @@ nav a{
     justify-self: start;
     align-self: start;
     width: 100%;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 #bio-about p{
     -webkit-column-break-inside: avoid;
@@ -450,6 +462,28 @@ footer span{
     margin: 0 auto;
     padding-top: 15px;
     font-size: .8em;
+}
+
+/***** Coming soon section *****/
+#coming-soon{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 0;
+}
+#coming-soon main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6em;
+    height: 100%;
+}
+#coming-soon main h1{
+    text-align: center;
+}
+#coming-soon main p{
+    text-align: center;
+    max-width: 600px;
 }
 
 /***** Responsive styling *****/
