@@ -1,5 +1,5 @@
 /***** - - -  Styling by Zack Labadie unless otherwise noted  - - - *****/
-/***** - - -  Made with several pots of coffee in January 2018 - - -  *****/
+/***** - - -  Made with several pots of coffee in early 2018 - - -  *****/
 
 /***** Set font-face *****/
 @font-face {
@@ -79,6 +79,9 @@ p{
     font-family: "t26-carbon",monospace;
     line-height: 1.4;
 }
+a, a:visited{
+    color: #000;
+}
 
 /***** Navigation bar *****/
 nav{
@@ -143,9 +146,9 @@ nav a{
     grid-template-columns: 6em minmax(260px, 600px) 12em;
     grid-template-rows: 6em 1fr 6em;
     grid-template-areas:
-        ". . . ."
-        ". intro . ."
-        ". . . .";
+        ". . ."
+        ". intro ."
+        ". . .";
 }
 #welcome > div{
     grid-area: intro;
@@ -316,26 +319,149 @@ nav a{
     padding-right: 2em;
 }
 
+/***** Coming soon section *****/
+#coming-soon{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 0;
+}
+#coming-soon main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6em;
+    height: 100%;
+}
+#coming-soon main h1{
+    text-align: center;
+}
+#coming-soon main p{
+    text-align: center;
+    max-width: 600px;
+}
+
+/***** Work : General section *****/
+.work-container{
+    padding: 3em 6em 6em 6em;
+}
+.work-hero{
+    height: 80vh;
+}
+.project-intro{
+    margin-bottom: 4em;
+}
+.project-intro h1{
+    max-width: 50%;
+    margin-bottom: .35em;
+    font-size: 2.5em;
+}
+.project-intro h4{
+    max-width: 540px;
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 1.4;
+    margin-top: 0;
+}
+.project-brief{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 4em;
+}
+.project-brief h6{
+    margin-top: 0;
+}
+.project-brief p{
+    margin-top: .5em;
+}
+.brief-goal{
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 8em;
+}
+.project-brief h6{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.brief-skills{
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+.brief-skills ul{
+    padding-left: 1em;
+    list-style-type: square;
+    line-height: 1.75;
+    margin-top: .5em;
+}
+.brief-skills ul li{
+    font-family: "t26-carbon",monospace;
+}
+.brief-date{
+    grid-column: 1;
+    grid-row: 2;
+}
+.work-grid{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.work-grid h5{
+    font-size: 1.4em;
+}
+.half-flex{
+    width: 50%;
+}
+.half-flex:first-of-type{
+    padding-right: 1em;
+}
+.half-flex:last-of-type{
+    padding-left: 1em;
+}
+
+
+/***** Work : Project specific sections *****/
+#compile .work-hero{
+    background: url('images/compile/compile-hero.jpg');
+    background-position: bottom;
+    background-size: cover;
+    min-height: 80vh;
+    min-width: 100vw;
+}
+
+
 /***** Footer section *****/
-#footer{
+footer{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-content: center;
     padding: 15px 40px;
     background: #000;
 }
-#footer > a{
+footer > a{
     text-decoration: none;
 }
-#footer > a > img{
+footer > a > img{
     width: 22px;
     padding: 0 .75em;
     height: auto;
     opacity: .45;
     transition: opacity .3s ease;
 }
-#footer > a > img:hover{
+footer > a > img:hover{
     opacity: 1;
+}
+footer span{
+    width: 100%;
+    font-family: "t26-carbon",monospace;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 15px;
+    font-size: .8em;
 }
 
 /***** Coming soon section *****/
@@ -361,6 +487,11 @@ nav a{
 }
 
 /***** Responsive styling *****/
+@media (max-width: 1100px){
+    .brief-goal{
+        padding-right: 6em;
+    }
+}
 @media (max-width: 960px){
     #bio-image{
         grid-column:1 / 8;
@@ -388,6 +519,12 @@ nav a{
     #bio{
         padding: 6em 4em;
     }
+    .work-container{
+        padding: 3em 4em 4em 4em;
+    }
+    .brief-goal{
+        padding-right: 4em;
+    }
 }
 @media (max-width: 760px){
     h1{
@@ -401,6 +538,30 @@ nav a{
     }
     #bio-image{
         grid-column: 1 / 9;
+    }
+    .project-brief{
+        grid-template-columns: 4fr 1fr;
+    }
+    .brief-goal{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .brief-skills{
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin-top: 2em;
+    }
+    .brief-skills ul{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        column-width: 225px;
+        -webkit-column-width: 225px;
+        -moz-column-width: 225px;
+    }
+    .brief-date{
+        grid-column: 2;
+        grid-row: 1;
     }
 }
 @media (max-width: 660px){
@@ -418,6 +579,7 @@ nav a{
         grid-column: 1 / 11;
         grid-row-start: 2;
     }
+
 }
 @media (max-width: 600px){
     h1{
@@ -446,6 +608,24 @@ nav a{
     }
     .columns{
         padding: .75em 2em 1em 0em;
+    }
+    .work-container{
+        padding: 1.5em 3em 3em 3em;
+    }
+    .brief-goal{
+        grid-column: 1 / 3;
+        grid-row: 1;
+        padding-right: 2em;
+    }
+    .brief-skills{
+        grid-column: 1 / 3;
+        grid-row: 3;
+        margin-top: 1.5em;
+    }
+    .brief-date{
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin-top: 1.5em;
     }
 }
 
@@ -477,7 +657,10 @@ nav a{
     .columns{
         padding: 1em 2em 1em 2em;
     }
+    .brief-goal{
+        padding-right: 0;
+    }
     #coming-soon main{
-        padding: 3em;
+    padding: 3em;
     }
 }
