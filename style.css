@@ -140,9 +140,9 @@ nav a{
     grid-template-columns: 6em minmax(260px, 600px) 12em;
     grid-template-rows: 6em 1fr 6em;
     grid-template-areas:
-        ". . . ."
-        ". intro . ."
-        ". . . .";
+        ". . ."
+        ". intro ."
+        ". . .";
 }
 #welcome > div{
     grid-area: intro;
@@ -307,6 +307,28 @@ nav a{
     padding-right: 2em;
 }
 
+/***** Coming soon section *****/
+#coming-soon{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 0;
+}
+#coming-soon main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6em;
+    height: 100%;
+}
+#coming-soon main h1{
+    text-align: center;
+}
+#coming-soon main p{
+    text-align: center;
+    max-width: 600px;
+}
+
 /***** Work : General section *****/
 .work-container{
     padding: 3em 6em 6em 6em;
@@ -371,6 +393,19 @@ nav a{
 .work-grid{
     display: flex;
     flex-direction: row;
+    align-content: center;
+}
+.work-grid h5{
+    font-size: 1.4em;
+}
+.half-flex{
+    width: 50%;
+}
+.half-flex:first-of-type{
+    padding-right: 1em;
+}
+.half-flex:last-of-type{
+    padding-left: 1em;
 }
 
 
@@ -590,5 +625,8 @@ footer span{
     }
     .brief-goal{
         padding-right: 0;
+    }
+    #coming-soon main{
+    padding: 3em;
     }
 }
