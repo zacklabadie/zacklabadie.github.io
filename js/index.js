@@ -94,35 +94,35 @@ $(document).ready(function() {
 
 
     // Slide out preview images on link hover
-    $('#compile-link a').hover(function(){
+    $('#work-links .compile-link a').hover(function(){
         $('.comp-img').addClass('slide-left');
     },
     function(){
         $('.comp-img').removeClass('slide-left');
     });
     //
-    $('#bevspot-link a').hover(function(){
+    $('#work-links .bevspot-link a').hover(function(){
         $('.bev-img').addClass('slide-left');
     },
     function(){
         $('.bev-img').removeClass('slide-left');
     });
     //
-    $('#lasso-link a').hover(function(){
+    $('#work-links .lasso-link a').hover(function(){
         $('.las-img').addClass('slide-left');
     },
     function(){
         $('.las-img').removeClass('slide-left');
     });
     //
-    $('#reframe-link a').hover(function(){
+    $('#work-links .reframe-link a').hover(function(){
         $('.fc-img').addClass('slide-left');
     },
     function(){
         $('.fc-img').removeClass('slide-left');
     });
     //
-    $('#reclaim-link a').hover(function(){
+    $('#work-links .reclaim-link a').hover(function(){
         $('.rk-img').addClass('slide-left');
     },
     function(){

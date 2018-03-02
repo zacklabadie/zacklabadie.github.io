@@ -40,7 +40,6 @@ html, body{
     min-height: 100%;
 }
 body{
-    padding-top: 50px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -102,6 +101,9 @@ nav{
     top: 0;
     width: 100%;
     transition: top 0.2s ease-in-out;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
 }
 nav a{
     text-decoration: none;
@@ -143,6 +145,9 @@ nav a{
 }
 
 /***** Welcome screen *****/
+#home{
+    padding-top: 50px;
+}
 #welcome{
     min-height: 100vh;
     display: grid;
@@ -187,7 +192,6 @@ nav a{
 #work-links{
     grid-column: 2 / 5;
     grid-row: 2 / 3;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -215,42 +219,42 @@ nav a{
 #img-stack img.slide-left, #img-stack video.slide-left{
     left: 0;
 }
-#compile-link > a{
+.compile-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #CBFF00 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#bevspot-link > a{
+.bevspot-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #779ddb 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#lasso-link > a{
+.lasso-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #5FFFBA 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#reframe-link > a{
+.reframe-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #3fcaea 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#reclaim-link > a{
+.reclaim-link > a{
     background-image: linear-gradient(180deg, transparent 65%, #f15e47 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#more-link > a, #bio-contact > h2 > a{
+#more-link > a, #bio-contact > h2 > a, .back-link > h5 > a{
     color: #000;
     background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
     background-size: 0 100%;
@@ -258,13 +262,14 @@ nav a{
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#compile-link > a:hover,
-#bevspot-link > a:hover,
-#lasso-link > a:hover,
-#reclaim-link > a:hover,
-#reframe-link > a:hover,
+.compile-link > a:hover,
+.bevspot-link > a:hover,
+.lasso-link > a:hover,
+.reclaim-link > a:hover,
+.reframe-link > a:hover,
 #more-link > a:hover,
-#bio-contact > h2 > a:hover{
+#bio-contact > h2 > a:hover,
+.back-link > h5 > a:hover{
     background-size: 100% 100%;
     cursor: pointer;
 }
@@ -284,6 +289,7 @@ nav a{
     background-image: url('images/zack.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    max-width: 620px;
 }
 /* #bio-image:hover{
     background-image: url('images/young.jpg');
@@ -352,20 +358,23 @@ nav a{
 
 /***** Work : General section *****/
 .work-wrapper{
-    padding: 3em 6em 6em 6em;
+    padding: 3em 6em;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 .work-hero{
     height: 100vh;
 }
-.project-intro{
-    margin-bottom: 4em;
+.project-brief{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-.project-intro h1{
+.project-brief h1{
     max-width: 50%;
     margin-bottom: .35em;
     font-size: 2.5em;
 }
-.project-intro h4{
+.project-brief h4{
     max-width: 540px;
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
@@ -373,29 +382,30 @@ nav a{
     line-height: 1.4;
     margin-top: 0;
 }
-.project-brief{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-.project-brief h6{
-    margin-top: 0;
+.project-brief h6, .other-work h6{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
 }
 .project-brief p{
     margin-top: .5em;
 }
-.brief-goal{
-    grid-column: 1;
+.brief-intro{
+    grid-column: 1 / 3;
     grid-row: 1;
+    margin-bottom: 4em;
+}
+.brief-goal{
+    grid-column: 1 / 3;
+    grid-row: 2;
     padding-right: 8em;
 }
-.project-brief h6{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0;
+.brief-goal p{
+    max-width: 680px;
 }
 .brief-skills{
-    grid-column: 2;
-    grid-row: 1 / 3;
+    grid-column: 3;
+    grid-row: 2 / 4;
 }
 .brief-skills ul{
     padding-left: 1em;
@@ -406,9 +416,35 @@ nav a{
 .brief-skills ul li{
     font-family: "t26-carbon",monospace;
 }
+.brief-link{
+    grid-column: 3;
+    grid-row: 1;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 6em;
+}
+.project-link a{
+    text-align: center;
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    padding: 1em 1.5em .75em 1.5em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0;
+    vertical-align: center;
+    font-size: .9em;
+    transition: background-color 0.35s ease;
+}
+#compile .project-link a:hover{
+    background-color: #b8e600;
+}
 .brief-date{
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
 }
 .work-section{
     display: flex;
@@ -422,9 +458,6 @@ nav a{
 .work-wrapper .rule{
     margin: 6em 0;
 }
-.half-flex .work-columns{
-    max-width: 480px;
-}
 .work-text h5{
     font-size: 1.4em;
     margin: 0 0 1em 0;
@@ -433,30 +466,48 @@ nav a{
     margin: 0 0 1.5em 0;
 }
 .full-flex{
-    max-width: 100%;
+    width: 100%;
 }
 .work-img video, .work-img img{
-    max-height: 800px;
     width: 100%;
+    max-height: 800px;
     height: auto;
 }
-.full-flex .work-columns p{
-    display: inline-block;
-    max-width: 480px;
+.work-columns p{
+    max-width: 440px;
     vertical-align: top;
-}
-.half-flex{
-    width: 48%;
-    box-sizing: border-box;
+    break-inside: avoid
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
 .two-thirds-flex{
     width: 66%
 }
+.half-flex, .other-work h5{
+    width: 48%;
+    box-sizing: border-box;
+}
+.one-third-flex{
+    width: 33%
+}
 .new-row{
-    margin-top: 3vw;
+    margin-top: 3em;
 }
 .border{
     border: 1px solid #e6e6e6;
+}
+.half-flex .work-columns, .full-flex .work-columns{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 280px;
+    -moz-column-width: 280px;
+    column-width: 280px;
+    column-gap: 40px;
+    width: 100%;
+    break-inside: avoid
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
 .right{
     padding-left: 2em;
@@ -464,19 +515,65 @@ nav a{
 .left{
     padding-right: 2em;
 }
-
+.one-third-left{
+    margin-left: 33%;
+}
+.end-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 8em 0;
+}
+.end-link a{
+    font-size: 1.2em;
+}
+.other-work{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.other-work h6{
+    width: 100%;
+    margin-bottom: 2em;
+}
+.other-work h5{
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+.other-work h5:nth-child(2n+1){
+    margin-left: 4%;
+    padding-left: 2em;
+}
+.other-work h5 a{
+    text-decoration: none;
+}
+.back-link{
+    margin-top: 1.5em;
+}
+.back-link a{
+    text-decoration: none;
+    text-align: left;
+}
 
 /***** Work : Project specific sections *****/
+#compile{
+    margin-top:
+}
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
-    background-position: bottom;
+    background-position: bottom left;
     background-size: cover;
     min-height: 100vh;
     min-width: 100vw;
 }
-#compile-ideation{
-    width: 80%;
-    margin-left: 10%;
+#compile .project-link a{
+    background-color: #CBFF00;
+}
+#compile-logo{
+    margin: 2.2em 0 2.2em 16%;
 }
 
 /***** Footer section *****/
@@ -544,6 +641,9 @@ footer span{
     .brief-goal{
         padding-right: 6em;
     }
+    .project-brief h4{
+        padding-right: 3em;
+    }
 }
 @media (max-width: 1050px){
     #bio-image{
@@ -554,7 +654,7 @@ footer span{
     nav{
         grid-template-columns: 25px 1fr 1fr 1fr 25px;
     }
-    .rule{
+    #home .rule{
         padding: 0 4em;
     }
     #welcome{
@@ -573,7 +673,7 @@ footer span{
         padding: 6em 4em;
     }
     .work-wrapper{
-        padding: 3em 4em 4em 4em;
+        padding: 3em 4em;
     }
     .brief-goal{
         padding-right: 4em;
@@ -581,18 +681,22 @@ footer span{
     .half-flex{
         width: 100%;
     }
-    .work-columns{
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        -webkit-column-width: 280px;
-        -moz-column-width: 280px;
-        column-width: 280px;
-        column-gap: 40px;
-    }
     .work-text{
         margin-bottom: 2em;
         order: -1;
+        width: 100%;
+    }
+    .right{
+        padding-left: 0;
+    }
+    .left{
+        padding-right: 0;
+    }
+    .one-third-left{
+        margin-left: 0;
+    }
+    .two-thirds-flex{
+        width: 100%;
     }
     .work-img{
         text-align: center;
@@ -601,6 +705,9 @@ footer span{
         max-height: 500px;
         width: auto;
         max-width: 100%;
+    }
+    #compile-logo{
+        margin: 1.2em 0;
     }
 }
 @media (max-width: 760px){
@@ -620,13 +727,13 @@ footer span{
         grid-template-columns: 4fr 1fr;
     }
     .brief-goal{
-        grid-column: 1;
-        grid-row: 1;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        margin-bottom: 2em;
     }
     .brief-skills{
         grid-column: 1 / 3;
-        grid-row: 2;
-        margin-top: 2em;
+        grid-row: 3 / 4;
     }
     .brief-skills ul{
         -webkit-column-count: 2;
@@ -637,8 +744,15 @@ footer span{
         -moz-column-width: 225px;
     }
     .brief-date{
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 3;
+        grid-row: 3 / 4;
+    }
+    .end-link{
+        margin: 5em 0;
+    }
+    .other-work h5{
+        font-size: 1.25em;
+        margin: .75em 0;
     }
 }
 @media (max-width: 660px){
@@ -656,6 +770,34 @@ footer span{
         grid-column: 1 / 11;
         grid-row-start: 2;
     }
+    .brief-intro{
+        grid-column: 1 / 4;
+        grid-row: 1;
+        margin-bottom: 2em;
+    }
+    .brief-intro h4{
+        margin-bottom: 0;
+        padding-right: 0;
+    }
+    .brief-link{
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    .brief-goal{
+        grid-column: 1 / 4;
+        grid-row: 3;
+    }
+    .brief-skills{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .brief-date{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .new-row{
+        margin-top: 2.5em;
+    }
 
 }
 @media (max-width: 600px){
@@ -671,7 +813,7 @@ footer span{
     #work{
         grid-template-columns: 3em repeat(6, 1fr);
     }
-    .rule{
+    #home .rule{
         padding: 0 3em;
     }
     #img-stack{
@@ -690,22 +832,37 @@ footer span{
         padding: .75em 2em 1em 0em;
     }
     .work-wrapper{
-        padding: 1.5em 3em 3em 3em;
+        padding: 1.5em 3em;
     }
     .brief-goal{
         grid-column: 1 / 3;
-        grid-row: 1;
-        padding-right: 2em;
+        grid-row: 3;
+        padding-right: 0;
+        margin-bottom: 0;
     }
     .brief-skills{
         grid-column: 1 / 3;
-        grid-row: 3;
+        grid-row: 5;
         margin-top: 1.5em;
     }
     .brief-date{
         grid-column: 1 / 3;
-        grid-row: 2;
+        grid-row: 4;
         margin-top: 1.5em;
+    }
+    .brief-link{
+        margin-bottom: 4.5em;
+    }
+    .end-link{
+        margin: 3em 0;
+    }
+    .other-work h5{
+        width: 100%;
+        margin: .8em 0;
+    }
+    .other-work h5:nth-child(2n+1){
+        margin-left: 0;
+        padding-left: 0;
     }
 }
 
@@ -737,10 +894,16 @@ footer span{
     .columns{
         padding: 1em 2em 1em 2em;
     }
-    .brief-goal{
-        padding-right: 0;
-    }
     #coming-soon main{
     padding: 3em;
+    }
+    .work-wrapper{
+        padding: 1.5em 25px;
+    }
+    .work-wrapper .rule{
+        margin: 4em 0;
+    }
+    .new-row{
+        margin-top: 2em;
     }
 }
