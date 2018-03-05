@@ -41,10 +41,10 @@ $(document).ready(function() {
 
     // Typing animations for welcome page
     new TypeIt('.type-it', {
-        speed: 90,
+        speed: 65,
         lifeLike: false,
         autoStart: false,
-        startDelay: 2200
+        startDelay: 1800
     })
     .type('Hi, my name&#8217;s Zack.')
     .pause(800)
@@ -53,40 +53,48 @@ $(document).ready(function() {
     .break()
     .type('I&#8217;m a digital designer from Boston who cares about ')
     .pause(2000)
-    .type('<span>simplicity</span>.')
-    .pause(1000)
-    .delete(11)
+    .type('<span>people</span>.')
+    .pause(1100)
+    .delete(7)
     .pause(300)
-    .type('<span>usability</span>.')
-    .pause(1000)
-    .delete(10)
-    .pause(300)
-    .type('<span>empathy</span>.')
-    .pause(1000)
+    .type('<span>process</span>.')
+    .pause(1100)
     .delete(8)
     .pause(300)
+    .type('<span>iteration</span>.')
+    .pause(1100)
+    .delete(10)
+    .pause(300)
     .type('<span>collaboration</span>.')
-    .pause(1000)
+    .pause(1100)
     .delete(14)
     .pause(300)
     .type('<span>craft</span>.')
-    .pause(1000)
+    .pause(1100)
     .delete(6)
     .pause(300)
     .type('<span>creativity</span>.')
-    .pause(1000)
-    .delete(11)
-    .pause(300)
-    .type('<span>technology</span>.')
-    .pause(1000)
+    .pause(1100)
     .delete(11)
     .pause(300)
     .type('<span>transparency</span>.')
-    .pause(1000)
+    .pause(1100)
     .delete(13)
     .pause(300)
+    .type('<span>technology</span>.')
+    .pause(1100)
+    .delete(11)
+    .pause(300)
+    .type('<span>bike rides</span>.')
+    .pause(1100)
+    .delete(11)
+    .pause(300)
+    .type('<span>early mornings</span>.')
+    .pause(1100)
+    .delete(15)
+    .pause(300)
     .type('<span>strong coffee</span>.')
-    .pause(1000)
+    .pause(1100)
     .delete(14)
     .pause(300)
     .type('<span>Cinnamon Toast Crunch</span>.')
@@ -94,35 +102,35 @@ $(document).ready(function() {
 
 
     // Slide out preview images on link hover
-    $('#compile-link a').hover(function(){
+    $('#work-links .compile-link a').hover(function(){
         $('.comp-img').addClass('slide-left');
     },
     function(){
         $('.comp-img').removeClass('slide-left');
     });
     //
-    $('#bevspot-link a').hover(function(){
+    $('#work-links .bevspot-link a').hover(function(){
         $('.bev-img').addClass('slide-left');
     },
     function(){
         $('.bev-img').removeClass('slide-left');
     });
     //
-    $('#lasso-link a').hover(function(){
+    $('#work-links .lasso-link a').hover(function(){
         $('.las-img').addClass('slide-left');
     },
     function(){
         $('.las-img').removeClass('slide-left');
     });
     //
-    $('#reframe-link a').hover(function(){
+    $('#work-links .reframe-link a').hover(function(){
         $('.fc-img').addClass('slide-left');
     },
     function(){
         $('.fc-img').removeClass('slide-left');
     });
     //
-    $('#reclaim-link a').hover(function(){
+    $('#work-links .reclaim-link a').hover(function(){
         $('.rk-img').addClass('slide-left');
     },
     function(){
