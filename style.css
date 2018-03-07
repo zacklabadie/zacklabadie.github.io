@@ -364,6 +364,9 @@ nav a{
 }
 .work-hero{
     height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+    box-sizing: border-box;
 }
 .project-brief{
     display: grid;
@@ -455,6 +458,9 @@ nav a{
     width: 100%;
     margin: 3em 0;
 }
+.work-section > div{
+    box-sizing: border-box;
+}
 .work-wrapper .rule{
     margin: 6em 0;
 }
@@ -486,11 +492,11 @@ nav a{
     width: 66%
 }
 .half-flex, .other-work h5{
-    width: 48%;
+    width: 50%;
     box-sizing: border-box;
 }
 .one-third-flex{
-    width: 33%
+    width: 33%;
 }
 .new-row{
     margin-top: 3em;
@@ -512,10 +518,10 @@ nav a{
     page-break-inside: avoid;
 }
 .right{
-    padding-left: 2em;
+    padding-left: 3.5em;
 }
 .left{
-    padding-right: 2em;
+    padding-right: 3.5em;
 }
 .one-third-left{
     margin-left: 33%;
@@ -561,15 +567,24 @@ nav a{
 }
 
 /***** Work : Project specific sections *****/
-#compile{
-    margin-top:
-}
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
     background-position: bottom left;
     background-size: cover;
-    min-height: 100vh;
-    min-width: 100vw;
+}
+#bevspot .work-hero{
+    background-color: #464f75;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 50px 50px 50px;
+    overflow: hidden;
+}
+#bevspot .work-hero img{
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    align-self: center;
 }
 #compile .project-link a{
     background-color: #CBFF00;
@@ -800,6 +815,14 @@ footer span{
     .new-row{
         margin-top: 2.5em;
     }
+    #bevspot .work-hero{
+        justify-content: flex-end;
+    }
+    #bevspot .work-hero img{
+        max-width: none;
+        width: auto;
+        height: 100%;
+    }
 
 }
 @media (max-width: 600px){
@@ -908,4 +931,7 @@ footer span{
     .new-row{
         margin-top: 2em;
     }
+    /* #bevspot .work-hero img{
+        height: 100%;
+    } */
 }
