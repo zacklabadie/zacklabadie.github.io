@@ -123,11 +123,11 @@ $(document).ready(function() {
         $('.las-img').removeClass('slide-left');
     });
     //
-    $('#work-links .reframe-link a').hover(function(){
-        $('.fc-img').addClass('slide-left');
+    $('#work-links .other-link a').hover(function(){
+        $('.other-img').addClass('slide-left');
     },
     function(){
-        $('.fc-img').removeClass('slide-left');
+        $('.other-img').removeClass('slide-left');
     });
     //
     $('#work-links .reclaim-link a').hover(function(){
