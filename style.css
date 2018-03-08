@@ -46,7 +46,7 @@ body{
     flex-flow: column nowrap;
     justify-content: space-between;
     width: 100vw;
-    padding-bottom: 6em;
+    padding-bottom: 100px;
     position: relative;
 }
 h1{
@@ -240,8 +240,8 @@ nav a{
     text-decoration: none;
     transition: background-size .3s ease;
 }
-.reframe-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #3fcaea 0);
+.other-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #68c6e8 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -266,7 +266,7 @@ nav a{
 .bevspot-link > a:hover,
 .lasso-link > a:hover,
 .reclaim-link > a:hover,
-.reframe-link > a:hover,
+.other-link > a:hover,
 #more-link > a:hover,
 #bio-contact > h2 > a:hover,
 .back-link > h5 > a:hover{
@@ -361,9 +361,13 @@ nav a{
     padding: 3em 6em;
     max-width: 1050px;
     margin: 0 auto;
+    margin-bottom: 120px;
 }
 .work-hero{
     height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+    box-sizing: border-box;
 }
 .project-brief{
     display: grid;
@@ -455,6 +459,9 @@ nav a{
     width: 100%;
     margin: 3em 0;
 }
+.work-section > div{
+    box-sizing: border-box;
+}
 .work-wrapper .rule{
     margin: 6em 0;
 }
@@ -466,39 +473,47 @@ nav a{
 }
 .work-text p{
     margin: 0 0 1.5em 0;
+    max-width: 490px;
 }
 .full-flex{
     width: 100%;
+}
+.full-flex .work-columns p{
+
 }
 .work-img video, .work-img img{
     width: 100%;
     max-height: 800px;
     height: auto;
 }
-.work-columns p{
-    max-width: 440px;
-    vertical-align: top;
-    break-inside: avoid
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-}
 .two-thirds-flex{
     width: 66%
 }
 .half-flex, .other-work h5{
-    width: 48%;
+    width: 50%;
     box-sizing: border-box;
 }
+.sm-pad-r{
+    padding-right: 25px;
+}
+.sm-pad-l{
+    padding-left: 25px;
+}
 .one-third-flex{
-    width: 33%
+    width: 33%;
 }
 .new-row{
-    margin-top: 3em;
+    margin-top: 80px;
 }
 .border{
     border: 1px solid #e6e6e6;
 }
-.half-flex .work-columns, .full-flex .work-columns{
+.shadow{
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
+}
+/* .half-flex .work-columns, .full-flex .work-columns{
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -507,15 +522,33 @@ nav a{
     column-width: 280px;
     column-gap: 40px;
     width: 100%;
-    break-inside: avoid
+} */
+/* .work-columns p{
+    max-width: 480px;
+    vertical-align: top;
+    break-inside: avoid;
     -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+} */
+.work-text .work-columns{
+    width: 100%;
 }
-.right{
-    padding-left: 2em;
+.full-flex .work-columns{
+    display: flex;
+    flex-direction: row;
 }
-.left{
-    padding-right: 2em;
+.full-flex .work-columns p{
+    width: 50%;
+    max-width: 480px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+.full-flex .work-columns p:nth-child(odd){
+    padding-right: 25px;
+}
+.full-flex .work-columns p:nth-child(even){
+    padding-left: 25px;
 }
 .one-third-left{
     margin-left: 33%;
@@ -527,8 +560,13 @@ nav a{
     text-align: center;
     margin: 8em 0;
 }
-.end-link a{
-    font-size: 1.2em;
+.end-link p{
+    max-width: 440px;
+    text-align: center;
+    opacity: .5;
+}
+.project-link a{
+    font-size: 1em;
 }
 .other-work{
     display: flex;
@@ -546,8 +584,7 @@ nav a{
     box-sizing: border-box;
 }
 .other-work h5:nth-child(2n+1){
-    margin-left: 4%;
-    padding-left: 2em;
+    padding-left: 25px;
 }
 .other-work h5 a{
     text-decoration: none;
@@ -561,15 +598,24 @@ nav a{
 }
 
 /***** Work : Project specific sections *****/
-#compile{
-    margin-top:
-}
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
     background-position: bottom left;
     background-size: cover;
-    min-height: 100vh;
-    min-width: 100vw;
+}
+#bevspot .work-hero{
+    background-color: #464f75;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 50px 50px 50px;
+    overflow: hidden;
+}
+#bevspot .work-hero img{
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    align-self: center;
 }
 #compile .project-link a{
     background-color: #CBFF00;
@@ -584,7 +630,7 @@ footer{
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    padding: 15px 40px;
+    padding: 60px 40px 30px 40px;
     background: #000;
     box-sizing: border-box;
     position: absolute;
@@ -608,12 +654,12 @@ footer > a > img:hover{
 footer span{
     width: 100%;
     font-family: "t26-carbon",monospace;
-    text-transform: uppercase;
     color: #fff;
     text-align: center;
     margin: 0 auto;
     padding-top: 15px;
     font-size: .8em;
+    opacity: .45;
 }
 
 /***** Coming soon section *****/
@@ -683,15 +729,44 @@ footer span{
     .half-flex{
         width: 100%;
     }
-    .work-text{
+    #compile .half-flex.work-text{
         margin-bottom: 2em;
         order: -1;
-        width: 100%;
     }
-    .right{
+    .new-row{
+        margin: 0;
+    }
+    .work-text, .work-img{
+        margin: 40px 0;
+    }
+    .work-text.other-work{
+        margin: 0 0 40px 0;
+    }
+    .work-section{
+        margin: -40px 0;
+    }
+    .half-flex .work-columns{
+        display: flex;
+        flex-direction: row;
+    }
+    .half-flex .work-columns p{
+        width: 50%;
+        max-width: 480px;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .half-flex .work-columns p:nth-child(odd){
+        padding-right: 25px;
+        margin-bottom: 80
+    }
+    .half-flex .work-columns p:nth-child(even){
+        padding-left: 25px;
+    }
+    .sm-pad-l{
         padding-left: 0;
     }
-    .left{
+    .sm-pad-r{
         padding-right: 0;
     }
     .one-third-left{
@@ -704,12 +779,19 @@ footer span{
         text-align: center;
     }
     .work-img img{
-        max-height: 500px;
+        max-height: 800px;
         width: auto;
         max-width: 100%;
     }
     #compile-logo{
         margin: 1.2em 0;
+    }
+    footer{
+        padding: 30px 40px 20px 40px;
+    }
+    .work-wrapper{
+        margin-bottom: 0;
+        margin: 0 auto;
     }
 }
 @media (max-width: 760px){
@@ -749,12 +831,23 @@ footer span{
         grid-column: 3;
         grid-row: 3 / 4;
     }
+    .work-img img{
+        max-height: 800px;
+    }
     .end-link{
         margin: 5em 0;
     }
     .other-work h5{
         font-size: 1.25em;
         margin: .75em 0;
+    }
+    .full-flex .work-columns, .half-flex .work-columns{
+        flex-wrap: wrap;
+    }
+    .full-flex .work-columns p, .half-flex .work-columns p{
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 0 !important;
     }
 }
 @media (max-width: 660px){
@@ -798,7 +891,18 @@ footer span{
         grid-row: 4;
     }
     .new-row{
-        margin-top: 2.5em;
+        margin-top: 60px;
+    }
+    #bevspot .work-hero{
+        justify-content: flex-end;
+    }
+    #bevspot .work-hero img{
+        max-width: none;
+        width: auto;
+        height: 100%;
+    }
+    body{
+        padding-bottom: 120px;
     }
 
 }
@@ -866,6 +970,18 @@ footer span{
         margin-left: 0;
         padding-left: 0;
     }
+    .project-link a{
+        font-size: .9em;
+    }
+    .end-link{
+        box-sizing: border-box;
+        padding: 0 1em;
+    }
+    .end-link p{
+        max-width: 350px;
+        text-align: center;
+        opacity: .5;
+    }
 }
 
 @media (max-width: 490px){
@@ -906,6 +1022,12 @@ footer span{
         margin: 4em 0;
     }
     .new-row{
-        margin-top: 2em;
+        margin-top: 40px;
     }
+    .project-link a{
+        font-size: .8em;
+    }
+    /* #bevspot .work-hero img{
+        height: 100%;
+    } */
 }
