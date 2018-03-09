@@ -446,6 +446,9 @@ nav a{
 #compile .project-link a:hover{
     background-color: #b8e600;
 }
+#lasso .project-link a:hover{
+    background-color: #52DEA1;
+}
 .brief-date{
     grid-column: 1;
     grid-row: 3;
@@ -603,6 +606,11 @@ nav a{
     background-position: bottom left;
     background-size: cover;
 }
+#lasso .work-hero{
+    background: url('images/lasso/tv-mockup.jpg');
+    background-position: 50% 30%;
+    background-size: cover;
+}
 #bevspot .work-hero{
     background-color: #464f75;
     display: flex;
@@ -622,6 +630,9 @@ nav a{
 }
 #compile-logo{
     margin: 2.2em 0 2.2em 16%;
+}
+#lasso .project-link a{
+    background-color: #5FFFBA;
 }
 
 /***** Footer section *****/
@@ -981,6 +992,13 @@ footer span{
         max-width: 350px;
         text-align: center;
         opacity: .5;
+    }
+}
+
+@media (max-width: 530px){
+    #lasso .work-hero{
+        background-position: 15% 30%;
+        background-size: cover;
     }
 }
 
