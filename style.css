@@ -467,6 +467,7 @@ nav a{
 }
 .work-wrapper .rule{
     margin: 6em 0;
+    width: 100%;
 }
 .work-text h5{
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
