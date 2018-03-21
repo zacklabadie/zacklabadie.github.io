@@ -130,11 +130,11 @@ $(document).ready(function() {
         $('.other-img').removeClass('slide-left');
     });
     //
-    $('#work-links .reclaim-link a').hover(function(){
-        $('.rk-img').addClass('slide-left');
+    $('#work-links .reframe-link a').hover(function(){
+        $('.reframe-img').addClass('slide-left');
     },
     function(){
-        $('.rk-img').removeClass('slide-left');
+        $('.reframe-img').removeClass('slide-left');
     });
 
 
