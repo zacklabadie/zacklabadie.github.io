@@ -78,10 +78,113 @@ h3{
 }
 p{
     font-family: "t26-carbon",monospace;
-    line-height: 1.4;
+    line-height: 1.55;
 }
 a, a:visited{
     color: #000;
+}
+#loader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+.loaded #loader{
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s 0.3s ease-out;
+    transition: all 0.3s 0.3s ease-out;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#loader > div:first-of-type{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF0053;
+    -webkit-animation: slide 1.5s ease infinite;
+    animation: slide 1.5s ease infinite;
+}
+#loader > div:last-of-type{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF0053;
+    -webkit-animation: slide-2 1.5s ease infinite;
+    animation: slide-2 1.5s ease infinite;
+}
+@keyframes slide {
+    0%{
+        -webkit-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        transform: translateX(-80px);
+    }
+    50%{
+        -webkit-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+    100%{
+        -webkit-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        transform: translateX(-80px);
+    }
+}
+@-webkit-keyframes slide-2 {
+    0%{
+        -webkit-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+    50%{
+        -webkit-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        transform: translateX(-80px);
+    }
+    100%{
+        -webkit-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+}
+@keyframes slide-2 {
+    0%{
+        -webkit-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+    50%{
+        -webkit-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        transform: translateX(-80px);
+    }
+    100%{
+        -webkit-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+}
+#loader h6{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 40px 0;
 }
 
 
@@ -102,8 +205,8 @@ nav{
     width: 100%;
     transition: top 0.2s ease-in-out;
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
--moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
 }
 nav a{
     text-decoration: none;
@@ -241,20 +344,20 @@ nav a{
     transition: background-size .3s ease;
 }
 .other-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #68c6e8 0);
+    background-image: linear-gradient(180deg, transparent 65%, #EF5434 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-.reclaim-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #f15e47 0);
+.reframe-link > a{
+    background-image: linear-gradient(180deg, transparent 65%, #3FC6E6 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#more-link > a, #bio-contact > h2 > a, .back-link > h5 > a{
+#more-link > a, #bio-contact > h2 > a{
     color: #000;
     background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
     background-size: 0 100%;
@@ -265,7 +368,7 @@ nav a{
 .compile-link > a:hover,
 .bevspot-link > a:hover,
 .lasso-link > a:hover,
-.reclaim-link > a:hover,
+.reframe-link > a:hover,
 .other-link > a:hover,
 #more-link > a:hover,
 #bio-contact > h2 > a:hover,
@@ -286,7 +389,7 @@ nav a{
 #bio-image{
     grid-column: 1 / 7;
     grid-row: 1 / 3;
-    background-image: url('images/zack.jpg');
+    background-image: url('images/pink.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 620px;
@@ -403,6 +506,7 @@ nav a{
     grid-column: 1 / 3;
     grid-row: 2;
     padding-right: 8em;
+    padding-bottom: 2em;
 }
 .brief-goal p{
     max-width: 680px;
@@ -443,11 +547,12 @@ nav a{
     font-size: .9em;
     transition: background-color 0.35s ease;
 }
-#compile .project-link a:hover{
-    background-color: #b8e600;
-}
 .brief-date{
     grid-column: 1;
+    grid-row: 3;
+}
+.brief-team{
+    grid-column: 2;
     grid-row: 3;
 }
 .work-section{
@@ -464,6 +569,7 @@ nav a{
 }
 .work-wrapper .rule{
     margin: 6em 0;
+    width: 100%;
 }
 .work-text h5{
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -478,9 +584,6 @@ nav a{
 .full-flex{
     width: 100%;
 }
-.full-flex .work-columns p{
-
-}
 .work-img video, .work-img img{
     width: 100%;
     max-height: 800px;
@@ -488,6 +591,9 @@ nav a{
 }
 .two-thirds-flex{
     width: 66%
+}
+.one-third-flex{
+    width: 33%;
 }
 .half-flex, .other-work h5{
     width: 50%;
@@ -499,9 +605,7 @@ nav a{
 .sm-pad-l{
     padding-left: 25px;
 }
-.one-third-flex{
-    width: 33%;
-}
+
 .new-row{
     margin-top: 80px;
 }
@@ -509,9 +613,32 @@ nav a{
     border: 1px solid #e6e6e6;
 }
 .shadow{
-    -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
-    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
+}
+.scroll-container{
+    height: 75vh;
+    min-height: 75vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: scroll;
+    text-align: left;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-container{
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.scroll-img{
+    height: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    display: inline-block;
 }
 /* .half-flex .work-columns, .full-flex .work-columns{
     -webkit-column-count: 2;
@@ -603,6 +730,12 @@ nav a{
     background-position: bottom left;
     background-size: cover;
 }
+#compile .project-link a{
+    background-color: #CBFF00;
+}
+#compile-logo{
+    margin: 2.2em 0 2.2em 16%;
+}
 #bevspot .work-hero{
     background-color: #464f75;
     display: flex;
@@ -617,12 +750,27 @@ nav a{
     max-height: 100%;
     align-self: center;
 }
-#compile .project-link a{
-    background-color: #CBFF00;
+#lasso .work-hero{
+    background: url('images/lasso/tv-mockup.jpg');
+    background-position: 50% 30%;
+    background-size: cover;
 }
-#compile-logo{
-    margin: 2.2em 0 2.2em 16%;
+#lasso .project-link a{
+    background-color: #5FFFBA;
 }
+#reframe .work-hero{
+    background: url('images/reframe/whiteboard.jpg');
+    background-position: 50% 30%;
+    background-size: cover;
+}
+#reframe .project-link a{
+    background-color: #3FC6E6;
+}
+
+
+
+
+
 
 /***** Footer section *****/
 footer{
@@ -630,7 +778,7 @@ footer{
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    padding: 60px 40px 30px 40px;
+    padding: 30px 40px;
     background: #000;
     box-sizing: border-box;
     position: absolute;
@@ -643,7 +791,7 @@ footer > a{
 }
 footer > a > img{
     width: 22px;
-    padding: 0 .75em;
+    padding: .5em .75em;
     height: auto;
     opacity: .45;
     transition: opacity .3s ease;
@@ -737,21 +885,21 @@ footer span{
         margin: 0;
     }
     .work-text, .work-img{
-        margin: 40px 0;
+        margin: 20px 0;
     }
     .work-text.other-work{
-        margin: 0 0 40px 0;
+        margin: 0 0 20px 0;
     }
     .work-section{
-        margin: -40px 0;
+        margin: -20px 0;
     }
     .half-flex .work-columns{
         display: flex;
         flex-direction: row;
     }
     .half-flex .work-columns p{
-        width: 50%;
-        max-width: 480px;
+        min-width: 50%;
+        max-width: 490px;
         box-sizing: border-box;
         display: inline-block;
         vertical-align: top;
@@ -817,7 +965,7 @@ footer span{
     }
     .brief-skills{
         grid-column: 1 / 3;
-        grid-row: 3 / 4;
+        grid-row: 3 / 5;
     }
     .brief-skills ul{
         -webkit-column-count: 2;
@@ -830,6 +978,10 @@ footer span{
     .brief-date{
         grid-column: 3;
         grid-row: 3 / 4;
+    }
+    .brief-team{
+        grid-column: 3;
+        grid-row: 4 / 5;
     }
     .work-img img{
         max-height: 800px;
@@ -865,6 +1017,9 @@ footer span{
         grid-column: 1 / 11;
         grid-row-start: 2;
     }
+    .project-brief{
+        grid-template-columns: 2fr 1fr;
+    }
     .brief-intro{
         grid-column: 1 / 4;
         grid-row: 1;
@@ -883,12 +1038,16 @@ footer span{
         grid-row: 3;
     }
     .brief-skills{
-        grid-row: 4;
+        grid-row: 4 / 6;
         grid-column: 1;
     }
     .brief-date{
         grid-column: 2;
-        grid-row: 4;
+        grid-row: 4 / 5;
+    }
+    .brief-team{
+        grid-column: 2;
+        grid-row: 5 / 6;
     }
     .new-row{
         margin-top: 60px;
@@ -940,6 +1099,9 @@ footer span{
     .work-wrapper{
         padding: 1.5em 3em;
     }
+    .project-brief{
+        grid-template-columns: 1fr 1fr;
+    }
     .brief-goal{
         grid-column: 1 / 3;
         grid-row: 3;
@@ -952,7 +1114,12 @@ footer span{
         margin-top: 1.5em;
     }
     .brief-date{
-        grid-column: 1 / 3;
+        grid-column: 1;
+        grid-row: 4;
+        margin-top: 1.5em;
+    }
+    .brief-team{
+        grid-column: 2;
         grid-row: 4;
         margin-top: 1.5em;
     }
@@ -984,6 +1151,13 @@ footer span{
     }
 }
 
+@media (max-width: 530px){
+    #lasso .work-hero{
+        background-position: 15% 30%;
+        background-size: cover;
+    }
+}
+
 @media (max-width: 490px){
     nav{
         grid-template-columns: 25px 1fr 25px 1fr 25px;
@@ -996,6 +1170,9 @@ footer span{
     }
     h2{
         font-size: 1.3em;
+    }
+    p{
+        font-size: .9em;
     }
     #bio{
         padding: 6em 0;
