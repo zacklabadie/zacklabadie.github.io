@@ -104,7 +104,7 @@ a, a:visited{
     transition: all 0.3s 0.3s ease-out;
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
-    transform: translateY(-100%); 
+    transform: translateY(-100%);
 }
 #loader{
     width: 100%;
@@ -479,7 +479,7 @@ nav a{
 .project-brief h1{
     max-width: 50%;
     margin-bottom: .35em;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 .project-brief h4{
     max-width: 540px;
@@ -600,10 +600,10 @@ nav a{
     box-sizing: border-box;
 }
 .sm-pad-r{
-    padding-right: 25px;
+    padding-right: 40px;
 }
 .sm-pad-l{
-    padding-left: 25px;
+    padding-left: 40px;
 }
 
 .new-row{
