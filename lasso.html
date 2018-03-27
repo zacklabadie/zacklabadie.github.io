@@ -10,6 +10,13 @@
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/typeit@5.4.1/dist/typeit.min.js"></script> -->
     <script type="text/javascript" src="js/index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116358405-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-116358405-1');
+    </script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -29,6 +36,13 @@
 
 
 <body id="lasso">
+    <div id="loader-wrapper">
+        <div id="loader">
+            <div></div>
+            <h6>hang tight...</h6>
+            <div></div>
+        </div>
+    </div>
     <nav>
         <div id="nav-links">
             <a href="index.html#work">work</a>
@@ -302,6 +316,7 @@
                     <img src="images/lasso/pref-3.svg" alt="Lasso Preferences screen">
                 </a>
             </div>
+        </div>
 
         <div class="project-link end-link">
             <a href="https://xd.adobe.com/view/3e48dcb2-262c-4d35-b489-235cda0808f0/" target="_blank">View Lasso prototype</a>
