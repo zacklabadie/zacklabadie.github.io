@@ -66,6 +66,13 @@ h3{
     line-height: 1.4;
     font-weight: normal;
 }
+h6{
+    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .7em;
+}
 .rule hr{
     border: 1px solid #000;
     width: auto;
@@ -182,8 +189,6 @@ a, a:visited{
     }
 }
 #loader h6{
-    text-transform: uppercase;
-    letter-spacing: 1px;
     margin: 40px 0;
 }
 
@@ -490,8 +495,6 @@ nav a{
     margin-top: 0;
 }
 .project-brief h6, .other-work h6{
-    text-transform: uppercase;
-    letter-spacing: 1px;
     margin: 0;
 }
 .project-brief p{
