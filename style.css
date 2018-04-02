@@ -787,6 +787,9 @@ nav a{
 #reframe .project-link a{
     background-color: #3FC6E6;
 }
+#more .hero-text{
+    padding: 0 2em;
+}
 #more .work-hero img{
     margin-bottom: 1em;
 }
