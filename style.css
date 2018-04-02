@@ -349,7 +349,7 @@ nav a{
     transition: background-size .3s ease;
 }
 .other-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #EF5434 0);
+    background-image: linear-gradient(180deg, transparent 65%, #00D8C1 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -477,6 +477,21 @@ nav a{
     padding-top: 50px;
     box-sizing: border-box;
 }
+#more .work-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text h1{
+    margin-bottom: .4em;
+    font-size: 3em;
+    text-align: center;
+}
+.hero-text h4{
+    text-align: center;
+    max-width: 500px;
+}
 .project-brief{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -486,7 +501,7 @@ nav a{
     margin-bottom: .35em;
     font-size: 3em;
 }
-.project-brief h4{
+.project-brief h4, .hero-text h4{
     max-width: 540px;
     font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
@@ -580,6 +595,11 @@ nav a{
     font-size: 1.4em;
     margin: 0 0 1em 0;
 }
+.work-text h6{
+    margin-top: 0;
+    margin-bottom: 15px;
+    opacity: .3;
+}
 .work-text p{
     margin: 0 0 1.5em 0;
     max-width: 490px;
@@ -589,7 +609,7 @@ nav a{
 }
 .work-img video, .work-img img{
     width: 100%;
-    max-height: 800px;
+    /* max-height: 800px; */
     height: auto;
 }
 .video-wrapper{
@@ -656,32 +676,16 @@ nav a{
     width: auto !important;
     display: inline-block;
 }
-/* .half-flex .work-columns, .full-flex .work-columns{
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-width: 280px;
-    -moz-column-width: 280px;
-    column-width: 280px;
-    column-gap: 40px;
-    width: 100%;
-} */
-/* .work-columns p{
-    max-width: 480px;
-    vertical-align: top;
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-} */
-.work-text .work-columns{
-    width: 100%;
+.half-flex .work-columns{
+    width: 90%;
 }
 .full-flex .work-columns{
     display: flex;
     flex-direction: row;
+        justify-content: space-between;
 }
 .full-flex .work-columns p{
-    width: 50%;
+    width: 48%;
     max-width: 480px;
     box-sizing: border-box;
     display: inline-block;
@@ -721,6 +725,7 @@ nav a{
 .other-work h6{
     width: 100%;
     margin-bottom: 2em;
+    opacity: 1;
 }
 .other-work h5{
     margin: 1em 0;
@@ -782,7 +787,15 @@ nav a{
 #reframe .project-link a{
     background-color: #3FC6E6;
 }
-
+#more .hero-text{
+    padding: 0 2em;
+}
+#more .work-hero img{
+    margin-bottom: 1em;
+}
+#more .end-link p, #more .hero-text h4{
+    max-width: 500px;
+}
 
 
 
@@ -861,6 +874,9 @@ footer span{
     #bio-image{
         grid-column:1 / 8;
     }
+    .work-text .work-columns{
+        width: 100%;
+    }
 }
 @media (max-width: 900px){
     nav{
@@ -889,6 +905,9 @@ footer span{
     }
     .brief-goal{
         padding-right: 4em;
+    }
+    .mobile-hide{
+        display: none;
     }
     .half-flex{
         width: 100%;
