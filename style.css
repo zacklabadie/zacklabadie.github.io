@@ -209,9 +209,9 @@ nav{
     top: 0;
     width: 100%;
     transition: top 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
 }
 nav a{
     text-decoration: none;
@@ -682,7 +682,7 @@ nav a{
 .full-flex .work-columns{
     display: flex;
     flex-direction: row;
-        justify-content: space-between;
+    justify-content: space-between;
 }
 .full-flex .work-columns p{
     width: 48%;
@@ -691,12 +691,12 @@ nav a{
     display: inline-block;
     vertical-align: top;
 }
-.full-flex .work-columns p:nth-child(odd){
+/* .full-flex .work-columns p:nth-child(odd){
     padding-right: 25px;
 }
 .full-flex .work-columns p:nth-child(even){
     padding-left: 25px;
-}
+} */
 .one-third-left{
     margin-left: 33%;
 }
@@ -912,6 +912,9 @@ footer span{
     .half-flex{
         width: 100%;
     }
+    .full-flex .work-columns p{
+        width: 46%;
+    }
     #compile .half-flex.work-text{
         margin-bottom: 2em;
         order: -1;
@@ -920,7 +923,7 @@ footer span{
         margin: 0;
     }
     .work-text, .work-img{
-        margin: 20px 0;
+        margin: 30px 0;
     }
     .work-text.other-work{
         margin: 0 0 20px 0;
@@ -931,21 +934,22 @@ footer span{
     .half-flex .work-columns{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .half-flex .work-columns p{
-        min-width: 50%;
+        width: 100%;
         max-width: 490px;
         box-sizing: border-box;
         display: inline-block;
         vertical-align: top;
     }
-    .half-flex .work-columns p:nth-child(odd){
+    /* .half-flex .work-columns p:nth-child(odd){
         padding-right: 25px;
         margin-bottom: 80
     }
     .half-flex .work-columns p:nth-child(even){
         padding-left: 25px;
-    }
+    } */
     .sm-pad-l{
         padding-left: 0;
     }
@@ -1028,7 +1032,7 @@ footer span{
         font-size: 1.25em;
         margin: .75em 0;
     }
-    .full-flex .work-columns, .half-flex .work-columns{
+    .full-flex .work-columns{
         flex-wrap: wrap;
     }
     .full-flex .work-columns p, .half-flex .work-columns p{
@@ -1084,9 +1088,9 @@ footer span{
         grid-column: 2;
         grid-row: 5 / 6;
     }
-    .new-row{
+    /* .new-row{
         margin-top: 60px;
-    }
+    } */
     #bevspot .work-hero{
         justify-content: flex-end;
     }
