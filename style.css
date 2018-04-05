@@ -442,28 +442,6 @@ nav a{
     padding-right: 2em;
 }
 
-/***** Coming soon section *****/
-#coming-soon{
-    height: 100vh;
-    width: 100vw;
-    padding-top: 0;
-}
-#coming-soon main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6em;
-    height: 100%;
-}
-#coming-soon main h1{
-    text-align: center;
-}
-#coming-soon main p{
-    text-align: center;
-    max-width: 600px;
-}
-
 /***** Work : General section *****/
 .work-wrapper{
     padding: 3em 6em;
@@ -840,25 +818,34 @@ footer span{
 }
 
 /***** Coming soon section *****/
-#coming-soon{
+#error{
     height: 100vh;
     width: 100vw;
-    padding-top: 0;
+    padding-bottom: 0;
 }
-#coming-soon main{
+#error main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6em;
     height: 100%;
+    margin-top: -50px;
 }
-#coming-soon main h1{
+#error main div{
+    padding: 6em;
+    margin-top: 50px;
+}
+#error main div h1{
     text-align: center;
+    font-size: 8em;
+    margin-bottom: 0;
+    line-height: 1;
+    color: #FF0053;
 }
-#coming-soon main p{
+#error main div p{
     text-align: center;
     max-width: 600px;
+    margin-top: 20px;
 }
 
 /***** Responsive styling *****/
@@ -1228,7 +1215,7 @@ footer span{
     .columns{
         padding: 1em 2em 1em 2em;
     }
-    #coming-soon main{
+    #error main{
     padding: 3em;
     }
     .work-wrapper{
