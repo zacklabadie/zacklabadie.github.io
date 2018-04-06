@@ -864,6 +864,9 @@ footer span{
     .work-text .work-columns{
         width: 100%;
     }
+    .work-wrapper{
+        padding: 3em 4em;
+    }
 }
 @media (max-width: 900px){
     nav{
@@ -888,7 +891,7 @@ footer span{
         padding: 6em 4em;
     }
     .work-wrapper{
-        padding: 3em 4em;
+        padding: 3em 6em;
     }
     .brief-goal{
         padding-right: 4em;
@@ -1075,9 +1078,6 @@ footer span{
         grid-column: 2;
         grid-row: 5 / 6;
     }
-    /* .new-row{
-        margin-top: 60px;
-    } */
     #bevspot .work-hero{
         justify-content: flex-end;
     }
@@ -1224,13 +1224,7 @@ footer span{
     .work-wrapper .rule{
         margin: 4em 0;
     }
-    .new-row{
-        margin-top: 40px;
-    }
     .project-link a{
         font-size: .8em;
     }
-    /* #bevspot .work-hero img{
-        height: 100%;
-    } */
 }
