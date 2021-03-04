@@ -209,9 +209,9 @@ nav{
     top: 0;
     width: 100%;
     transition: top 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
 }
 nav a{
     text-decoration: none;
@@ -442,28 +442,6 @@ nav a{
     padding-right: 2em;
 }
 
-/***** Coming soon section *****/
-#coming-soon{
-    height: 100vh;
-    width: 100vw;
-    padding-top: 0;
-}
-#coming-soon main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6em;
-    height: 100%;
-}
-#coming-soon main h1{
-    text-align: center;
-}
-#coming-soon main p{
-    text-align: center;
-    max-width: 600px;
-}
-
 /***** Work : General section *****/
 .work-wrapper{
     padding: 3em 6em;
@@ -682,7 +660,7 @@ nav a{
 .full-flex .work-columns{
     display: flex;
     flex-direction: row;
-        justify-content: space-between;
+    justify-content: space-between;
 }
 .full-flex .work-columns p{
     width: 48%;
@@ -691,12 +669,12 @@ nav a{
     display: inline-block;
     vertical-align: top;
 }
-.full-flex .work-columns p:nth-child(odd){
+/* .full-flex .work-columns p:nth-child(odd){
     padding-right: 25px;
 }
 .full-flex .work-columns p:nth-child(even){
     padding-left: 25px;
-}
+} */
 .one-third-left{
     margin-left: 33%;
 }
@@ -840,25 +818,34 @@ footer span{
 }
 
 /***** Coming soon section *****/
-#coming-soon{
+#error{
     height: 100vh;
     width: 100vw;
-    padding-top: 0;
+    padding-bottom: 0;
 }
-#coming-soon main{
+#error main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6em;
     height: 100%;
+    margin-top: -50px;
 }
-#coming-soon main h1{
+#error main div{
+    padding: 6em;
+    margin-top: 50px;
+}
+#error main div h1{
     text-align: center;
+    font-size: 8em;
+    margin-bottom: 0;
+    line-height: 1;
+    color: #FF0053;
 }
-#coming-soon main p{
+#error main div p{
     text-align: center;
     max-width: 600px;
+    margin-top: 20px;
 }
 
 /***** Responsive styling *****/
@@ -876,6 +863,9 @@ footer span{
     }
     .work-text .work-columns{
         width: 100%;
+    }
+    .work-wrapper{
+        padding: 3em 4em;
     }
 }
 @media (max-width: 900px){
@@ -901,7 +891,7 @@ footer span{
         padding: 6em 4em;
     }
     .work-wrapper{
-        padding: 3em 4em;
+        padding: 3em 6em;
     }
     .brief-goal{
         padding-right: 4em;
@@ -912,6 +902,9 @@ footer span{
     .half-flex{
         width: 100%;
     }
+    .full-flex .work-columns p{
+        width: 46%;
+    }
     #compile .half-flex.work-text{
         margin-bottom: 2em;
         order: -1;
@@ -920,7 +913,7 @@ footer span{
         margin: 0;
     }
     .work-text, .work-img{
-        margin: 20px 0;
+        margin: 30px 0;
     }
     .work-text.other-work{
         margin: 0 0 20px 0;
@@ -931,21 +924,22 @@ footer span{
     .half-flex .work-columns{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .half-flex .work-columns p{
-        min-width: 50%;
+        width: 100%;
         max-width: 490px;
         box-sizing: border-box;
         display: inline-block;
         vertical-align: top;
     }
-    .half-flex .work-columns p:nth-child(odd){
+    /* .half-flex .work-columns p:nth-child(odd){
         padding-right: 25px;
         margin-bottom: 80
     }
     .half-flex .work-columns p:nth-child(even){
         padding-left: 25px;
-    }
+    } */
     .sm-pad-l{
         padding-left: 0;
     }
@@ -1028,7 +1022,7 @@ footer span{
         font-size: 1.25em;
         margin: .75em 0;
     }
-    .full-flex .work-columns, .half-flex .work-columns{
+    .full-flex .work-columns{
         flex-wrap: wrap;
     }
     .full-flex .work-columns p, .half-flex .work-columns p{
@@ -1083,9 +1077,6 @@ footer span{
     .brief-team{
         grid-column: 2;
         grid-row: 5 / 6;
-    }
-    .new-row{
-        margin-top: 60px;
     }
     #bevspot .work-hero{
         justify-content: flex-end;
@@ -1224,7 +1215,7 @@ footer span{
     .columns{
         padding: 1em 2em 1em 2em;
     }
-    #coming-soon main{
+    #error main{
     padding: 3em;
     }
     .work-wrapper{
@@ -1233,13 +1224,7 @@ footer span{
     .work-wrapper .rule{
         margin: 4em 0;
     }
-    .new-row{
-        margin-top: 40px;
-    }
     .project-link a{
         font-size: .8em;
     }
-    /* #bevspot .work-hero img{
-        height: 100%;
-    } */
 }

@@ -81,7 +81,7 @@ $(document).ready(function() {
     .pause(1100)
     .delete(13)
     .pause(300)
-    .type('<span>technology</span>.')
+    .type('<span>innovation</span>.')
     .pause(1100)
     .delete(11)
     .pause(300)
@@ -97,7 +97,7 @@ $(document).ready(function() {
     .pause(1100)
     .delete(14)
     .pause(300)
-    .type('<span>Cinnamon Toast Crunch</span>.')
+    .type('<span>solving problems</span>.')
     ;
 
 
