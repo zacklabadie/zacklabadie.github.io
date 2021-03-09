@@ -17,11 +17,11 @@ class Nav extends HTMLElement {
                 </a>
             </div>
             <div id="nav-icons">
-                <a href="files/ZackLabadie-Resume.pdf" target="_blank">
-                    <img src="images/icons/download.svg" alt="Download resume">
-                </a>
                 <a href="mailto:hey@zack.design">
-                    <img src="images/icons/mail.svg" alt="Email">
+                    <img src="images/icons/envelope.svg" alt="Email Zack">
+                </a>
+                <a href="files/ZackLabadie-Mar2021.pdf" target="_blank">
+                    <img src="images/icons/resume.svg" alt="Download resume">
                 </a>
             </div>
         </nav>

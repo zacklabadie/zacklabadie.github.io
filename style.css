@@ -197,7 +197,7 @@ a, a:visited{
 nav{
     display: grid;
     grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 10px 30px 10px;
+    grid-template-rows: 12px 24px 12px;
     grid-template-areas:
         ". . . . ."
         ". text-links monogram icon-links ."
@@ -216,6 +216,9 @@ nav{
 nav a{
     text-decoration: none;
 }
+nav div{
+    height: 24px;
+}
 #nav-links{
     grid-area: text-links;
     justify-self: start;
@@ -224,6 +227,7 @@ nav a{
     font-family: "t26-carbon",monospace;
     text-transform: uppercase;
     font-weight: bold;
+    line-height: 24px;
     display: inline;
     padding-right: 1em;
     text-decoration: none;
@@ -234,8 +238,8 @@ nav a{
     justify-self: center;
 }
 #nav-monogram > a > img{
-    width: 30px;
-    height: auto;
+    width: 24px;
+    height: 24px;
     text-align: center;
 }
 #nav-icons{
@@ -243,18 +247,18 @@ nav a{
     justify-self: end;
 }
 #nav-icons > a > img{
-    width: 25px;
-    height: auto;
+    width: 24px;
+    height: 24px;
     display: inline;
     padding-left: 1em;
 }
 .nav-up{
-    top: -50px;
+    top: -48px;
 }
 
 /***** Welcome screen *****/
 #home{
-    padding-top: 50px;
+    padding-top: 48px;
 }
 #welcome{
     min-height: 100vh;
@@ -452,7 +456,7 @@ nav a{
 .work-hero{
     height: 100vh;
     width: 100vw;
-    padding-top: 50px;
+    padding-top: 48px;
     box-sizing: border-box;
 }
 #more .work-hero{
@@ -783,7 +787,7 @@ nav a{
 #coming-soon .content{
     text-align: center;
     max-width: 600px;
-    margin: -50px 2em 2em 2em;
+    margin: -48px 2em 2em 2em;
 }
 
 
@@ -839,11 +843,11 @@ footer span{
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-top: -50px;
+    margin-top: -48px;
 }
 #error main div{
     padding: 6em;
-    margin-top: 50px;
+    margin-top: 48px;
 }
 #error main div h1{
     text-align: center;
