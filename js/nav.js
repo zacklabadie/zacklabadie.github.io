@@ -19,7 +19,7 @@ class Nav extends HTMLElement {
             <div id="nav-email">
                 <a href="mailto:hey@zack.design">
                     <span>Email</span>
-                    <img src="images/icons/ext-arrow.svg">
+                    <img src="images/icons/arrow-ne.svg">
                 </a>
             </div>
         </nav>
