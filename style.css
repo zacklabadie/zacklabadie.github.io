@@ -200,7 +200,7 @@ nav{
     grid-template-rows: 12px 24px 12px;
     grid-template-areas:
         ". . . . ."
-        ". text-links monogram icon-links ."
+        ". text-links monogram email ."
         ". . . . .";
     align-items: center;
     background: #fff;
@@ -209,48 +209,50 @@ nav{
     top: 0;
     width: 100%;
     transition: top 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.06);
 }
 nav a{
     text-decoration: none;
+    font-family: "t26-carbon",monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    display: inline;
+    text-decoration: none;
+    color: #000;
 }
 nav div{
     height: 24px;
+}
+#nav-links, #nav-email a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #nav-links{
     grid-area: text-links;
     justify-self: start;
 }
-#nav-links > a{
-    font-family: "t26-carbon",monospace;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 24px;
-    display: inline;
-    padding-right: 1em;
-    text-decoration: none;
-    color: #000;
+#nav-links a{
+    padding-right: 1.5em;
 }
 #nav-monogram{
     grid-area: monogram;
     justify-self: center;
+    align-self: center;
 }
 #nav-monogram > a > img{
     width: 24px;
     height: 24px;
     text-align: center;
 }
-#nav-icons{
-    grid-area: icon-links;
+#nav-email{
+    grid-area: email;
     justify-self: end;
 }
-#nav-icons > a > img{
-    width: 24px;
-    height: 24px;
-    display: inline;
-    padding-left: 1em;
+#nav-email span{
+    padding-right: 4px;
+    align-self: center;
 }
 .nav-up{
     top: -48px;
@@ -339,7 +341,7 @@ nav div{
     transition: background-size .3s ease;
 }
 .bevspot-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #779ddb 0);
+    background-image: linear-gradient(180deg, transparent 65%, rgba(119,157,219,0.75) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -368,7 +370,7 @@ nav div{
 }
 #more-link > a, #bio-contact > h2 > a{
     color: #000;
-    background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
+    background-image: linear-gradient(180deg, transparent 65%, rgba(255,0,83,0.7) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -393,6 +395,7 @@ nav div{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 14em 14em auto;
     padding: 6em;
+    margin-bottom: 4em;
 }
 
 #bio-image{
@@ -790,9 +793,6 @@ nav div{
     margin: -48px 2em 2em 2em;
 }
 
-
-
-
 /***** Footer section *****/
 footer{
     display: flex;
@@ -814,7 +814,7 @@ footer > a > img{
     width: 22px;
     padding: .5em .75em;
     height: auto;
-    opacity: .45;
+    opacity: .6;
     transition: opacity .3s ease;
 }
 footer > a > img:hover{
@@ -828,7 +828,8 @@ footer span{
     margin: 0 auto;
     padding-top: 15px;
     font-size: .8em;
-    opacity: .45;
+    line-height: 1.5;
+    opacity: .6;
 }
 
 /***** Coming soon section *****/

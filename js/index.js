@@ -41,10 +41,10 @@ $(document).ready(function() {
 
     // Typing animations for welcome page
     new TypeIt('.type-it', {
-        speed: 65,
+        speed: 55,
         lifeLike: false,
         autoStart: false,
-        startDelay: 1800
+        startDelay: 1600
     })
     .type('Hi, my name&#8217;s Zack.')
     .pause(800)
@@ -77,7 +77,7 @@ $(document).ready(function() {
     .pause(1100)
     .delete(11)
     .pause(300)
-    .type('<span>transparency</span>.')
+    .type('<span>authenticity</span>.')
     .pause(1100)
     .delete(13)
     .pause(300)

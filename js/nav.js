@@ -8,20 +8,18 @@ class Nav extends HTMLElement {
       this.innerHTML = `
         <nav>
             <div id="nav-links">
-                <a href="#work">work</a>
-                <a href="#bio">bio</a>
+                <a href="index.html#work">work</a>
+                <a href="index.html#bio">bio</a>
             </div>
             <div id="nav-monogram">
                 <a href="index.html#welcome">
                     <img src="images/icons/monogram.svg" alt="ZL">
                 </a>
             </div>
-            <div id="nav-icons">
+            <div id="nav-email">
                 <a href="mailto:hey@zack.design">
-                    <img src="images/icons/envelope.svg" alt="Email Zack">
-                </a>
-                <a href="files/ZackLabadie-Mar2021.pdf" target="_blank">
-                    <img src="images/icons/resume.svg" alt="Download resume">
+                    <span>Email</span>
+                    <img src="images/icons/ext-arrow.svg">
                 </a>
             </div>
         </nav>
