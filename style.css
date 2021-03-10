@@ -35,6 +35,145 @@
     font-style: italic;
 }
 
+/********** Hella fonts ***********/
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('fonts/founders/FoundersGrotesk-Bold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGrotesk-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('fonts/founders/FoundersGrotesk-Semibold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGrotesk-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('fonts/founders/FoundersGrotesk-Medium.woff2') format('woff2'),
+        url('fonts/founders/FoundersGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('fonts/founders/FoundersGrotesk-Regular.woff2') format('woff2'),
+        url('fonts/founders/FoundersGrotesk-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('fonts/founders/FoundersGrotesk-Light.woff2') format('woff2'),
+        url('fonts/founders/FoundersGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk Text';
+    src: url('fonts/founders/FoundersGroteskText-Bold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskText-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Text';
+    src: url('fonts/founders/FoundersGroteskText-Semibold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskText-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Text';
+    src: url('fonts/founders/FoundersGroteskText-Medium.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskText-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Text';
+    src: url('fonts/founders/FoundersGroteskText-Regular.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskText-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Text';
+    src: url('fonts/founders/FoundersGroteskText-Light.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    src: url('fonts/founders/FoundersGroteskMono-Bold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    src: url('fonts/founders/FoundersGroteskMono-Semibold.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskMono-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    src: url('fonts/founders/FoundersGroteskMono-Medium.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    src: url('fonts/founders/FoundersGroteskMono-Regular.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Founders Grotesk Mono';
+    src: url('fonts/founders/FoundersGroteskMono-Light.woff2') format('woff2'),
+        url('fonts/founders/FoundersGroteskMono-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/***** Custom properties *****/
+:root{
+    --sans-serif-title: 'Founders Grotesk', 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --sans-serif-body: 'Founders Grotesk Text', 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: 'Founders Grotesk Mono', "t26-carbon", monospace;
+    --ink: #000;
+    --highlight: #FF0053;
+    --l-pg-margin: 72px;
+    --m-pg-margin: 48px;
+    --s-pg-margin: 32px;
+    --xs-pg-margin: 24px;
+}
+
+
 /***** Global styles *****/
 html, body{
     min-height: 100%;
@@ -46,49 +185,53 @@ body{
     flex-flow: column nowrap;
     justify-content: space-between;
     width: 100vw;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     position: relative;
 }
 h1{
-    line-height: 1.35;
-    color: #000;
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.2em;
+    line-height: 1.15;
+    color: var(--ink);
+    font-family: var(--sans-serif-title);
+    font-size: 3.5rem;
 }
 h2{
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #000;
-    font-size: 1.6em;
+    font-family: var(--sans-serif-title);
+    color: var(--ink);
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 h3{
-    font-family: "t26-carbon",monospace;
-    font-size: 1.5em;
+    font-family: var(--mono);
+    font-size: 1.5rem;
     line-height: 1.4;
     font-weight: normal;
 }
 h6{
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #000;
+    font-family: var(--sans-serif-body);
+    color: var(--ink);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: .7em;
+    font-size: 1rem;
+    font-weight: 500;
 }
 .rule hr{
-    border: 1px solid #000;
+    border: 1px solid var(--ink);
     width: auto;
+    margin: 0;
 }
 #home .rule{
-    padding: 0 6em;
+    padding: 0 var(--l-pg-margin);
 }
 .light{
     opacity: .1;
 }
 p{
-    font-family: "t26-carbon",monospace;
-    line-height: 1.55;
+    font-family: var(--mono);
+    font-weight: 300;
+    line-height: 1.8;
 }
 a, a:visited{
-    color: #000;
+    color: var(--ink);
 }
 #loader-wrapper{
     position: fixed;
@@ -125,7 +268,7 @@ a, a:visited{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #FF0053;
+    background-color: var(--highlight);
     -webkit-animation: slide 1.5s ease infinite;
     animation: slide 1.5s ease infinite;
 }
@@ -133,7 +276,7 @@ a, a:visited{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #FF0053;
+    background-color: var(--highlight);
     -webkit-animation: slide-2 1.5s ease infinite;
     animation: slide-2 1.5s ease infinite;
 }
@@ -197,10 +340,10 @@ a, a:visited{
 nav{
     display: grid;
     grid-template-columns: 40px 1fr 1fr 1fr 40px;
-    grid-template-rows: 10px 30px 10px;
+    grid-template-rows: 12px 28px 12px;
     grid-template-areas:
         ". . . . ."
-        ". text-links monogram icon-links ."
+        ". text-links monogram email ."
         ". . . . .";
     align-items: center;
     background: #fff;
@@ -209,58 +352,62 @@ nav{
     top: 0;
     width: 100%;
     transition: top 0.2s ease-in-out;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.07);
 }
 nav a{
     text-decoration: none;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    display: inline;
+    text-decoration: none;
+    color: var(--ink);
+}
+#nav-links, #nav-email a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #nav-links{
     grid-area: text-links;
     justify-self: start;
 }
-#nav-links > a{
-    font-family: "t26-carbon",monospace;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline;
-    padding-right: 1em;
-    text-decoration: none;
-    color: #000;
+#nav-links a{
+    padding-right: 1.5rem;
 }
 #nav-monogram{
     grid-area: monogram;
     justify-self: center;
+    align-self: center;
+    height: 28px;
 }
 #nav-monogram > a > img{
-    width: 30px;
-    height: auto;
+    width: 28px;
+    height: 28px;
     text-align: center;
 }
-#nav-icons{
-    grid-area: icon-links;
+#nav-email{
+    grid-area: email;
     justify-self: end;
 }
-#nav-icons > a > img{
-    width: 25px;
-    height: auto;
-    display: inline;
-    padding-left: 1em;
+#nav-email span{
+    padding-right: 4px;
+    align-self: center;
 }
 .nav-up{
-    top: -50px;
+    top: -52px;
 }
 
 /***** Welcome screen *****/
 #home{
-    padding-top: 50px;
+    padding-top: 52px;
 }
 #welcome{
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 6em minmax(260px, 600px) 12em;
-    grid-template-rows: 6em 1fr 6em;
+    grid-template-columns: var(--l-pg-margin) auto var(--l-pg-margin);
+    grid-template-rows: 40px auto 40px;
     grid-template-areas:
         ". . ."
         ". intro ."
@@ -269,22 +416,23 @@ nav a{
 #welcome > div{
     grid-area: intro;
     align-self: center;
+    max-width: 832px;
 }
 #welcome > div > h1{
     font-weight: normal;
 }
 .type-it span{
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--sans-serif-title);
     display: inline;
-    font-weight: bold;
-    color: #FF0053;
+    font-weight: 600;
+    color: var(--highlight);
 }
 
 /***** Projects section *****/
 #work{
     display: grid;
-    grid-template-columns: 6em repeat(6, 1fr);
-    grid-template-rows: 6em 1fr 6em;
+    grid-template-columns: var(--l-pg-margin) repeat(6, 1fr);
+    grid-template-rows: 3rem 1fr 3rem;
     justify-items: start;
     align-items: center;
     min-height: 90vh;
@@ -305,17 +453,11 @@ nav a{
     justify-content: space-around;
 }
 .project{
-    margin: 1.25em 0;
+    margin: 1.75rem 0;
 }
 .project > a{
-    color: #000;
+    color: var(--ink);
 
-}
-.project:first-of-type{
-    margin: 0 0 1.25em 0;
-}
-.project:last-of-type{
-    margin: 1.25em 0 0 0;
 }
 #img-stack img, #img-stack video{
     position: absolute;
@@ -328,43 +470,43 @@ nav a{
     left: 0;
 }
 .compile-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #CBFF00 0);
+    background-image: linear-gradient(180deg, transparent 80%, #CBFF00 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
 .bevspot-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #779ddb 0);
+    background-image: linear-gradient(180deg, transparent 80%, rgba(119,157,219,0.75) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
 .lasso-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #5FFFBA 0);
+    background-image: linear-gradient(180deg, transparent 80%, #5FFFBA 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
 .other-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #00D8C1 0);
+    background-image: linear-gradient(180deg, transparent 80%, #00D8C1 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-.reframe-link > a{
-    background-image: linear-gradient(180deg, transparent 65%, #3FC6E6 0);
+.catch-link > a{
+    background-image: linear-gradient(180deg, transparent 80%, #FFC499 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
 }
-#more-link > a, #bio-contact > h2 > a{
-    color: #000;
-    background-image: linear-gradient(180deg, transparent 65%, #FF0053 0);
+#more-link > a, #bio-contact a h2{
+    color: var(--ink);
+    background-image: linear-gradient(180deg, transparent 80%, var(--highlight) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -373,10 +515,10 @@ nav a{
 .compile-link > a:hover,
 .bevspot-link > a:hover,
 .lasso-link > a:hover,
-.reframe-link > a:hover,
+.catch-link > a:hover,
 .other-link > a:hover,
 #more-link > a:hover,
-#bio-contact > h2 > a:hover,
+#bio-contact > a >h2:hover,
 .back-link > h5 > a:hover{
     background-size: 100% 100%;
     cursor: pointer;
@@ -385,10 +527,11 @@ nav a{
 /***** Bio section *****/
 #bio{
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 14em 14em auto;
-    padding: 6em;
+    grid-template-rows: 14rem 14rem auto;
+    /*TODO: tighten up, check out self-alignment*/
+    padding: var(--l-pg-margin);
 }
 
 #bio-image{
@@ -399,9 +542,6 @@ nav a{
     background-repeat: no-repeat;
     max-width: 620px;
 }
-/* #bio-image:hover{
-    background-image: url('images/young.jpg');
-} */
 #bio-contact{
     grid-column: 1 / 4;
     grid-row: 3 / 4;
@@ -411,8 +551,23 @@ nav a{
     flex-direction: column;
     justify-content: center;
 }
+#bio-contact a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
 #bio-contact h2{
-    line-height: 1.8;
+    line-height: 1;
+    margin: 0;
+}
+#bio-contact img{
+    width: 1.75rem;
+    height: 1.75rem;
+    opacity: .25;
+    margin: -.15rem 0 0 .75rem;
 }
 .columns{
     -webkit-column-count: 2;
@@ -421,7 +576,7 @@ nav a{
     -webkit-column-width: 280px;
     -moz-column-width: 280px;
     column-width: 280px;
-    padding: .75em 1em 1em 1.5em;
+    padding: .75rem 1rem 1rem 1.5rem;
     background: #ffffff;
     flex: 1;
 }
@@ -439,42 +594,20 @@ nav a{
     page-break-inside: avoid;
     break-inside: avoid;
     display: inline-block;
-    padding-right: 2em;
-}
-
-/***** Coming soon section *****/
-#coming-soon{
-    height: 100vh;
-    width: 100vw;
-    padding-top: 0;
-}
-#coming-soon main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6em;
-    height: 100%;
-}
-#coming-soon main h1{
-    text-align: center;
-}
-#coming-soon main p{
-    text-align: center;
-    max-width: 600px;
+    padding-right: 2rem;
 }
 
 /***** Work : General section *****/
 .work-wrapper{
-    padding: 3em 6em;
+    padding: 3rem var(--l-pg-margin);
     max-width: 1050px;
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 2rem;
 }
 .work-hero{
     height: 100vh;
     width: 100vw;
-    padding-top: 50px;
+    padding-top: 52px;
     box-sizing: border-box;
 }
 #more .work-hero{
@@ -484,8 +617,8 @@ nav a{
     align-items: center;
 }
 .hero-text h1{
-    margin-bottom: .4em;
-    font-size: 3em;
+    margin-bottom: .4rem;
+    font-size: 3rem;
     text-align: center;
 }
 .hero-text h4{
@@ -498,33 +631,36 @@ nav a{
 }
 .project-brief h1{
     max-width: 50%;
-    margin-bottom: .35em;
-    font-size: 3em;
+    margin-bottom: .35rem;
+    font-size: 3rem;
 }
 .project-brief h4, .hero-text h4{
     max-width: 540px;
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--sans-serif-title);
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 1.5rem;
     line-height: 1.4;
     margin-top: 0;
 }
 .project-brief h6, .other-work h6{
     margin: 0;
 }
+.other-work h6{
+    padding-top: .5rem;
+}
 .project-brief p{
-    margin-top: .5em;
+    margin-top: .5rem;
 }
 .brief-intro{
     grid-column: 1 / 3;
     grid-row: 1;
-    margin-bottom: 4em;
+    margin-bottom: 4rem;
 }
 .brief-goal{
     grid-column: 1 / 3;
     grid-row: 2;
-    padding-right: 8em;
-    padding-bottom: 2em;
+    padding-right: 8rem;
+    padding-bottom: 2rem;
 }
 .brief-goal p{
     max-width: 680px;
@@ -534,13 +670,14 @@ nav a{
     grid-row: 2 / 4;
 }
 .brief-skills ul{
-    padding-left: 1em;
+    padding-left: 1rem;
     list-style-type: square;
     line-height: 1.75;
-    margin-top: .5em;
+    margin-top: .5rem;
 }
 .brief-skills ul li{
-    font-family: "t26-carbon",monospace;
+    font-family: var(--mono);
+    font-weight: 300;
 }
 .brief-link{
     grid-column: 3;
@@ -548,13 +685,13 @@ nav a{
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-    margin-bottom: 6em;
+    margin-bottom: var(--l-pg-margin);
 }
 .project-link a{
     text-align: center;
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    padding: 1em 1.5em .75em 1.5em;
+    font-family: var(--sans-serif-title);
+    font-weight: 600;
+    padding: 1rem 1.5rem .75rem 1.5rem;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -562,7 +699,7 @@ nav a{
     line-height: 1;
     margin-bottom: 0;
     vertical-align: center;
-    font-size: .9em;
+    font-size: 1rem;
     transition: background-color 0.35s ease;
 }
 .brief-date{
@@ -580,20 +717,20 @@ nav a{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin: 3em 0;
+    margin: 3rem 0;
 }
 .work-section > div{
     box-sizing: border-box;
 }
 .work-wrapper .rule{
-    margin: 6em 0;
+    margin: var(--l-pg-margin) 0;
     width: 100%;
 }
 .work-text h5{
-    font-family: 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 1.4em;
-    margin: 0 0 1em 0;
+    font-family: var(--sans-serif-title);
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
 }
 .work-text h6{
     margin-top: 0;
@@ -601,7 +738,7 @@ nav a{
     opacity: .3;
 }
 .work-text p{
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1.5rem 0;
     max-width: 490px;
 }
 .full-flex{
@@ -682,7 +819,7 @@ nav a{
 .full-flex .work-columns{
     display: flex;
     flex-direction: row;
-        justify-content: space-between;
+    justify-content: space-between;
 }
 .full-flex .work-columns p{
     width: 48%;
@@ -691,12 +828,12 @@ nav a{
     display: inline-block;
     vertical-align: top;
 }
-.full-flex .work-columns p:nth-child(odd){
+/* .full-flex .work-columns p:nth-child(odd){
     padding-right: 25px;
 }
 .full-flex .work-columns p:nth-child(even){
     padding-left: 25px;
-}
+} */
 .one-third-left{
     margin-left: 33%;
 }
@@ -705,7 +842,7 @@ nav a{
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 8em 0;
+    margin: 8rem 0;
 }
 .end-link p{
     max-width: 440px;
@@ -713,7 +850,7 @@ nav a{
     opacity: .5;
 }
 .project-link a{
-    font-size: 1em;
+    font-size: 1rem;
 }
 .other-work{
     display: flex;
@@ -724,11 +861,11 @@ nav a{
 }
 .other-work h6{
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     opacity: 1;
 }
 .other-work h5{
-    margin: 1em 0;
+    margin: 1rem 0;
     box-sizing: border-box;
 }
 .other-work h5:nth-child(2n+1){
@@ -738,7 +875,7 @@ nav a{
     text-decoration: none;
 }
 .back-link{
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
 }
 .back-link a{
     text-decoration: none;
@@ -755,7 +892,7 @@ nav a{
     background-color: #CBFF00;
 }
 #compile-logo{
-    margin: 2.2em 0 2.2em 16%;
+    margin: 2.2rem 0 2.2rem 16%;
 }
 #bevspot .work-hero{
     background-color: #464f75;
@@ -784,22 +921,29 @@ nav a{
     background-position: 50% 30%;
     background-size: cover;
 }
-#reframe .project-link a{
-    background-color: #3FC6E6;
+#catch .project-link a{
+    background-color: #FFC499;
 }
 #more .hero-text{
-    padding: 0 2em;
+    padding: 0 2rem;
 }
 #more .work-hero img{
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 #more .end-link p, #more .hero-text h4{
     max-width: 500px;
 }
-
-
-
-
+#coming-soon .container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#coming-soon .content{
+    text-align: center;
+    max-width: 600px;
+    margin: -52px 2rem 2rem 2rem;
+}
 
 /***** Footer section *****/
 footer{
@@ -807,10 +951,9 @@ footer{
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    padding: 30px 40px;
-    background: #000;
+    padding: 3rem 2rem;
+    background: var(--ink);
     box-sizing: border-box;
-    position: absolute;
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -819,10 +962,10 @@ footer > a{
     text-decoration: none;
 }
 footer > a > img{
-    width: 22px;
-    padding: .5em .75em;
+    width: 1.75rem;
+    padding: .5rem 1rem;
     height: auto;
-    opacity: .45;
+    opacity: .6;
     transition: opacity .3s ease;
 }
 footer > a > img:hover{
@@ -830,52 +973,74 @@ footer > a > img:hover{
 }
 footer span{
     width: 100%;
-    font-family: "t26-carbon",monospace;
+    font-family: var(--mono);
     color: #fff;
     text-align: center;
     margin: 0 auto;
     padding-top: 15px;
-    font-size: .8em;
-    opacity: .45;
+    font-size: .8rem;
+    line-height: 1.5;
+    opacity: .6;
 }
 
 /***** Coming soon section *****/
-#coming-soon{
+#error{
     height: 100vh;
     width: 100vw;
-    padding-top: 0;
+    padding-bottom: 0;
 }
-#coming-soon main{
+#error main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6em;
     height: 100%;
+    margin-top: -52px;
 }
-#coming-soon main h1{
+#error main div{
+    padding: var(--l-pg-margin);
+    margin-top: 52px;
+}
+#error main div h1{
     text-align: center;
+    font-size: 8rem;
+    margin-bottom: 0;
+    line-height: 1;
+    color: var(--highlight);
 }
-#coming-soon main p{
+#error main div p{
     text-align: center;
     max-width: 600px;
+    margin-top: 20px;
 }
 
 /***** Responsive styling *****/
 @media (max-width: 1100px){
     .brief-goal{
-        padding-right: 6em;
+        padding-right: var(--l-pg-margin);
     }
     .project-brief h4{
-        padding-right: 3em;
+        padding-right: 3rem;
     }
 }
 @media (max-width: 1050px){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.25rem;
+    }
+    #welcome > div{
+        max-width: 720px;
+    }
     #bio-image{
         grid-column:1 / 8;
     }
     .work-text .work-columns{
         width: 100%;
+    }
+    .work-wrapper{
+        padding: 3rem var(--m-pg-margin);
     }
 }
 @media (max-width: 900px){
@@ -883,28 +1048,32 @@ footer span{
         grid-template-columns: 25px 1fr 1fr 1fr 25px;
     }
     #home .rule{
-        padding: 0 4em;
+        padding: 0 var(--m-pg-margin);
     }
     #welcome{
-        grid-template-columns: 4em minmax(260px, 600px) 8em;
+        grid-template-columns: var(--m-pg-margin) auto var(--m-pg-margin);
+    }
+    #welcome div{
+        max-width: 720px;
     }
     #work{
-        grid-template-columns: 4em repeat(6, 1fr);
+        grid-template-columns: var(--m-pg-margin) repeat(6, 1fr);
     }
     #img-stack{
         height: 80%;
     }
     .project{
-        margin: 1.15em 0;
+        margin: 1.5rem 0;
     }
     #bio{
-        padding: 6em 4em;
+        padding: 6rem var(--m-pg-margin);
+        margin-bottom: 0;
     }
     .work-wrapper{
-        padding: 3em 4em;
+        padding: 3rem 6rem;
     }
     .brief-goal{
-        padding-right: 4em;
+        padding-right: var(--m-pg-margin);
     }
     .mobile-hide{
         display: none;
@@ -912,15 +1081,18 @@ footer span{
     .half-flex{
         width: 100%;
     }
+    .full-flex .work-columns p{
+        width: 46%;
+    }
     #compile .half-flex.work-text{
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
         order: -1;
     }
     .new-row{
         margin: 0;
     }
     .work-text, .work-img{
-        margin: 20px 0;
+        margin: 30px 0;
     }
     .work-text.other-work{
         margin: 0 0 20px 0;
@@ -931,20 +1103,14 @@ footer span{
     .half-flex .work-columns{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .half-flex .work-columns p{
-        min-width: 50%;
+        width: 100%;
         max-width: 490px;
         box-sizing: border-box;
         display: inline-block;
         vertical-align: top;
-    }
-    .half-flex .work-columns p:nth-child(odd){
-        padding-right: 25px;
-        margin-bottom: 80
-    }
-    .half-flex .work-columns p:nth-child(even){
-        padding-left: 25px;
     }
     .sm-pad-l{
         padding-left: 0;
@@ -967,25 +1133,29 @@ footer span{
         max-width: 100%;
     }
     #compile-logo{
-        margin: 1.2em 0;
+        margin: 1.2rem 0;
     }
-    footer{
+    /* footer{
         padding: 30px 40px 20px 40px;
-    }
+    } */
     .work-wrapper{
+        padding: var(--m-pg-margin);
         margin-bottom: 0;
         margin: 0 auto;
     }
 }
 @media (max-width: 760px){
     h1{
-        font-size: 1.9em;
+        font-size: 2.5rem;
     }
     h2{
-        font-size: 1.45em;
+        font-size: 2rem;
+    }
+    h6{
+        font-size: .8rem;
     }
     .project{
-        margin: 1.1em 0;
+        margin: 1.5rem 0;
     }
     #bio-image{
         grid-column: 1 / 9;
@@ -996,7 +1166,7 @@ footer span{
     .brief-goal{
         grid-column: 1 / 4;
         grid-row: 2 / 3;
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
     }
     .brief-skills{
         grid-column: 1 / 3;
@@ -1022,13 +1192,13 @@ footer span{
         max-height: 800px;
     }
     .end-link{
-        margin: 5em 0;
+        margin: 5rem 0;
     }
     .other-work h5{
-        font-size: 1.25em;
-        margin: .75em 0;
+        font-size: 1.5rem;
+        margin: .75rem 0;
     }
-    .full-flex .work-columns, .half-flex .work-columns{
+    .full-flex .work-columns{
         flex-wrap: wrap;
     }
     .full-flex .work-columns p, .half-flex .work-columns p{
@@ -1052,13 +1222,16 @@ footer span{
         grid-column: 1 / 11;
         grid-row-start: 2;
     }
+    .columns{
+        padding: .75rem 1rem 1rem 0;
+    }
     .project-brief{
         grid-template-columns: 2fr 1fr;
     }
     .brief-intro{
         grid-column: 1 / 4;
         grid-row: 1;
-        margin-bottom: 2em;
+        margin-bottom: 2rem;
     }
     .brief-intro h4{
         margin-bottom: 0;
@@ -1084,9 +1257,6 @@ footer span{
         grid-column: 2;
         grid-row: 5 / 6;
     }
-    .new-row{
-        margin-top: 60px;
-    }
     #bevspot .work-hero{
         justify-content: flex-end;
     }
@@ -1095,26 +1265,32 @@ footer span{
         width: auto;
         height: 100%;
     }
-    body{
-        padding-bottom: 120px;
-    }
 
 }
 @media (max-width: 600px){
     h1{
-        font-size: 1.7em;
+        font-size: 2rem;
     }
     section > hr{
-        margin: 0 3em;
+        margin: 0 var(--s-pg-margin);
     }
     #welcome{
-        grid-template-columns: 3em minmax(260px, 600px) 6em;
-    }
-    #work{
-        grid-template-columns: 3em repeat(6, 1fr);
+        grid-template-columns: var(--s-pg-margin) auto var(--s-pg-margin);
     }
     #home .rule{
-        padding: 0 3em;
+        padding: 0 var(--s-pg-margin);
+    }
+    #work{
+        grid-template-columns: var(--s-pg-margin) repeat(6, 1fr);
+    }
+    #bio{
+        padding: 6rem var(--s-pg-margin);
+    }
+    .work-wrapper{
+        padding: 1.5rem var(--s-pg-margin);
+    }
+    #welcome div{
+        padding-right: 24px;
     }
     #img-stack{
         grid-column: 3 / 8;
@@ -1125,14 +1301,8 @@ footer span{
         grid-column: 2 / 8;
         z-index: 2;
     }
-    #bio{
-        padding: 6em 3em;
-    }
     .columns{
-        padding: .75em 2em 1em 0em;
-    }
-    .work-wrapper{
-        padding: 1.5em 3em;
+        padding: .75rem 2rem 1rem 0rem;
     }
     .project-brief{
         grid-template-columns: 1fr 1fr;
@@ -1146,38 +1316,38 @@ footer span{
     .brief-skills{
         grid-column: 1 / 3;
         grid-row: 5;
-        margin-top: 1.5em;
+        margin-top: 1.5rem;
     }
     .brief-date{
         grid-column: 1;
         grid-row: 4;
-        margin-top: 1.5em;
+        margin-top: 1.5rem;
     }
     .brief-team{
         grid-column: 2;
         grid-row: 4;
-        margin-top: 1.5em;
+        margin-top: 1.5rem;
     }
     .brief-link{
-        margin-bottom: 4.5em;
+        margin-bottom: 4.5rem;
     }
     .end-link{
-        margin: 3em 0;
+        margin: var(--s-pg-margin) 0;
     }
     .other-work h5{
         width: 100%;
-        margin: .8em 0;
+        margin: .8rem 0;
     }
     .other-work h5:nth-child(2n+1){
         margin-left: 0;
         padding-left: 0;
     }
     .project-link a{
-        font-size: .9em;
+        font-size: .9rem;
     }
     .end-link{
         box-sizing: border-box;
-        padding: 0 1em;
+        padding: 0 1rem;
     }
     .end-link p{
         max-width: 350px;
@@ -1195,23 +1365,41 @@ footer span{
 
 @media (max-width: 490px){
     nav{
-        grid-template-columns: 25px 1fr 25px 1fr 25px;
+        grid-template-columns: var(--xs-pg-margin) 1fr 25px 1fr var(--xs-pg-margin);
     }
     #nav-monogram{
         display: none;
     }
     h1{
-        font-size: 1.5em;
+        font-size: 1.75rem;
+        line-height: 1.3;
     }
     h2{
-        font-size: 1.3em;
+        font-size: 1.5rem;
     }
     p{
-        font-size: .9em;
+        font-size: .9rem;
+    }
+    section > hr{
+        margin: 0 var(--xs-pg-margin);
+    }
+    #welcome{
+        grid-template-columns: var(--xs-pg-margin) auto var(--xs-pg-margin);
+    }
+    #home .rule{
+        padding: 0 var(--xs-pg-margin);
+    }
+    #work{
+        grid-template-columns: var(--xs-pg-margin) repeat(6, 1fr);
+        height: auto;
+        min-height: 0;
     }
     #bio{
-        padding: 6em 0;
-        grid-template-rows: 16em auto;
+        padding: 0;
+        grid-template-rows: 16rem auto;
+    }
+    .work-wrapper{
+        padding: 1.5rem var(--xs-pg-margin);
     }
     #bio-image{
         grid-column: 1 / 13;
@@ -1221,25 +1409,24 @@ footer span{
         grid-column: 1 / 13;
         grid-row-start: 2;
     }
+    footer > a > img{
+        width: 1.5rem;
+        padding: .5rem .75rem;
+    }
     .columns{
-        padding: 1em 2em 1em 2em;
+        padding: 1.75rem var(--xs-pg-margin);
+        margin-bottom: 2rem;
     }
-    #coming-soon main{
-    padding: 3em;
-    }
-    .work-wrapper{
-        padding: 1.5em 25px;
+    #error main{
+        padding: 3rem;
     }
     .work-wrapper .rule{
-        margin: 4em 0;
-    }
-    .new-row{
-        margin-top: 40px;
+        margin: 40px 0;
     }
     .project-link a{
-        font-size: .8em;
+        font-size: .8rem;
     }
-    /* #bevspot .work-hero img{
-        height: 100%;
-    } */
+    .lazy-hide{
+        display: none;
+    }
 }

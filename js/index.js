@@ -41,10 +41,10 @@ $(document).ready(function() {
 
     // Typing animations for welcome page
     new TypeIt('.type-it', {
-        speed: 65,
+        speed: 55,
         lifeLike: false,
         autoStart: false,
-        startDelay: 1800
+        startDelay: 1600
     })
     .type('Hi, my name&#8217;s Zack.')
     .pause(800)
@@ -77,11 +77,11 @@ $(document).ready(function() {
     .pause(1100)
     .delete(11)
     .pause(300)
-    .type('<span>transparency</span>.')
+    .type('<span>authenticity</span>.')
     .pause(1100)
     .delete(13)
     .pause(300)
-    .type('<span>technology</span>.')
+    .type('<span>innovation</span>.')
     .pause(1100)
     .delete(11)
     .pause(300)
@@ -97,7 +97,7 @@ $(document).ready(function() {
     .pause(1100)
     .delete(14)
     .pause(300)
-    .type('<span>Cinnamon Toast Crunch</span>.')
+    .type('<span>solving problems</span>.')
     ;
 
 
@@ -130,11 +130,11 @@ $(document).ready(function() {
         $('.other-img').removeClass('slide-left');
     });
     //
-    $('#work-links .reframe-link a').hover(function(){
-        $('.reframe-img').addClass('slide-left');
+    $('#work-links .catch-link a').hover(function(){
+        $('.catch-img').addClass('slide-left');
     },
     function(){
-        $('.reframe-img').removeClass('slide-left');
+        $('.catch-img').removeClass('slide-left');
     });
 
 
@@ -176,118 +176,4 @@ $(document).ready(function() {
         }
         }
     });
-
-//     particlesJS.load('particles-js', 'assets/particles.json', function() {
-//   console.log('callback - particles.js config loaded');
-// });
-
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#7dbb24"
-    },
-    "shape": {
-      "type": "polygon",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 6
-      },
-    },
-    "opacity": {
-      "value": 0.4,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": .5,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 4,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#7dbb24",
-      "opacity": 0.2,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 5,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-
-
-
-
 });

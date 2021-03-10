@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Zack Labadie | Lasso</title>
     <link rel="stylesheet" href="https://use.typekit.net/vxr5wxk.css">
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/typeit@5.4.1/dist/typeit.min.js"></script> -->
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/nav.js" defer></script>
+    <script type="text/javascript" src="js/footer.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116358405-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,10 +23,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="manifest" href="favicons/site.webmanifest">
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
-    <link rel="shortcut icon" href="favicons/favicon.ico">
-    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
 
     <script type="text/javascript">
@@ -43,32 +44,14 @@
             <div></div>
         </div>
     </div>
-    <nav>
-        <div id="nav-links">
-            <a href="index.html#work">work</a>
-            <a href="index.html#bio">bio</a>
-        </div>
-        <div id="nav-monogram">
-            <a href="index.html#welcome">
-                <img src="images/icons/monogram.svg" alt="ZL">
-            </a>
-        </div>
-        <div id="nav-icons">
-            <a href="files/ZackLabadie-Resume.pdf" target="_blank">
-                <img src="images/icons/download.svg" alt="Download resume">
-            </a>
-            <a href="mailto:hello@zacklabadie.com">
-                <img src="images/icons/mail.svg" alt="Email">
-            </a>
-        </div>
-    </nav>
+    <nav-component></nav-component>
     <div class="work-hero">
     </div>
     <div class="work-wrapper">
         <div class="project-brief">
             <div class="brief-intro">
                 <h1>Lasso</h1>
-                <h4>Designing a modern solution to the overcrowded, over&#8209;complicated world of streaming services</h4>
+                <h4>Designing a modern solution to the overcrowded, over&#8209;complicated world of streaming services.</h4>
             </div>
             <div class="project-link brief-link">
                 <a href="https://xd.adobe.com/view/3e48dcb2-262c-4d35-b489-235cda0808f0/" target="_blank" >
@@ -103,8 +86,8 @@
             <div class="full-flex work-text">
                 <h5>Concept</h5>
                 <div class="work-columns">
-                    <p>The first generation of streaming video services, led by Netflix, Hulu, and others, has been a competition measured by the breadth and quality of content. Each platform strives for binge-worthy exclusives and original programming. The result for customers, however, is access to thousands of movies and TV shows divided across multiple walled gardens with access to content heavily obscured by algorithms and business incentives. This means Netflix and the like often offer biased or inaccurate content suggestions, leaving users to unhappily browse for extended periods of time when looking for something to watch. Lasso was designed to be a second-generation streaming platform, acting as a consolidated library for the content offered by existing streaming services.</p>
-                    <p>My process began with research and a competitve analysis. <b>More than 50%</b> of streaming video subscribers under 45 subscribe to more than one service. <b>63%</b> have a cable subscription in addition to one or more streaming services. It is ridiculous to require these users to keep a running list of where and how to watch their favorite TV and movies. It is unethical design to bury legitimate content under dozens of Netflix (or Hulu, or Amazon) Originals. Entertainment should not require boredom or frustration. Paying customers deserve a smart and human-centered browsing experience. Keeping this in mind, I analyzed Netflix, Hulu, Youtube (streaming services) and 1Password (account consolidation) looking for strengths, weaknesses, and common design patterns.</p>
+                    <p>The first generation of streaming video services, led by Netflix, Hulu, and others, has been a competition measured by the breadth and quality of content. Each platform strives for binge-worthy exclusives and original programming. The result for customers, however, is access to thousands of movies and TV shows divided across multiple walled gardens with access to content heavily obscured by algorithms and business incentives.<br/><br/>This means Netflix and the like often offer biased or inaccurate content suggestions, leaving users to unhappily browse for extended periods of time when looking for something to watch. Lasso was designed to be a second-generation streaming platform, acting as a consolidated library for the content offered by existing publishers.</p>
+                    <p>My process began with research and a competitve analysis. <b>More than 50%</b> of streaming video subscribers under 45 subscribe to more than one service. <b>63%</b> have a cable subscription in addition to one or more streaming services. It is ridiculous to require these users to keep a running list of where and how to watch their favorite TV and movies. It is unethical design to bury legitimate content under dozens of Netflix (or Hulu, or Amazon) Originals. Entertainment should not require boredom or frustration. Paying customers deserve a smart and human-centered browsing experience.<br/><br/>Keeping this in mind, I analyzed Netflix, Hulu, Youtube (streaming services) and 1Password (account consolidation) looking for strengths, weaknesses, and common design&nbsp;patterns.</p>
                 </div>
             </div>
             <div class="full-flex work-img new-row">
@@ -132,10 +115,11 @@
             <hr>
         </div>
         <div class="work-section">
-            <div class="half-flex work-text sm-pad-l">
+            <div class="full-flex work-text">
                 <h5>Storyboarding</h5>
                 <div class="work-columns">
-                    <p>After auditing the competition, I created a series of personas and scenarios to better understand the motivation(s) of the end user. While these people and situations are entirely imagined, I believe that creating detailed and authentic personas early on in the design process is crucial to solving real problems in a way that resonates with real people. By actively brainstorming edge use cases, I could also begin building a preliminary feature list early in the project lifecycle. High-priority personas denoted core user scenarios and were used as success metrics throughout the project lifecycle.</p>
+                    <p>After auditing the competition, I created a series of personas and scenarios to better understand the motivations of the end user. While these people and situations are entirely imagined, I believe that creating detailed and authentic personas early on in the design process is crucial to solving real problems in a way that resonates with real&nbsp;people.</p>
+                    <p>By actively brainstorming edge use cases, I could also begin building a preliminary feature list early in the project lifecycle. High-priority personas denoted core user scenarios and were used as success metrics throughout the project lifecycle.</p>
                 </div>
             </div>
             <div class="two-thirds-flex work-img one-third-left new-row">
@@ -177,7 +161,7 @@
             <div class="half-flex work-text sm-pad-l">
                 <h5>Wireframes</h5>
                 <div class="work-columns">
-                    <p>The user flow chart became the blueprint for gray box wireframes. Using Adobe XD, I created screens for each stage of the user flow. I restricted myself to only Helvetica Neue and a predominantly grayscale palette so that I could conduct user tests at arbitrary fidelity with minimal visual distractions. Once the static wireframes were complete, I linked the screens to create a clickable prototype for user testing.</p>
+                    <p>The user flow chart became the blueprint for gray box wireframes. Using Adobe XD, I created screens for each stage of the user flow. I restricted myself to only Helvetica Neue and a predominantly grayscale palette so that I could conduct user tests at arbitrary fidelity with minimal visual distractions. Once the static wireframes were complete, I linked the screens to create a clickable prototype for user&nbsp;testing.</p>
                 </div>
             </div>
             <div class="two-thirds-flex one-third-left work-img new-row">
@@ -198,8 +182,8 @@
             <div class="full-flex work-text">
                 <h5>User Testing</h5>
                 <div class="work-columns">
-                    <p>Once the interactive prototype was ready, I drafted a usability test based on common user scenarios. I set key goals for the test along with a description of ideal participants. The usability test was designed to last about 15 minutes, including a brief introduction from me, some background questions for the participant, and several basic tasks such as "Please find and play an episode of The Office". I took notes throughout the test as well as screen recordings. I then compiled the results into a usability summary which included difficulty ratings for each task, direct quotes from users, and other insights.</p>
-                    <p>One of my most important goals when user testing was to ensure that the Lasso onboarding process was simple and easy to understand. A smooth onboarding experience was critical to getting new users into the app and quickly demonstrating value. I also used user testing as an opportunity for user research, learning more about user's browsing habits and how they digest information. Testing results were generally positive, but did reveal opportunities for improvement that might have otherwise gone unnoticed; these include minor changes such as making copy more descriptive, and more major changes such as introducing in-app tooltips to explain key features.</p>
+                    <p>Once the interactive prototype was ready, I drafted a usability test based on common user scenarios. I set key goals for the test along with a description of ideal participants. The usability test was designed to last about 15 minutes, including a brief introduction from me, some background questions for the participant, and several basic tasks such as "Please find and play an episode of The Office". I took notes throughout the test as well as screen recordings. I then compiled the results into a usability summary which included difficulty ratings for each task, direct quotes from users, and other&nbsp;insights.</p>
+                    <p>One of my most important goals when user testing was to ensure that the Lasso onboarding process was simple and easy to understand. A smooth onboarding experience was critical to getting new users into the app and quickly demonstrating value. I also used user testing as an opportunity for user research, learning more about user's browsing habits and how they digest information. Testing results were generally positive, but did reveal opportunities for improvement that might have otherwise gone unnoticed; these include minor changes such as making copy more descriptive, and more major changes such as introducing in-app tooltips to explain key&nbsp;features.</p>
                 </div>
             </div>
             <div class="two-thirds-flex one-third-left work-img new-row">
@@ -228,9 +212,9 @@
                 </a>
             </div>
             <div class="half-flex work-text sm-pad-l">
-                <h5>Logo & visual development</h5>
+                <h5>Logo & Design System</h5>
                 <div class="work-columns">
-                    <p>After updating the Lasso prototype to reflect insights from user testing, I began developing a logo and visual identity for the app. Although this project's primary focus was on user experience and interaction design, I believe cohesive visual design is fundamental to both. I began with the logo, sketching dozens of ideas inspired by video iconography, the letter L, and the concept of consolidation. These were narrowed down to two options, each with several color explorations, before the final logo was chosen and polished.</p>
+                    <p>After updating the Lasso prototype to reflect insights from user testing, I began developing a logo and visual identity for the app. Although this project's primary focus was on user experience and interaction design, I believe cohesive visual design is fundamental to both. I began with the logo, sketching dozens of ideas inspired by video iconography, the letter L, and the concept of consolidation. These were narrowed down to two options, each with several color explorations, before the final logo was chosen and further&nbsp;refined.</p>
                     <p>I then expanded this branding into a design system that could be applied throughout the application. Since Lasso was designed for televisions, it features large typography that's legible from a distance and a dark background ideal for low-light environments. Primary and secondary brand colors were used sparingly throughout the app, meant to pop against swaths of black. Azo Sans was used in headers to inject a bit of personality, while Aktiv Grotesk was used in forms and body text due to its simplicity and legibility at small sizes.</p>
                 </div>
             </div>
@@ -260,9 +244,9 @@
         </div>
         <div class="work-section">
             <div class="half-flex work-text sm-pad-r">
-                <h5>High-fidelity mockups</h5>
+                <h5>Visual Development</h5>
                 <div class="work-columns">
-                    <p>The final step in the Lasso design process was bringing my interactive prototype to full visual fidelity. Thanks to user testing, wireframes already existed for almost every page of the app; I simply had to introduce new typography, colors, and imagery throughout. I made final edits sitting on the couch, mirroring my laptop display on a 60" TV. You can <a href="https://xd.adobe.com/view/3e48dcb2-262c-4d35-b489-235cda0808f0/" target="_blank">check out the full prototype here</a>.</p>
+                    <p>The final step in the Lasso design process was bringing my interactive prototype to full visual fidelity. Thanks to user testing, wireframes already existed for almost every page of the app; I simply had to introduce new typography, colors, and imagery throughout. I made final edits in context, mirroring my laptop display on a 60" TV. You can <a href="https://xd.adobe.com/view/3e48dcb2-262c-4d35-b489-235cda0808f0/" target="_blank">check out the full prototype here</a>.</p>
                 </div>
             </div>
             <div class="half-flex work-img sm-pad-l">
@@ -303,7 +287,7 @@
             <div class="half-flex work-text sm-pad-l">
                 <h5>Next steps</h5>
                 <div class="work-columns">
-                    <p>Lasso is far from finished. One area of particular interest is further developing a set of preference tools that could aid in Lasso's machine learning customization while empowering users who prefer fine-tuned control. By aggregating the data of several streaming apps, Lasso could form a more holistic image of the user's preferences and  habits. I believe this is the first step towards a modern, human-centered TV viewing experience. I believe it's also crucial be transparent about these algorithmically-derived insights so that when they're wrong, users are able to correct them without confusion or frustration.</p>
+                    <p>Lasso is far from finished. One area of particular interest is further developing preference tools that could aid in Lasso's AI while empowering users who prefer fine-tuned control. By aggregating the data of several streaming apps, Lasso could form a more holistic image of the user's preferences and habits. I believe this is the first step towards a modern, human-centered TV viewing experience. I believe it's also crucial be transparent about these algorithmically-derived insights so that when they're wrong, users are able to correct them without confusion or&nbsp;frustration.</p>
                 </div>
             </div>
             <div class="half-flex work-img sm-pad-r new-row">
@@ -326,39 +310,20 @@
         </div>
         <div class="work-text other-work">
             <h6>Additional work</h6>
-            <h5 class="compile-link">
-                <a href="compile.html">Compile</a>
+            <h5 class="catch-link">
+                <a href="catch.html">Catch</a>
             </h5>
             <h5 class="bevspot-link">
                 <a href="bevspot.html">BevSpot</a>
             </h5>
-            <h5 class="reframe-link">
-                <a href="reframe.html">Reframe</a>
+            <h5 class="compile-link">
+                <a href="compile.html">Compile</a>
             </h5>
             <h5 class="other-link">
                 <a href="other-projects.html">Other projects</a>
             </h5>
         </div>
     </div>
-    <footer>
-        <a href="https://www.linkedin.com/in/zacklabadie/" target="_blank">
-            <img src="images/icons/linked-in.svg" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/zacklabadie" target="_blank">
-            <img src="images/icons/github.svg" alt="GitHub">
-        </a>
-        <a href="https://www.facebook.com/labadie.z" target="_blank">
-            <img src="images/icons/facebook.svg" alt="Facebook">
-        </a>
-        <a href="https://twitter.com/ZackLabadie" target="_blank">
-            <img src="images/icons/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://www.instagram.com/zacklabadie/" target="_blank">
-            <img src="images/icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://open.spotify.com/user/zacklabadie" target="_blank">
-            <img src="images/icons/spotify.svg" alt="Spotify">
-        </a>
-        <span>Designed & developed by Zack.</span>
-    </footer>
+    <footer-component></footer-component>
+
 </body>

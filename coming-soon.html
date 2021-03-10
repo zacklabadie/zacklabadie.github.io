@@ -10,6 +10,8 @@
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.4.1/dist/typeit.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/nav.js" defer></script>
+    <script type="text/javascript" src="js/footer.js" defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -21,32 +23,15 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-
 <body id="coming-soon">
-    <nav>
-        <div id="nav-links">
-            <a href="index.html#work">work</a>
-            <a href="index.html#bio">bio</a>
-        </div>
-        <div id="nav-monogram">
-            <a href="index.html#welcome">
-                <img src="images/icons/monogram.svg">
-            </a>
-        </div>
-        <div id="nav-icons">
-            <a href="files/ZackLabadie-Resume.pdf" target="_blank">
-                <img src="images/icons/download.svg">
-            </a>
-            <a href="mailto:hello@zacklabadie.com">
-                <img src="images/icons/mail.svg">
-            </a>
-        </div>
-    </nav>
+    <nav-component></nav-component>
     <main>
-        <div>
-            <h1>This page is still under development...</h1>
-            <h1>😅</h1>
-            <p>If you're interested in examples of my work, <a href="mailto:hello@zacklabadie.com">please shoot me an email</a>. I'd be more than happy to send along a PDF of relevant&nbsp;projects.</p>
+        <div class="container">
+                <div class="content">
+                    <h1>This page is still under development...</h1>
+                    <h1>😅</h1>
+                    <p>For work samples, <a href="mailto:hey@zack.design">please shoot me an email</a>. I'd be more than happy to send along a PDF of relevant&nbsp;projects.</p>
+                </div>
         </div>
     </main>
 </body>
