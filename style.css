@@ -165,7 +165,8 @@
     --sans-serif-title: 'Founders Grotesk', 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     --sans-serif-body: 'Founders Grotesk Text', 'Larsseit', "Helvetica Neue", Helvetica, Arial, sans-serif;
     --mono: 'Founders Grotesk Mono', "t26-carbon", monospace;
-    --ink: #000;
+    --ink: #1A1717;
+    --paper: #FAF8F7;
     --highlight: #FF0053;
     --l-pg-margin: 72px;
     --m-pg-margin: 48px;
@@ -185,8 +186,8 @@ body{
     flex-flow: column nowrap;
     justify-content: space-between;
     width: 100vw;
-    /* padding-bottom: 100px; */
     position: relative;
+    background-color: var(--paper);
 }
 h1{
     line-height: 1.15;
@@ -222,9 +223,9 @@ h6{
 #home .rule{
     padding: 0 var(--l-pg-margin);
 }
-.light{
+/* .light{
     opacity: .1;
-}
+} */
 p{
     font-family: var(--mono);
     font-weight: 300;
@@ -351,7 +352,8 @@ nav{
     position: fixed;
     top: 0;
     width: 100%;
-    transition: top 0.2s ease-in-out;
+    transition: top 0.15s ease-in-out;
+    background-color: var(--paper);
 }
 nav a{
     text-decoration: none;
@@ -394,6 +396,10 @@ nav a{
 #nav-email span{
     padding-right: 4px;
     align-self: center;
+}
+#nav-email img{
+    opacity: .3;
+    background-blend-mode: multiply;
 }
 .nav-up{
     top: -52px;
@@ -475,6 +481,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 .bevspot-link > a{
     background-image: linear-gradient(180deg, transparent 80%, rgba(119,157,219,0.75) 0);
@@ -482,6 +489,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 .lasso-link > a{
     background-image: linear-gradient(180deg, transparent 80%, #5FFFBA 0);
@@ -489,6 +497,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 .other-link > a{
     background-image: linear-gradient(180deg, transparent 80%, #00D8C1 0);
@@ -496,6 +505,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 .catch-link > a{
     background-image: linear-gradient(180deg, transparent 80%, #FFC499 0);
@@ -503,6 +513,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 #more-link > a, #bio-contact a h2{
     color: var(--ink);
@@ -511,6 +522,7 @@ nav a{
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
+    mix-blend-mode: multiply;
 }
 .compile-link > a:hover,
 .bevspot-link > a:hover,
@@ -532,6 +544,7 @@ nav a{
     grid-template-rows: 14rem 14rem auto;
     /*TODO: tighten up, check out self-alignment*/
     padding: var(--l-pg-margin);
+    margin: 2rem 0;
 }
 
 #bio-image{
@@ -567,7 +580,8 @@ nav a{
     width: 1.75rem;
     height: 1.75rem;
     opacity: .25;
-    margin: -.15rem 0 0 .75rem;
+    margin: -.1rem 0 0 1rem;
+    background-blend-mode: multiply;
 }
 .columns{
     -webkit-column-count: 2;
@@ -576,9 +590,13 @@ nav a{
     -webkit-column-width: 280px;
     -moz-column-width: 280px;
     column-width: 280px;
-    padding: .75rem 1rem 1rem 1.5rem;
+    padding: 1rem 2rem;
     background: #ffffff;
     flex: 1;
+    border: solid 2px var(--ink)
+}
+.columns a{
+    font-weight: 500;
 }
 #bio-about{
     grid-column: 4 / 13;
@@ -1223,7 +1241,7 @@ footer span{
         grid-row-start: 2;
     }
     .columns{
-        padding: .75rem 1rem 1rem 0;
+        padding: .75rem 1rem 1rem .75rem;
     }
     .project-brief{
         grid-template-columns: 2fr 1fr;
@@ -1302,7 +1320,7 @@ footer span{
         z-index: 2;
     }
     .columns{
-        padding: .75rem 2rem 1rem 0rem;
+        padding: .75rem 1rem;
     }
     .project-brief{
         grid-template-columns: 1fr 1fr;
@@ -1397,6 +1415,7 @@ footer span{
     #bio{
         padding: 0;
         grid-template-rows: 16rem auto;
+        margin-top: 3.5rem;
     }
     .work-wrapper{
         padding: 1.5rem var(--xs-pg-margin);
@@ -1404,6 +1423,7 @@ footer span{
     #bio-image{
         grid-column: 1 / 13;
         grid-row: 1 / 3;
+        background-position: center;
     }
     #bio-about{
         grid-column: 1 / 13;
@@ -1416,6 +1436,8 @@ footer span{
     .columns{
         padding: 1.75rem var(--xs-pg-margin);
         margin-bottom: 2rem;
+        border: none;
+        background-color: var(--paper);
     }
     #error main{
         padding: 3rem;
