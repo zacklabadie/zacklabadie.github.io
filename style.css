@@ -1479,6 +1479,17 @@ footer span{
     .work-wrapper{
         padding: 1.5rem var(--xs-pg-margin);
     }
+    #circle{
+        width: 128px;
+        height: 128px;
+        grid-column: 1;
+        grid-row: 3;
+        margin: -124px 0 0 -54px;
+        opacity: .65;
+        background-blend-mode: multiply;
+        filter: blur(48px);
+        z-index: 1;
+    }
     #bio-image{
         grid-column: 1 / 13;
         grid-row: 1 / 3;
