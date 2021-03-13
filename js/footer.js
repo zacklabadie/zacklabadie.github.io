@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
               <a href="https://open.spotify.com/user/zacklabadie" target="_blank">
                   <img src="images/icons/spotify.svg" alt="Spotify">
               </a>
-              <span>Made by Zack<br>
+              <span>Designed &#38; built by Zack<br>
               Set in Founders Grotesk</span>
           </footer>
       `;
