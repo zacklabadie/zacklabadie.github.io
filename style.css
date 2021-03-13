@@ -167,13 +167,33 @@
     --mono: 'Founders Grotesk Mono', "t26-carbon", monospace;
     --ink: #1A1717;
     --paper: #FAF8F7;
-    --highlight: #FF0053;
+    --highlight: linear-gradient(45deg, #7A14FF 0%, #4400FF 100%);
+    --link-blue: #4400FF;
     --l-pg-margin: 72px;
     --m-pg-margin: 48px;
     --s-pg-margin: 32px;
     --xs-pg-margin: 24px;
 }
 
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: #4400FF;
+
+  /* Create the gradient. */
+  background-image: var(--highlight);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
 
 /***** Global styles *****/
 html, body{
@@ -223,9 +243,6 @@ h6{
 #home .rule{
     padding: 0 var(--l-pg-margin);
 }
-/* .light{
-    opacity: .1;
-} */
 p{
     font-family: var(--mono);
     font-weight: 300;
@@ -431,7 +448,30 @@ nav a{
     font-family: var(--sans-serif-title);
     display: inline;
     font-weight: 600;
-    color: var(--highlight);
+}
+.type-it span span{
+    /* Fallback: Set a background color. */
+    background-color: green;
+
+    /* Create the gradient. */
+    background-image: var(--highlight);
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    /* Credit to Sarah L. Fossheim for the technique! https://fossheim.io/writing/posts/css-text-gradient/ */
+  }
+
+.light{
+    opacity: 10%;
 }
 
 /***** Projects section *****/
@@ -476,7 +516,7 @@ nav a{
     left: 0;
 }
 .compile-link > a{
-    background-image: linear-gradient(180deg, transparent 80%, #CBFF00 0);
+    background-image: linear-gradient(180deg, transparent 85%, #CBFF00 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -484,7 +524,7 @@ nav a{
     mix-blend-mode: multiply;
 }
 .bevspot-link > a{
-    background-image: linear-gradient(180deg, transparent 80%, rgba(119,157,219,0.75) 0);
+    background-image: linear-gradient(180deg, transparent 85%, rgba(119,157,219,0.75) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -492,7 +532,7 @@ nav a{
     mix-blend-mode: multiply;
 }
 .lasso-link > a{
-    background-image: linear-gradient(180deg, transparent 80%, #5FFFBA 0);
+    background-image: linear-gradient(180deg, transparent 85%, #5FFFBA 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -500,7 +540,7 @@ nav a{
     mix-blend-mode: multiply;
 }
 .other-link > a{
-    background-image: linear-gradient(180deg, transparent 80%, #00D8C1 0);
+    background-image: linear-gradient(180deg, transparent 85%, #00D8C1 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -508,7 +548,7 @@ nav a{
     mix-blend-mode: multiply;
 }
 .catch-link > a{
-    background-image: linear-gradient(180deg, transparent 80%, #FFC499 0);
+    background-image: linear-gradient(180deg, transparent 85%, #FFC499 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -517,12 +557,13 @@ nav a{
 }
 #more-link > a, #bio-contact a h2{
     color: var(--ink);
-    background-image: linear-gradient(180deg, transparent 80%, var(--highlight) 0);
+    background-image:
+        linear-gradient(to bottom, var(--paper) 85%, transparent 0),
+        linear-gradient(45deg, #7A14FF 0%, #4400FF 100%);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
     transition: background-size .3s ease;
-    mix-blend-mode: multiply;
 }
 .compile-link > a:hover,
 .bevspot-link > a:hover,
@@ -544,16 +585,28 @@ nav a{
     grid-template-rows: 14rem 14rem auto;
     /*TODO: tighten up, check out self-alignment*/
     padding: var(--l-pg-margin);
-    margin: 2rem 0;
+    margin: 80px 0;
 }
-
-#bio-image{
-    grid-column: 1 / 7;
+#circle{
+    width: 240px;
+    height: 240px;
+    background: var(--highlight);
+    border-radius: 50%;
+    grid-column: 4 / 6;
     grid-row: 1 / 3;
-    background-image: url('images/pink.jpg');
-    background-size: contain;
+    margin-top: 120px;
+    filter: blur(72px);
+    z-index: -1;
+}
+#bio-image{
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    background-image: url('images/it-me.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     max-width: 620px;
+    max-height: 384px;
+    border-radius: 10px;
 }
 #bio-contact{
     grid-column: 1 / 4;
@@ -593,10 +646,12 @@ nav a{
     padding: 1rem 2rem;
     background: #ffffff;
     flex: 1;
-    border: solid 2px var(--ink)
+    border: solid 2px var(--ink);
+    border-radius: 10px;
 }
 .columns a{
     font-weight: 500;
+    color: var(--link-blue);
 }
 #bio-about{
     grid-column: 4 / 13;
@@ -969,7 +1024,7 @@ footer{
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    padding: 3rem 2rem;
+    padding: 80px 40px;
     background: var(--ink);
     box-sizing: border-box;
     left: 0;
@@ -1052,7 +1107,8 @@ footer span{
         max-width: 720px;
     }
     #bio-image{
-        grid-column:1 / 8;
+        grid-column: 1 / 7;
+        max-height: 320px;
     }
     .work-text .work-columns{
         width: 100%;
@@ -1085,7 +1141,7 @@ footer span{
     }
     #bio{
         padding: 6rem var(--m-pg-margin);
-        margin-bottom: 0;
+        margin: 0;
     }
     .work-wrapper{
         padding: 3rem 6rem;
@@ -1230,8 +1286,11 @@ footer span{
         padding-right: 0;
     }
     #bio-image{
-        grid-column: 3 / 13;
+        grid-column: 5 / 13;
         grid-row: 1 / 3;
+    }
+    #circle{
+        grid-column: 3 / 6;
     }
     #bio-contact{
         display: none;
@@ -1423,7 +1482,9 @@ footer span{
     #bio-image{
         grid-column: 1 / 13;
         grid-row: 1 / 3;
-        background-position: center;
+        background-position: top;
+        border-radius: 0;
+        max-height: 400px;
     }
     #bio-about{
         grid-column: 1 / 13;
@@ -1437,6 +1498,7 @@ footer span{
         padding: 1.75rem var(--xs-pg-margin);
         margin-bottom: 2rem;
         border: none;
+        border-radius: 0;
         background-color: var(--paper);
     }
     #error main{
