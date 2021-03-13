@@ -649,7 +649,7 @@ nav a{
     border: solid 2px var(--ink);
     border-radius: 10px;
 }
-.columns a{
+.columns a, #coming-soon .content a{
     font-weight: 500;
     color: var(--link-blue);
 }
@@ -1480,14 +1480,14 @@ footer span{
         padding: 1.5rem var(--xs-pg-margin);
     }
     #circle{
-        width: 128px;
-        height: 128px;
+        width: 96px;
+        height: 96px;
         grid-column: 1;
         grid-row: 3;
-        margin: -124px 0 0 -54px;
+        margin: -80px 0 0 -54px;
         opacity: .65;
         background-blend-mode: multiply;
-        filter: blur(48px);
+        filter: blur(24px);
         z-index: 1;
     }
     #bio-image{
