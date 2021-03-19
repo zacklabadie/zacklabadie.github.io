@@ -1017,6 +1017,10 @@ nav a{
     max-width: 600px;
     margin: -52px 2rem 2rem 2rem;
 }
+#coming-soon .content img{
+    width: 120px;
+    height: auto;
+}
 
 /***** Footer section *****/
 footer{
