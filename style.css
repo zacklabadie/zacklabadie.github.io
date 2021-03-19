@@ -498,12 +498,34 @@ nav a{
     flex-direction: column;
     justify-content: space-around;
 }
-.project{
+#work-links div{
     margin: 1.75rem 0;
 }
-.project > a{
+#work-links div h2{
+    margin: 0 1rem 0 0;
+}
+.project a{
     color: var(--ink);
-
+}
+#work-links div{
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+}
+#work-links div span{
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+    display: inline;
+    text-decoration: none;
+    color: var(--ink);
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 #img-stack img, #img-stack video{
     position: absolute;
@@ -515,7 +537,7 @@ nav a{
 #img-stack img.slide-left, #img-stack video.slide-left{
     left: 0;
 }
-.compile-link > a{
+.compile-link a{
     background-image: linear-gradient(180deg, transparent 85%, #CBFF00 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -523,7 +545,7 @@ nav a{
     transition: background-size .3s ease;
     mix-blend-mode: multiply;
 }
-.bevspot-link > a{
+.bevspot-link a{
     background-image: linear-gradient(180deg, transparent 85%, rgba(119,157,219,0.75) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -531,7 +553,7 @@ nav a{
     transition: background-size .3s ease;
     mix-blend-mode: multiply;
 }
-.lasso-link > a{
+.lasso-link a{
     background-image: linear-gradient(180deg, transparent 85%, #5FFFBA 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -539,7 +561,7 @@ nav a{
     transition: background-size .3s ease;
     mix-blend-mode: multiply;
 }
-.other-link > a{
+.other-link a{
     background-image: linear-gradient(180deg, transparent 85%, #00D8C1 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
@@ -547,8 +569,8 @@ nav a{
     transition: background-size .3s ease;
     mix-blend-mode: multiply;
 }
-.catch-link > a{
-    background-image: linear-gradient(180deg, transparent 85%, #FFC499 0);
+.catch-link a{
+    background-image: linear-gradient(180deg, transparent 85%, #CEE1E5 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -565,16 +587,22 @@ nav a{
     text-decoration: none;
     transition: background-size .3s ease;
 }
-.compile-link > a:hover,
-.bevspot-link > a:hover,
-.lasso-link > a:hover,
-.catch-link > a:hover,
-.other-link > a:hover,
-#more-link > a:hover,
-#bio-contact > a >h2:hover,
-.back-link > h5 > a:hover{
-    background-size: 100% 100%;
-    cursor: pointer;
+@media(hover: hover) and (pointer: fine){
+    .compile-link a:hover,
+    .bevspot-link a:hover,
+    .lasso-link a:hover,
+    .catch-link a:hover,
+    .other-link a:hover,
+    #more-link > a:hover,
+    #bio-contact > a > h2:hover,
+    .back-link > h5 > a:hover{
+        background-size: 100% 100%;
+        cursor: pointer;
+    }
+}
+
+.show{
+    opacity: .5 !important;
 }
 
 /***** Bio section *****/
@@ -606,7 +634,7 @@ nav a{
     background-repeat: no-repeat;
     max-width: 620px;
     max-height: 384px;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 #bio-contact{
     grid-column: 1 / 4;
@@ -623,7 +651,7 @@ nav a{
     justify-content: flex-start;
     align-content: center;
     text-decoration: none;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
 }
 #bio-contact h2{
     line-height: 1;
@@ -646,8 +674,8 @@ nav a{
     padding: 1rem 2rem;
     background: #ffffff;
     flex: 1;
-    border: solid 2px var(--ink);
-    border-radius: 10px;
+    border: solid 3px var(--ink);
+    border-radius: 16px;
 }
 .columns a, #coming-soon .content a{
     font-weight: 500;
@@ -995,7 +1023,7 @@ nav a{
     background-size: cover;
 }
 #catch .project-link a{
-    background-color: #FFC499;
+    background-color: #CEE1E5;
 }
 #more .hero-text{
     padding: 0 2rem;
@@ -1377,6 +1405,9 @@ footer span{
     #work-links{
         grid-column: 2 / 8;
         z-index: 2;
+    }
+    #work-links .show{
+        opacity: 0 !important;
     }
     .columns{
         padding: .75rem 1rem;
