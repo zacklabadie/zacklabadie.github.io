@@ -101,41 +101,54 @@ $(document).ready(function() {
     ;
 
 
-    // Slide out preview images on link hover
+    // Slide out preview images on link hover, show project years
+    $('#work-links .catch-link a').hover(function(){
+        $('.catch-img').addClass('slide-left');
+        $('.catch-link span').addClass('show');
+    },
+    function(){
+        $('.catch-img').removeClass('slide-left');
+        $('.catch-link span').removeClass('show');
+    });
+    //
     $('#work-links .compile-link a').hover(function(){
         $('.comp-img').addClass('slide-left');
+        $('.compile-link span').addClass('show');
     },
     function(){
         $('.comp-img').removeClass('slide-left');
+        $('.compile-link span').removeClass('show');
     });
     //
     $('#work-links .bevspot-link a').hover(function(){
         $('.bev-img').addClass('slide-left');
+        $('.bevspot-link span').addClass('show');
     },
     function(){
         $('.bev-img').removeClass('slide-left');
+        $('.bevspot-link span').removeClass('show');
     });
     //
     $('#work-links .lasso-link a').hover(function(){
         $('.las-img').addClass('slide-left');
+        $('.lasso-link span').addClass('show');
     },
     function(){
         $('.las-img').removeClass('slide-left');
+        $('.lasso-link span').removeClass('show');
     });
     //
     $('#work-links .other-link a').hover(function(){
         $('.other-img').addClass('slide-left');
+        $('.other-link span').addClass('show');
+
     },
     function(){
         $('.other-img').removeClass('slide-left');
+        $('.other-link span').removeClass('show');
     });
     //
-    $('#work-links .catch-link a').hover(function(){
-        $('.catch-img').addClass('slide-left');
-    },
-    function(){
-        $('.catch-img').removeClass('slide-left');
-    });
+
 
 
     // Universal smooth scrolling – Based on Chris Coyier's snippet
