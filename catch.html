@@ -1,16 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Zack Labadie | Catch</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typeit@5.4.1/dist/typeit.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/nav.js" defer></script>
     <script type="text/javascript" src="js/footer.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116358405-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-116358405-1');
+    </script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -19,30 +25,279 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('body').addClass('loaded');
+    });
+    </script>
 </head>
 
-<body id="coming-soon">
+
+<body id="catch">
+    <div id="loader-wrapper">
+        <div id="loader">
+            <div></div>
+            <h6>hang tight...</h6>
+            <div></div>
+        </div>
+    </div>
     <nav-component></nav-component>
-    <main>
-        <div class="container">
-            <div class="content">
-                <img src="images/whoopsie.PNG" alt="Zack's Memoji">
-                <h1>This page is still under development...</h1>
-                <p>In the mean time you can <a href="https://catch.co" target="_blank">learn more</a> about Catch, <a href="https://app.catch.co" target="_blank">check it out</a>  for yourself, or <a href="mailto:hey@zack.design">email me</a> for case studies.</p>
+    <div class="work-hero"></div>
+    <div class="work-wrapper">
+        <div class="project-brief">
+            <div class="brief-intro">
+                <h1>Catch</h1>
+                <h4>Building, launching, and scaling a new personal safety net designed for the future of work.</h4>
+            </div>
+            <div class="brief-link">
+                <a href="https://catch.co" target="_blank" >
+                    Check it out
+                    <!-- <img src="images/icons/arrow-ne.svg"> -->
+                </a>
+            </div>
+            <div class="left-col">
+                <div>
+                    <h6>roles</h6>
+                    <p>Lead Product Designer <span>(04/18 – 03/20)</span><br/>Sr. Product Designer <span>(03/20 – 01/21)</span></p>
+                </div>
+                <div>
+                    <h6>mission</h6>
+                    <p>Provide self-employed Americans the accessible, affordable, effective safety net they need. Create modern, personalized solutions for savings, investments, and insurance so that users can get back to doing whatever it is they do&nbsp;best.</p>
+                </div>
+                <div>
+                    <h6>dates</h6>
+                    <p>April 2018 – February 2021</p>
+                </div>
+                <div>
+                    <h6>key collaborators</h6>
+                    <p>Andrew Ambrosino <span>(Founder and CTO)</span><br/>Misha Bove <span>(Design Director)</span><br/>Kate Mook <span>(Sr. Product Designer)</span></p>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="brief-skills">
+                    <h6>skills</h6>
+                    <ul>
+                        <li>User research</li>
+                        <li>Info architecture</li>
+                        <li>User flows</li>
+                        <li>Logic and documentation</li>
+                        <li>Prototyping</li>
+                        <li>Design infrastructure</li>
+                        <li>Brand development</li>
+                        <li>Copywriting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6>highlights</h6>
+                    <ul>
+                        <li>YCombintator Winter 2019</li>
+                        <li>Web, iOS, and Android apps</li>
+                        <li>Light and dark modes</li>
+                        <li>Certified Section 508 compliant</li>
+                        <li>1 of 6 EDE web-brokers in the&nbsp;U.S.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </main>
-    <div class="work-wrapper">
+        <div class="rule">
+            <hr>
+        </div>
+        <div id="app-review">
+            <div id="stars">
+                <img src="images/catch/star.svg" alt="star">
+                <img src="images/catch/star.svg" alt="star">
+                <img src="images/catch/star.svg" alt="star">
+                <img src="images/catch/star.svg" alt="star">
+                <img src="images/catch/star.svg" alt="star">
+            </div>
+            <h5>Obsessed! I find myself looking forward to business deposits — not only because money is awesome, but because I love to see my Catch balance rise!</h5>
+            <span class="mono">iOS App Store review<br/>June 2020</span>
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="work-section stack-flip">
+            <div class="half-flex work-text sm-pad-r">
+                <h5>The Problem</h5>
+                <div class="work-columns">
+                    <p>Freelancers, contractors, sole proprieters, gig workers... They go by many names, but the number of Americans engaging in some degree of self-employment has been steadily climbing since 2008. <a href="https://quickbooks.intuit.com/self-employed/report/" target="_blank">A 2019 Gallup poll</a> found that over 28% of Americans identify as at least partially self-employed.</p>
+                    <p>More so than their W-2 counterparts, these independent workers enjoy a sense of purpose, increased control, and more flexible work arrangements. On the flip side, independent work brings with it a set of very real challenges: unpredictable income, opaque tax situations, and a lack of crucial benefits like health insurance that are largely still shackled to traditional employment.</p>
+                    <p>This leaves self-employed individuals out on their own, walking a tightrope with no safety net. Very few have the time, money, and motivation to confidently tackle taxes, plan for retirement, or navigate the health insurance market. And even if they do, most existing solutions are archaic and disparate. If you’re self-employed, benefits are hard to find and expensive to enroll in; Their distributed nature makes them a headache to manage and ultimately less effective than they could be. </p>
+                </div>
+            </div>
+            <div id="c-climber" class="half-flex work-img stretch-img sm-pad-l grayscale">
+            </div>
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="work-section">
+            <div id="c-rope" class="half-flex work-img sm-pad-r stretch-img grayscale">
+            </div>
+            <div class="half-flex work-text sm-pad-l">
+                <h5>The Solution</h5>
+                <div class="work-columns">
+                    <p>Focus on the individual. Meet each person where they are. Earn their trust, understand their needs, and serve their whole selves — not just a job title or tax form. Bring the pillars of financial stability together under one roof, where info can be shared to paint a more complete picture of someone’s life. Offer guidance to those who might not even know what they’re&nbsp;missing.</p>
+                    <p>Chisel these benefits down to be approachable and intuitive, so everyone has a seat at the table. Be more like a camp counselor than a robo-advisor. Build a design language that feels more like Headspace than Bank of America. Treat a paycheck like a paycheck, regardless of where it came from.  Combine what we know with a little automation magic to keep things chugging along behind the&nbsp;scenes.</p>
+                    <p>Empower everyone to spend their time and energy on literally anything <i>but</i> insurance, taxes, and retirement. Because whether you’re a gig driver today or a YouTube sensation a few months down the line, you deserve to live life with&nbsp;confidence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="work-section">
+            <div class="half-flex work-text sm-pad-r">
+                <h5>My Role</h5>
+                <div class="work-columns">
+                    <p>I joined Catch fresh out of school in 2018, a few months before its beta launch. I hit the ground running and for three years, never looked&nbsp;back.</p>
+                    <p>My first two years were spent working in tandem with the Design Director, <a href="https://www.linkedin.com/in/mishabove/" target="_blank">Misha Bove</a>. Together, we worked with Catch’s founding team to sharpen its vision, define the brand, design the core UX, support the app’s beta release, iterate post-launch based on user feedback, and much&nbsp;more.</p>
+                    <p>When Misha left Catch at the end of 2019, I stepped into the role of Lead Product Designer. In addition to hiring and coaching a second full-time designer, I led end-to-end design for Catch’s entire health insurance vertical, our first suite of paid features, a full visual refresh of the product, and extensive support for growth initiatives leading up to our Series&nbsp;A.</p>
+                </div>
+            </div>
+            <div class="half-flex work-img sm-pad-l grayscale">
+                <img src="images/catch/ptown.jpg" alt="The Catch team in Provincetown, 2019">
+            </div>
+        </div>
+        <div class="rule">
+            <hr>
+        </div>
+        <div class="work-section">
+            <div class="full-flex sub-proj">
+                <h2>Health Explorer</h2>
+                <h4>Help people find the right health plan, fast</h4>
+                <span class="mono">August 2020, 6 weeks</span>
+            </div>
+            <div class="full-flex work-img new-row">
+                <img src="images/catch/health-exp-ft.png" alt="Final visual mockups for Health Explorer plan selection">
+            </div>
+            <div class="work-section new-row">
+                <div class="half-flex work-text sm-pad-r">
+                    <h5>Background</h5>
+                    <div class="work-columns">
+                        <p>After years of work, Catch had finally been approved to enroll users in Marketplace health insurance&nbsp;plans. We were <a href="https://www.cms.gov/CCIIO/Programs-and-Initiatives/Health-Insurance-Marketplaces/EDE-ApprovedPartners" target="_blank">one of only five</a> such web brokers in the country.</p>
+                        <p>As you may imagine, the enrollment process came with a mile-long list of constraints and federal regulations. These guardrails drastically narrowed the scope for meaningful innovation within the actual health insurance enrollment flow. Anything before or after that core flow, though, was largely fair&nbsp;game.</p>
+                        <p>How could I deliver on users’ job to be done (find the right health plan) and use that as a motivator for the lengthy enrollment process that lay&nbsp;ahead?</p>
+                    </div>
+                </div>
+                <div class="half-flex work-img sm-pad-l grayscale">
+                    <img src="images/catch/capitol.jpg" alt="Capitol Building">
+                </div>
+            </div>
+            <div class="rule light">
+                <hr>
+            </div>
+            <div class="work-section">
+                <div class="half-flex sm-pad-r pull-quote">
+                    <img src="images/catch/quote.svg" alt="Survey quote">
+                    <h3>The stress of not being covered is detrimental to my&nbsp;health.</h3>
+                </div>
+                <div class="half-flex work-text sm-pad-l">
+                    <h5>Research</h5>
+                    <div class="work-columns">
+                        <p>Only industry wonks care about health insurance. The average person cares much more about the material implications of health insurance. Can I pay my premium and still make ends meet? Do I have access to a doctor when I need one? Could I make it through a car accident without going&nbsp;bankrupt?</p>
+                        <p>I conducted a 10-question survey to better understand how people relate to their health insurance. What motivates people to get covered in the first place? Of those without coverage, what are the barriers? When comparing plans, what information is most important? Are there other stakeholders in the decision-making process?</p>
+                        <p>Unsurprisingly, I found that decision-making ultimately boiled down to premium prices. If a user could afford coverage, plans would then be compared based on total deductible, provider networks, prescription coverage, and co-pays for recurring care (e.g. therapy visits). Worth highlighting is that most people felt confident forecasting their health for the year&nbsp;ahead.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rule light">
+                <hr>
+            </div>
+            <div class="work-section">
+                <div class="half-flex work-text sm-pad-r">
+                    <h5>Personas</h5>
+                    <div class="work-columns">
+                        <p>Based on a blend of research findings and knowledge of our existing userbase, I created three user personas. I kept these personas at the center of my process to help ensure I was solving problems for real people, not just relying on API limitations and business requirements.</p>
+                    </div>
+                </div>
+                <div class="half-flex work-img sm-pad-l">
+                    <a href="images/catch/health-persona.svg" target="_blank">
+                        <img src="images/catch/health-persona.svg" alt="One of three user personas" class="big-shadow">
+                    </a>
+                </div>
+            </div>
+            <div class="rule light">
+                <hr>
+            </div>
+            <div class="full-flex work-text">
+                <h5>User Journey</h5>
+                <div class="work-columns">
+                    <p>Based on research findings and API constraints, I gathered all possible user inputs. Some (like zip code) were required, while others (like prescriptions) were&nbsp;optional.<br/><br/>I created a basic user flow, situated within the overarching user journey. I was confident that leading with plan exploration would improve the overall enrollment experience, but it was an addition to an already lengthy&nbsp;process.</p>
+                    <p>Health Explorer had to be fast, lightweight, and approachable. I went wide exploring all possible inputs for plan comparison, then ruthlessly pared the flow down using research findings and personas as a north&nbsp;star.</p>
+                </div>
+            </div>
+            <div class="full-flex work-img new-row">
+                <a href="images/catch/health-userjourney.png" target="_blank">
+                    <img src="images/catch/health-userjourney.png" alt="Simplified health user journey">
+                </a>
+            </div>
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="work-section">
+            <div class="half-flex work-img sm-pad-r">
+                <a href="images/catch/rec-matrix.svg" target="_blank">
+                    <img src="images/catch/rec-matrix.svg" alt="Design artifact outling recommendation criteria" class="big-shadow">
+                </a>
+            </div>
+            <div class="half-flex work-text sm-pad-l">
+                <h5>Recommendations</h5>
+                <div class="work-columns">
+                    <p>To deliver on Catch’s promise of offering personalized guidance, I worked with our Biz Ops lead, <a href="https://www.linkedin.com/in/dantenner/" target="_blank">Dan</a>, to outline a health plan recommendation system.</p>
+                    <p>Aligning with themes from my initial research, we weighted various plan factors to highlight up to three health plans based on user needs and&nbsp;preferences. I created a basic matrix as a design artifact, and wrote copy for each potential&nbsp;outcome.</p>
+                    <p>With upwards of 100 health plans to sift through in some states, this recommendation system helped mitigate decision paralysis while giving Catch a competitive edge. Win&nbsp;win.</p>
+                </div>
+            </div>
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="full-flex work-text">
+            <h5>Final Designs</h5>
+            <div class="work-columns">
+                <p>I became intimately familiar with peoples' needs. I analyzed the competition. I created a basic user flow using existing components then pushed it further, exploring alternate inputs and new design patterns.</p>
+                <p>With guiding principles of speed, simplicity, and clarity in mind, I began paring down and iterating. Health Explorer had to be fast, lightweight, and approachable. Here are some final designs.</p>
+            </div>
+        </div>
+        <div class="full-flex work-img new-row scroll-container">
+            <img src="images/catch/health-explorer/00-intro.svg" alt="Simplified health user journey" class="big-shadow ios-corner">
+            <img src="images/catch/health-explorer/00-intro.svg" alt="Simplified health user journey" class="big-shadow ios-corner">
+            <img src="images/catch/health-explorer/00-intro.svg" alt="Simplified health user journey" class="big-shadow ios-corner">
+            <img src="images/catch/health-explorer/00-intro.svg" alt="Simplified health user journey" class="big-shadow ios-corner">
+            <img src="images/catch/health-explorer/00-intro.svg" alt="Simplified health user journey" class="big-shadow ios-corner">
+        </div>
+        <div class="rule light">
+            <hr>
+        </div>
+        <div class="work-section">
+            <div class="half-flex work-img sm-pad-r">
+                <a href="images/compile/process.jpg" target="_blank">
+                    <img src="images/catch/health-explorer/00-intro.svg" alt="Compile process book">
+                </a>
+            </div>
+            <div class="half-flex work-text sm-pad-l">
+                <h5>Process book</h5>
+                <div class="work-columns">
+                    <p>In addition to fully curating, designing, and developing Compile, I made a 68-page hand-bound process book. The book contains a detailed step-by-step overview of my 14-week design process. If you're interested, you can <a href="https://drive.google.com/open?id=1WcjFtqiw_d8P11JI7K8ekG-SlYm-82F5" target="_blank">download a PDF version</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-link end-link">
+            <a href="http://wtfiscompile.xyz/" target="_blank">View Compile demo</a>
+        </div>
         <div class="rule" style="margin-bottom: 0;">
             <hr>
         </div>
         <div class="work-text other-work">
             <h6>Additional work</h6>
+            <h5 class="catch-link">
+                <a href="catch.html">Catch</a>
+            </h5>
             <h5 class="bevspot-link">
                 <a href="bevspot.html">BevSpot</a>
-            </h5>
-            <h5 class="compile-link">
-                <a href="compile.html">Compile</a>
             </h5>
             <h5 class="lasso-link">
                 <a href="lasso.html">Lasso</a>
@@ -52,4 +307,6 @@
             </h5>
         </div>
     </div>
+    <footer-component></footer-component>
+
 </body>
