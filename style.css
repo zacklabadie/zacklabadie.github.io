@@ -897,7 +897,7 @@ div.project-brief .project-link a{
 }
 .work-text p{
     margin: 0 0 1.5rem 0;
-    max-width: 490px;
+    max-width: 600px;
 }
 .work-text p a{
     text-decoration: none;
@@ -1173,16 +1173,30 @@ span.mono{
     margin: 1.5rem 0 0 0;
     max-width: 25rem;
 }
-#c-climber{
+/* #c-climber{
     background: url('images/catch/climbing3.jpg');
     background-position: top center;
     background-size: cover;
+} */
+#problem-img{
+    background: url('images/catch/scrib1.svg');
+    background-position: center;
+    background-size: 100% auto;
+    align-self: stretch;
+    background-repeat: no-repeat;
 }
-#c-rope{
+#solution-img{
+    background: url('images/catch/scrib2.svg');
+    background-position: center;
+    background-size: 100% auto;
+    align-self: stretch;
+    background-repeat: no-repeat;
+}
+/* #c-rope{
     background: url('images/catch/rope.jpg');
     background-position: center;
     background-size: cover;
-}
+} */
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
     background-position: bottom left;
@@ -1409,8 +1423,28 @@ footer span{
     #catch .work-section.stack-flip{
         flex-direction: column-reverse;
     }
-    #c-climber{
+    /* #c-climber{
         background-position: top center;
+    } */
+    #solution-img, #problem-img{
+        margin: 0;
+        height: 12rem;
+        width: 100%;
+        background-size: contain;
+        background-position: left;
+    }
+    #team-img{
+        background: url('images/catch/ptown.jpg');
+        background-position: center;
+        background-size: 100% auto;
+        align-self: stretch;
+        background-repeat: no-repeat;
+        border-radius: 16px;
+        max-height: 26rem;
+        background-position-y: 35%;
+    }
+    #team-img img{
+        opacity: 0;
     }
     .new-row{
         margin: 0;
