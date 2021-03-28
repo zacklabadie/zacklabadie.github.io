@@ -169,10 +169,10 @@
     --paper: #FAF8F7;
     --highlight: linear-gradient(45deg, #7A14FF 0%, #4400FF 100%);
     --link-blue: #4400FF;
-    --l-pg-margin: 72px;
-    --m-pg-margin: 48px;
-    --s-pg-margin: 32px;
-    --xs-pg-margin: 24px;
+    --l-pg-margin: 4.5rem;
+    --m-pg-margin: 3rem;
+    --s-pg-margin: 2rem;
+    --xs-pg-margin: 1.5rem;
 }
 
 
@@ -232,19 +232,24 @@ h6{
     color: var(--ink);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight: 500;
 }
 .rule hr{
-    border: 1px solid var(--ink);
+    border: 2px solid var(--ink);
     width: auto;
     margin: 0;
+}
+.rule.light hr{
+    border: 1px solid var(--ink);
+    opacity: 10%;
 }
 #home .rule{
     padding: 0 var(--l-pg-margin);
 }
 p{
-    font-family: var(--mono);
+    font-family: var(--sans-serif-body);
+    font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.8;
 }
@@ -470,10 +475,6 @@ nav a{
     /* Credit to Sarah L. Fossheim for the technique! https://fossheim.io/writing/posts/css-text-gradient/ */
   }
 
-.light{
-    opacity: 10%;
-}
-
 /***** Projects section *****/
 #work{
     display: grid;
@@ -677,9 +678,10 @@ nav a{
     border: solid 3px var(--ink);
     border-radius: 16px;
 }
-.columns a, #coming-soon .content a{
+.columns a, #coming-soon a{
     font-weight: 500;
     color: var(--link-blue);
+    text-decoration: none;
 }
 #bio-about{
     grid-column: 4 / 13;
@@ -732,7 +734,7 @@ nav a{
 }
 .project-brief h1{
     max-width: 50%;
-    margin-bottom: .35rem;
+    margin-bottom: .25rem;
     font-size: 3rem;
 }
 .project-brief h4, .hero-text h4{
@@ -740,8 +742,19 @@ nav a{
     font-family: var(--sans-serif-title);
     font-weight: normal;
     font-size: 1.5rem;
-    line-height: 1.4;
-    margin-top: 0;
+    line-height: 1.5;
+    margin: 0;
+}
+.sub-proj h4{
+    text-align: center;
+    font-family: var(--sans-serif-title);
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+.sub-proj h2{
+    margin-bottom: .75rem;
 }
 .project-brief h6, .other-work h6{
     margin: 0;
@@ -751,6 +764,11 @@ nav a{
 }
 .project-brief p{
     margin-top: .5rem;
+    font-family: var(--mono);
+    font-size: 1rem;
+}
+.project-brief p span{
+    opacity: .4;
 }
 .brief-intro{
     grid-column: 1 / 3;
@@ -763,6 +781,12 @@ nav a{
     padding-right: 8rem;
     padding-bottom: 2rem;
 }
+.brief-mission{
+    grid-column: 1 / 3;
+    grid-row: 3;
+    padding-right: 8rem;
+    padding-bottom: 2rem;
+}
 .brief-goal p{
     max-width: 680px;
 }
@@ -770,14 +794,17 @@ nav a{
     grid-column: 3;
     grid-row: 2 / 4;
 }
-.brief-skills ul{
+.project-brief ul{
     padding-left: 1rem;
     list-style-type: square;
     line-height: 1.75;
-    margin-top: .5rem;
+    margin-top: .75rem;
 }
-.brief-skills ul li{
+.project-brief ul li{
     font-family: var(--mono);
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    padding-left: .375rem;
     font-weight: 300;
 }
 .brief-link{
@@ -788,11 +815,25 @@ nav a{
     align-items: flex-end;
     margin-bottom: var(--l-pg-margin);
 }
+#catch .left-col{
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    padding-right: 6rem;
+}
+#catch .right-col{
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+}
+#catch .left-col div, #catch .right-col div{
+    margin-bottom: 2rem;
+}
 .project-link a{
     text-align: center;
     font-family: var(--sans-serif-title);
     font-weight: 600;
-    padding: 1rem 1.5rem .75rem 1.5rem;
+    padding: 1.2rem 1.5rem .75rem 1.5rem;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -803,13 +844,25 @@ nav a{
     font-size: 1rem;
     transition: background-color 0.35s ease;
 }
+div.project-brief .project-link a{
+    margin-bottom: 2rem;
+}
 .brief-date{
     grid-column: 1;
     grid-row: 3;
 }
+#catch .brief-date{
+    grid-column: 1;
+    grid-row: 4;
+    margin-bottom: 2rem;
+}
 .brief-team{
     grid-column: 2;
     grid-row: 3;
+}
+.brief-collabs{
+    grid-column: 1;
+    grid-row: 5;
 }
 .work-section{
     display: flex;
@@ -823,24 +876,33 @@ nav a{
 .work-section > div{
     box-sizing: border-box;
 }
+.work-section img{
+    border-radius: 12px;
+}
 .work-wrapper .rule{
     margin: var(--l-pg-margin) 0;
     width: 100%;
 }
-.work-text h5{
+.work-text h5, #app-review h5{
     font-family: var(--sans-serif-title);
     font-weight: 500;
     font-size: 2rem;
     margin: 0 0 1rem 0;
+    opacity: 1;
 }
 .work-text h6{
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     opacity: .3;
 }
 .work-text p{
     margin: 0 0 1.5rem 0;
     max-width: 490px;
+}
+.work-text p a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--link-blue)
 }
 .full-flex{
     width: 100%;
@@ -849,6 +911,9 @@ nav a{
     width: 100%;
     /* max-height: 800px; */
     height: auto;
+}
+.big-shadow{
+    box-shadow: 0px 30px 150px rgba(0, 0, 0, 0.25);
 }
 .video-wrapper{
     position: relative;
@@ -891,22 +956,27 @@ nav a{
     -moz-box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
 }
-.scroll-container{
-    height: 75vh;
-    min-height: 75vh;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: scroll;
-    text-align: left;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+#catch .ios-corner{
+    border-radius: 32px;
 }
 .scroll-container{
-  &::-webkit-scrollbar {
-    display: none;
-  }
+    height: 80vh;
+    width: inherit;
+    min-height: 80vh;
+    padding: 3rem;
+    border-radius: 16px;
+    background-color: #DFDBDA;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    align-content: stretch;
+    justify-content: flex-start;
+}
+.scroll-container img{
+    align-self: stretch;
+    margin-right: 2rem;
+    width: auto;
+    max-width: 80%;
 }
 .scroll-img{
     height: 100% !important;
@@ -951,7 +1021,7 @@ nav a{
     opacity: .5;
 }
 .project-link a{
-    font-size: 1rem;
+    font-size: 1.125rem;
 }
 .other-work{
     display: flex;
@@ -984,6 +1054,135 @@ nav a{
 }
 
 /***** Work : Project specific sections *****/
+#catch .work-hero{
+    background: url('images/catch/comps.png');
+    background-position: center;
+    background-size: cover;
+}
+#catch .brief-link a{
+    color: #fff;
+    background-color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    font-family: var(--sans-serif-title);
+    font-weight: 600;
+    padding: 1.2rem 1.5rem .75rem 1.5rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#catch .brief-link img{
+    width: 20px;
+    height: auto;
+    color: #fff;
+}
+#catch .brief-intro h4{
+    max-width: 31.25rem;
+}
+#app-review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+#stars{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin: 2rem 0 1.25rem 0;
+}
+#stars img{
+    margin: 0 .25rem 1rem .25rem;
+    height: 2.5rem;
+    width: auto;
+}
+#app-review h5{
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    max-width: 800px;
+    align-self: center;
+    line-height: 1.25;
+}
+span.mono{
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink);
+    opacity: .4;
+    text-align: center;
+    line-height: 1.25;
+}
+#app-review span{
+    margin-bottom: 2rem;
+}
+.stretch-img{
+    align-self: stretch;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin: 4rem 0 1.5rem 0;
+}
+.no-h-cap{
+    max-height: none !important;
+}
+.carousel-spacer{
+    min-width: 3rem;
+}
+.grayscale{
+    filter: grayscale(1);
+    transition: 0.5s ease-in-out;
+}
+.grayscale:hover{
+    filter: grayscale(0);
+}
+.sub-proj{
+    text-align: center;
+}
+.pull-quote{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    background-color: #E4F0F0;
+    background-blend-mode: multiply;
+    border-radius: 16px;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 2rem;
+}
+.pull-quote img{
+    height: 2rem;
+    width: fit-content;
+    background-blend-mode: multiply;
+}
+.pull-quote h3{
+    font-family: var(--sans-serif-title);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #3E5357;
+    text-align: left;
+    font-style: italic;
+    background-blend-mode: multiply;
+    margin: 1.5rem 0 0 0;
+    max-width: 25rem;
+}
+#c-climber{
+    background: url('images/catch/climbing3.jpg');
+    background-position: top center;
+    background-size: cover;
+}
+#c-rope{
+    background: url('images/catch/rope.jpg');
+    background-position: center;
+    background-size: cover;
+}
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
     background-position: bottom left;
@@ -1034,16 +1233,25 @@ nav a{
 #more .end-link p, #more .hero-text h4{
     max-width: 500px;
 }
-#coming-soon .container{
-    min-height: 100vh;
+#coming-soon{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-#coming-soon .content{
+    margin: .5rem 0 1rem 0;
     text-align: center;
+}
+#coming-soon h1{
+    margin: .25rem 0;
+}
+#coming-soon p{
     max-width: 600px;
-    margin: -52px 2rem 2rem 2rem;
+    margin-bottom: 3rem;
+}
+#coming-soon img{
+    width: 216px;
+    height: auto;
+    margin-right: -20px;
 }
 
 /***** Footer section *****/
@@ -1117,7 +1325,7 @@ footer span{
 
 /***** Responsive styling *****/
 @media (max-width: 1100px){
-    .brief-goal{
+    .brief-goal, .brief-role, .brief-mission{
         padding-right: var(--l-pg-margin);
     }
     .project-brief h4{
@@ -1174,7 +1382,7 @@ footer span{
     .work-wrapper{
         padding: 3rem 6rem;
     }
-    .brief-goal{
+    .brief-goal, .brief-role, .brief-mission{
         padding-right: var(--m-pg-margin);
     }
     .mobile-hide{
@@ -1189,6 +1397,20 @@ footer span{
     #compile .half-flex.work-text{
         margin-bottom: 2rem;
         order: -1;
+    }
+    #catch .stretch-img{
+        height: 20rem;
+        width: auto;
+        margin: 0 0 2rem 0;
+    }
+    #catch .work-section{
+        flex-direction: column;
+    }
+    #catch .work-section.stack-flip{
+        flex-direction: column-reverse;
+    }
+    #c-climber{
+        background-position: top center;
     }
     .new-row{
         margin: 0;
@@ -1209,10 +1431,17 @@ footer span{
     }
     .half-flex .work-columns p{
         width: 100%;
-        max-width: 490px;
+        max-width: 600px;
         box-sizing: border-box;
         display: inline-block;
         vertical-align: top;
+    }
+    .pull-quote{
+        padding: 3rem;
+        margin: 2rem 0;
+    }
+    .pull-quote h3{
+        max-width: 440px;
     }
     .sm-pad-l{
         padding-left: 0;
@@ -1247,6 +1476,10 @@ footer span{
     }
 }
 @media (max-width: 760px){
+    .work-wrapper{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
     h1{
         font-size: 2.5rem;
     }
@@ -1265,26 +1498,67 @@ footer span{
     .project-brief{
         grid-template-columns: 4fr 1fr;
     }
-    .brief-goal{
+    .brief-intro{
         grid-column: 1 / 4;
-        grid-row: 2 / 3;
+        margin-bottom: 1.5rem;
+    }
+    .brief-link{
+        grid-row: 2;
+        margin-bottom: 4rem;
+    }
+    #compile .brief-link{
+        grid-column: 1;
         margin-bottom: 2rem;
+    }
+    #compile .brief-goal{
+        grid-row: 3;
+    }
+    #compile .brief-skills{
+        grid-row: 4;
+        margin-bottom: 2rem;
+    }
+    #compile .brief-date{
+        grid-row: 5;
+        grid-column: 1;
+    }
+    #catch .left-col{
+        grid-row: 3;
+        grid-column: 1 / 4;
+        padding-right: 0;
+    }
+    #catch .right-col{
+        grid-row: 4;
+        padding-right: 0;
+    }
+    .brief-goal, .brief-role{
+        grid-column: 1 / 4;
+        grid-row: 2; //changed from 2 slash 4
+        margin-bottom: 2rem;
+    }
+    .brief-mission{
+        grid-column: 1 / 4;
+        grid-row: 3;
+        margin-bottom: 2rem;
+    }
+    .brief-date{
+        grid-column: 3;
+        grid-row: 3 / 4;
     }
     .brief-skills{
         grid-column: 1 / 3;
         grid-row: 3 / 5;
     }
-    .brief-skills ul{
+    #catch .brief-skills{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .project-brief ul{
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
         column-width: 225px;
         -webkit-column-width: 225px;
         -moz-column-width: 225px;
-    }
-    .brief-date{
-        grid-column: 3;
-        grid-row: 3 / 4;
     }
     .brief-team{
         grid-column: 3;
@@ -1305,6 +1579,7 @@ footer span{
     }
     .full-flex .work-columns p, .half-flex .work-columns p{
         width: 100%;
+        max-width: 616px;
         padding-right: 20px;
         padding-left: 0 !important;
     }
@@ -1327,6 +1602,9 @@ footer span{
         grid-column: 1 / 11;
         grid-row-start: 2;
     }
+    .big-shadow{
+        box-shadow: 0px 10px 60px rgb(0 0 0 / 15%);
+    }
     .columns{
         padding: .75rem 1rem 1rem .75rem;
     }
@@ -1342,11 +1620,14 @@ footer span{
         margin-bottom: 0;
         padding-right: 0;
     }
+    .project-brief ul li{
+        margin-right: 1rem;
+    }
     .brief-link{
         grid-column: 1 / 4;
         grid-row: 2;
     }
-    .brief-goal{
+    .brief-goal, .brief-role{
         grid-column: 1 / 4;
         grid-row: 3;
     }
@@ -1415,11 +1696,15 @@ footer span{
     .project-brief{
         grid-template-columns: 1fr 1fr;
     }
-    .brief-goal{
+    .brief-goal, .brief-role{
         grid-column: 1 / 3;
         grid-row: 3;
         padding-right: 0;
         margin-bottom: 0;
+    }
+    .brief-mission{
+        grid-column: 1 / 4;
+        grid-row: 4;
     }
     .brief-skills{
         grid-column: 1 / 3;
@@ -1451,7 +1736,10 @@ footer span{
         padding-left: 0;
     }
     .project-link a{
-        font-size: .9rem;
+        font-size: 1rem;
+    }
+    .scroll-container img{
+        align-self: center;
     }
     .end-link{
         box-sizing: border-box;
@@ -1461,6 +1749,10 @@ footer span{
         max-width: 350px;
         text-align: center;
         opacity: .5;
+    }
+    #coming-soon img{
+        width: 160px;
+        margin-right: -12px;
     }
 }
 
@@ -1486,7 +1778,7 @@ footer span{
         font-size: 1.5rem;
     }
     p{
-        font-size: .9rem;
+        font-size: 1rem;
     }
     section > hr{
         margin: 0 var(--xs-pg-margin);
@@ -1509,6 +1801,18 @@ footer span{
     }
     .work-wrapper{
         padding: 1.5rem var(--xs-pg-margin);
+    }
+    .scroll-container{
+        padding: 3rem 1.5rem;
+        height: fit-content;
+        min-height: 0;
+    }
+    .scroll-container img{
+        margin-right: 1rem;
+        max-width: 90%;
+    }
+    #catch .ios-corner{
+        border-radius: 24px;
     }
     #circle{
         width: 96px;
