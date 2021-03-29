@@ -703,9 +703,13 @@ nav a{
 /***** Work : General section *****/
 .work-wrapper{
     padding: 3rem var(--l-pg-margin);
-    max-width: 1050px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 .work-hero{
     height: 100vh;
@@ -873,6 +877,12 @@ div.project-brief .project-link a{
     width: 100%;
     margin: 3rem 0;
 }
+#catch .work-section{
+    margin: 0;
+}
+#catch .rule{
+    margin: 5.5rem 0;
+}
 .work-section > div{
     box-sizing: border-box;
 }
@@ -880,7 +890,7 @@ div.project-brief .project-link a{
     border-radius: 12px;
 }
 .work-wrapper .rule{
-    margin: var(--l-pg-margin) 0;
+    margin: 3rem 0;
     width: 100%;
 }
 .work-text h5, #app-review h5{
@@ -898,6 +908,9 @@ div.project-brief .project-link a{
 .work-text p{
     margin: 0 0 1.5rem 0;
     max-width: 600px;
+}
+.work-columns p:last-of-type{
+    margin-bottom: 0;
 }
 .work-text p a{
     text-decoration: none;
@@ -948,6 +961,9 @@ div.project-brief .project-link a{
 .new-row{
     margin-top: 80px;
 }
+#catch .new-row{
+    margin-top: 5rem;
+}
 .border{
     border: 1px solid #e6e6e6;
 }
@@ -957,12 +973,9 @@ div.project-brief .project-link a{
     box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.15);
 }
 #catch .ios-corner{
-    border-radius: 32px;
+    border-radius: 28px;
 }
 .scroll-container{
-    height: 80vh;
-    width: inherit;
-    min-height: 80vh;
     padding: 3rem;
     border-radius: 16px;
     background-color: #DFDBDA;
@@ -973,10 +986,13 @@ div.project-brief .project-link a{
     justify-content: flex-start;
 }
 .scroll-container img{
-    align-self: stretch;
+    height: calc((100vh - 6rem) - 56px);
+    min-height: 520px;
     margin-right: 2rem;
     width: auto;
-    max-width: 80%;
+}
+.scroll-container .big-shadow{
+    box-shadow: 0px 24px 40px rgb(0 0 0 / 10%);
 }
 .scroll-img{
     height: 100% !important;
@@ -998,6 +1014,9 @@ div.project-brief .project-link a{
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
+}
+.sub-row{
+    margin-top: 2.5rem;
 }
 /* .full-flex .work-columns p:nth-child(odd){
     padding-right: 25px;
@@ -1154,12 +1173,15 @@ span.mono{
     border-radius: 16px;
     justify-content: center;
     align-content: flex-start;
-    padding: 2rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    max-width: 48%;
 }
 .pull-quote img{
     height: 2rem;
     width: fit-content;
     background-blend-mode: multiply;
+    align-self: flex-start;
 }
 .pull-quote h3{
     font-family: var(--sans-serif-title);
@@ -1173,11 +1195,6 @@ span.mono{
     margin: 1.5rem 0 0 0;
     max-width: 25rem;
 }
-/* #c-climber{
-    background: url('images/catch/climbing3.jpg');
-    background-position: top center;
-    background-size: cover;
-} */
 #problem-img{
     background: url('images/catch/scrib1.svg');
     background-position: center;
@@ -1192,11 +1209,6 @@ span.mono{
     align-self: stretch;
     background-repeat: no-repeat;
 }
-/* #c-rope{
-    background: url('images/catch/rope.jpg');
-    background-position: center;
-    background-size: cover;
-} */
 #compile .work-hero{
     background: url('images/compile/compile-hero.jpg');
     background-position: bottom left;
@@ -1405,8 +1417,23 @@ footer span{
     .half-flex{
         width: 100%;
     }
+    .new-row{
+        margin-top: 2rem;
+    }
+    .sm-pad-l{
+        margin: 0 0 3rem 0;
+    }
     .full-flex .work-columns p{
         width: 46%;
+    }
+    .sub-proj{
+        margin-bottom: 2rem;
+    }
+    .sub-proj h4{
+        margin-bottom: .5rem;
+    }
+    .sub-proj h2{
+        margin-bottom: .5rem;
     }
     #compile .half-flex.work-text{
         margin-bottom: 2rem;
@@ -1423,9 +1450,9 @@ footer span{
     #catch .work-section.stack-flip{
         flex-direction: column-reverse;
     }
-    /* #c-climber{
-        background-position: top center;
-    } */
+    #catch .sub-row{
+        margin-top: 2.5rem;
+    }
     #solution-img, #problem-img{
         margin: 0;
         height: 12rem;
@@ -1446,17 +1473,17 @@ footer span{
     #team-img img{
         opacity: 0;
     }
-    .new-row{
-        margin: 0;
-    }
     .work-text, .work-img{
         margin: 30px 0;
     }
+    #catch .work-text{
+        margin: 0;
+    }
+    #solution-img, #problem-img{
+        margin-bottom: 2rem;
+    }
     .work-text.other-work{
         margin: 0 0 20px 0;
-    }
-    .work-section{
-        margin: -20px 0;
     }
     .half-flex .work-columns{
         display: flex;
@@ -1470,18 +1497,22 @@ footer span{
         display: inline-block;
         vertical-align: top;
     }
-    .pull-quote{
-        padding: 3rem;
-        margin: 2rem 0;
+    #catch .pull-quote{
+        padding: 2rem;
     }
+
     .pull-quote h3{
-        max-width: 440px;
+        font-size: 1.75rem;
     }
     .sm-pad-l{
         padding-left: 0;
+        margin: 3rem 0 0 0;
     }
     .sm-pad-r{
         padding-right: 0;
+    }
+    #catch .clear-bottom{
+        margin-bottom: 0;
     }
     .one-third-left{
         margin-left: 0;
@@ -1500,9 +1531,6 @@ footer span{
     #compile-logo{
         margin: 1.2rem 0;
     }
-    /* footer{
-        padding: 30px 40px 20px 40px;
-    } */
     .work-wrapper{
         padding: var(--m-pg-margin);
         margin-bottom: 0;
@@ -1564,6 +1592,10 @@ footer span{
         grid-row: 4;
         padding-right: 0;
     }
+    .pull-quote{
+        width: 100%;
+        max-width: 100%;
+    }
     .brief-goal, .brief-role{
         grid-column: 1 / 4;
         grid-row: 2; //changed from 2 slash 4
@@ -1597,6 +1629,9 @@ footer span{
     .brief-team{
         grid-column: 3;
         grid-row: 4 / 5;
+    }
+    .pull-quote{
+        margin: 3rem 0;
     }
     .work-img img{
         max-height: 800px;
@@ -1676,6 +1711,16 @@ footer span{
     .brief-team{
         grid-column: 2;
         grid-row: 5 / 6;
+    }
+    .pull-quote{
+        padding: 1.75rem;
+    }
+    .pull-quote img{
+        height: 1.75rem;
+    }
+    .pull-quote h3{
+        width: 100%;
+        font-size: 1.75rem;
     }
     #bevspot .work-hero{
         justify-content: flex-end;
@@ -1838,15 +1883,15 @@ footer span{
     }
     .scroll-container{
         padding: 3rem 1.5rem;
-        height: fit-content;
-        min-height: 0;
     }
     .scroll-container img{
+        width: calc((100vw - (2 * var(--xs-pg-margin))) - 4rem);
+        max-width: 400px;
+        height: auto;
         margin-right: 1rem;
-        max-width: 90%;
     }
     #catch .ios-corner{
-        border-radius: 24px;
+        border-radius: 18px;
     }
     #circle{
         width: 96px;
@@ -1885,7 +1930,7 @@ footer span{
         padding: 3rem;
     }
     .work-wrapper .rule{
-        margin: 40px 0;
+        margin: 3rem 0;
     }
     .project-link a{
         font-size: .8rem;
