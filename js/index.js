@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     // Typing animations for welcome page
     new TypeIt('.type-it', {
-        speed: 75,
+        speed: 85,
         lifeLike: false,
         autoStart: false,
         startDelay: 1200
@@ -71,7 +71,7 @@ $(document).ready(function() {
     .pause(450)
     .type('<span>simplicity</span>.')
     .pause(1000)
-    .delete(10)
+    .delete(11)
     .pause(450)
     .type('<span>iteration</span>.')
     .pause(1000)
